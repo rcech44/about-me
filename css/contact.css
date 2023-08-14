@@ -1,0 +1,191 @@
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    /* background: linear-gradient(-45deg, #7333a7 0%, #1b1b1b 100%); */
+    /* background: radial-gradient(ellipse at top, #7333a7, black),
+                radial-gradient(ellipse at bottom, #7333a7, black); */
+    /* background: #D1A395;
+    background: radial-gradient(at center bottom, #D1A395, #52F911); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    animation: sky 60s infinite normal;
+  }
+  header.masthead .masthead-content {
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    z-index: 1;
+    position: relative;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+  }
+  header.masthead .masthead-content .masthead-subsubheading {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  header.masthead .bg-background-1 {
+    z-index: 9;
+    width: 100vw;
+    height: 15vh;
+    min-height: 200px;
+    border-radius: 0%;
+    background: #11475a;
+    animation: ;
+    clip-path: polygon(100% 100%, 0% 100% , 0.00% 17.26%, 2.00% 18.55%, 4.00% 19.92%, 6.00% 21.33%, 8.00% 22.77%, 10.00% 24.20%, 12.00% 25.60%, 14.00% 26.94%, 16.00% 28.19%, 18.00% 29.33%, 20.00% 30.35%, 22.00% 31.21%, 24.00% 31.90%, 26.00% 32.42%, 28.00% 32.75%, 30.00% 32.87%, 32.00% 32.81%, 34.00% 32.54%, 36.00% 32.08%, 38.00% 31.44%, 40.00% 30.62%, 42.00% 29.66%, 44.00% 28.55%, 46.00% 27.33%, 48.00% 26.01%, 50.00% 24.63%, 52.00% 23.21%, 54.00% 21.77%, 56.00% 20.34%, 58.00% 18.96%, 60.00% 17.64%, 62.00% 16.42%, 64.00% 15.31%, 66.00% 14.33%, 68.00% 13.52%, 70.00% 12.87%, 72.00% 12.40%, 74.00% 12.13%, 76.00% 12.06%, 78.00% 12.18%, 80.00% 12.50%, 82.00% 13.01%, 84.00% 13.70%, 86.00% 14.56%, 88.00% 15.56%, 90.00% 16.70%, 92.00% 17.95%, 94.00% 19.29%, 96.00% 20.69%, 98.00% 22.12%, 100.00% 23.55%);
+}  
+
+  header.masthead .bg-circle {
+    width: 8vw;
+    height: 8vw;
+    max-width: 150px;
+    max-height: 150px;
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
+    transition: 0.3s;
+    opacity: 100%;
+  }
+  header.masthead .bg-circle-1 {
+      bottom:0vw;
+      left:46vw;
+      background: #d3d604;
+      /* transform-origin: center center;
+      -webkit-animation: clockwise 1s infinite linear;
+      -moz-animation: clockwise 1s infinite linear; */
+      animation: myOrbitSun 60s linear infinite;
+      /* animation: rotate-scale-down 8s linear infinite both; */
+  }
+
+  @keyframes myOrbitSun {
+    from { transform: rotate(0deg) translateX(-46vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(-46vw) rotate(-360deg); }
+}
+@keyframes myOrbitMoon {
+    from { transform: rotate(0deg) translateX(46vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(46vw) rotate(-360deg); }
+}
+
+  header.masthead .bg-circle-2 {
+      bottom:0vw;
+      left:46vw;
+      background: #6b6b6b;
+      /* transform-origin: center center;
+      -webkit-animation: clockwise 1s infinite linear;
+      -moz-animation: clockwise 1s infinite linear; */
+      animation: myOrbitMoon 60s linear infinite;
+      /* animation: rotate-scale-down 8s linear infinite both; */
+  }
+  
+  header.masthead .bg-circle-3 {
+      height: 1vh;
+      width: 25vw;
+      top: 11vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f74b45 80%);
+      animation: rotate-scale-down 14s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-4 {
+      height: 1vh;
+      width: 20vw;
+      top: 15vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f7cd45 80%);
+      animation: rotate-scale-down 23s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-5 {
+      height: 2vh;
+      width: 35vw;
+      top: 21vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #ad823d 80%);
+      animation: rotate-scale-down 5s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-6 {
+      height: 2vh;
+      width: 20vw;
+      top: 33vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
+      animation: rotate-scale-down 12s linear infinite both;
+  }
+  
+  @keyframes sky {
+    0% {
+        background: #1f1f1f;
+    }
+    15% {
+        background: #d47c17;
+    }
+    20% {
+        background: #0e8ee2;
+    }
+    30% {
+        background: #0e8ee2;
+    }
+    35% {
+        background: #d47c17;
+    }
+    50% {
+        background: #1f1f1f;
+    }
+    100% {
+        background: #1f1f1f;
+    }
+    }
+
+  @keyframes rotate-scale-down {
+  0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+  }
+  100% {
+      -webkit-transform: translateX(160vw);
+              transform: translateX(160vw);
+  }
+  }
+
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-top: calc(10rem + 55px);
+      padding-bottom: 10rem;
+    }
+    header.masthead .masthead-content .masthead-heading {
+        text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+        font-size: 6rem;
+      }
+      header.masthead .masthead-content .masthead-subheading {
+          text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+        font-size: 3rem;
+      }
+  }
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #b58300;
+    --bs-btn-border-color: #b58300;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #825e00;
+    --bs-btn-hover-border-color: #825e00;
+    --bs-btn-focus-shadow-rgb: 241, 46, 141;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #825e00;
+    --bs-btn-active-border-color: #825e00;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #b58300;
+    --bs-btn-disabled-border-color: #b58300;
+  }

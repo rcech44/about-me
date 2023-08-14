@@ -24,7 +24,7 @@ function scrollHandle()
         else
         {
             scrolledUp = false;
-            $("#nav").stop().animate({backgroundColor: 'rgba(0,0,0,0.7)'}, 300);
+            $("#nav").stop().animate({backgroundColor: 'rgba(0,0,0,0.7)'}, 500);
         }
     }
 }
