@@ -50,9 +50,6 @@ header.masthead .bg-star-2 {
     z-index: 0;
     position: absolute;
     font-size: 5vw;
-    /* border-radius: 100%;
-    background: #6786a3;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     transition: 0.3s;
   }
   header.masthead .bg-circle-1 {
@@ -63,10 +60,6 @@ header.masthead .bg-star-2 {
       /* background: #6786a3; */
       animation: rotate-scale-down 10s ease-in-out infinite both;
   }
-  
-  /* header.masthead .bg-circle:active {
-      background: #000000;
-  } */
   
   header.masthead .bg-circle-2 {
       height: 3vw;
