@@ -106,6 +106,29 @@ header.masthead .bg-star-2 {
       animation: rotate-scale-down 10s ease-in-out infinite both;
   }
   
+  header.masthead .bg-astronaut {
+    width: 8vw;
+    height: 8vw;
+    max-width: 100px;
+    max-height: 100px;
+    z-index: 0;
+    position: absolute;
+    transition: 0.3s;
+    rotate: 0deg;
+    top: 0vh;
+    right: -10vw;
+    animation: astronaut-animation 35s linear infinite both;
+  }
+
+  @keyframes astronaut-animation {
+    0% {
+        transform: translateX(0vw) translateY(0vh) rotate3d(0, 0, -1, -30deg);;
+    }
+    100% {
+        transform: translateX(-120vw) translateY(50vh) rotate3d(0, 0, -1, 360deg);;
+    }
+    }
+
   
   @keyframes rotate-scale-down {
   0% {

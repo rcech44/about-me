@@ -2850,6 +2850,7 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   --bs-btn-color: #fff;
   --bs-btn-bg: #1f5f9c;
   --bs-btn-border-color: #1f5f9c;
@@ -7760,6 +7761,16 @@ textarea.form-control-lg {
 .px-5 {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
+}
+
+.px-6 {
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
+}
+
+.px-7 {
+    padding-right: 7rem !important;
+    padding-left: 7rem !important;
 }
 
 .py-0 {

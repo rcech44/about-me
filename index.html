@@ -18,116 +18,65 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
     </head>
-    <body id="page-top" onscroll="scrollHandle()">
+    <body id="page-top" onscroll="scrollHandle()" style="background: radial-gradient(at center bottom, #7434BD 10%, #010101 100%);">
         <!-- Navigation-->
-        <nav id="nav" style="background-color:rgba(0, 0, 0, 0)" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">Radomír Čech</a>
+                <a class="navbar-brand" href="#!">Radomír Čech</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link nav-link-active" href="#!">Úvod</a></li>
+                        <li class="nav-item"><a class="nav-link" href="features.html">Dovednosti</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects_v2.html">Projekty</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">O mně</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Header-->
-        <header class="masthead text-center text-white" style="-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));">
-            <div class="masthead-content">
-                <div class="container px-5">
-                    <h1 class="masthead-heading mb-2">Vývoj softwaru</h1>
-                    <h2 class="masthead-subheading mb-2">IT správa a mnoho dalších...</h2>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Posunout dolů</a>
+        <header class="masthead text-center text-white" style="height: 100vh">
+            <div class="masthead-content" style="height:100%;">
+                <div class="container px-6" style="height:100%;">
+                    <div>
+                        <h1 class="masthead-heading mb-2">Ahoj,</h1>
+                        <!-- <h2 class="masthead-subheading mb-4">Máte dotaz nebo mě chcete kontaktovat?</h2> -->
+                        <h4 class="masthead-subsubheading mb-2">jsem Radek, vývojář desktopových a webových aplikací, který se s vášní pro programování a špetkou kreativity snaží vytvářet jedinečné aplikace.</h4>
+                        <a class="btn btn-primary btn-xl rounded-pill mt-5 text-black" href="features.html">Mé dovednosti</a>
+                    </div>
                 </div>
             </div>
-            <!-- <img src="assets/img/index-bg-1.svg" style="position: relative; display: inline-block; overflow: hidden;"> -->
-            <div style="position: relative;">
-                <div class="bg-background-1"></div>
-            </div>
+            <div class="bg-star-1 bg-star">*</div>
+            <div class="bg-star-2 bg-star">*</div>
+            <div class="bg-star-3 bg-star">*</div>
+            <div class="bg-star-4 bg-star">*</div>
+            <div class="bg-star-5 bg-star">*</div>
+            <div class="bg-star-6 bg-star">*</div>
+            <div class="bg-star-7 bg-star">*</div>
+            <div class="bg-star-8 bg-star">*</div>
+            <div class="bg-star-9 bg-star">*</div>
+            <div class="bg-star-10 bg-star">*</div>
+            <div class="bg-star-11 bg-star">*</div>
+            <div class="bg-circle-0 bg-circle"></div>
             <div class="bg-circle-1 bg-circle"></div>
             <div class="bg-circle-2 bg-circle"></div>
             <div class="bg-circle-3 bg-circle"></div>
             <div class="bg-circle-4 bg-circle"></div>
             <div class="bg-circle-5 bg-circle"></div>
             <div class="bg-circle-6 bg-circle"></div>
-            <div class="bg-medusa-1 bg-medusa"><img src="assets/img/jellyfish1.png" style="max-width: 10vw;"></div>
-            <!-- <div class="bg-medusa-2 bg-medusa"><img src="assets/img/jellyfish2.png" style="max-width: 10vw;"></div> -->
+            <div class="bg-circle-7 bg-circle"></div>
+            <div class="bg-circle-8 bg-circle"></div>
+        
         </header>
-        <!-- Content section 1-->
-        <section id="scroll">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/main_1.jpg" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">Vývoj desktopových aplikací</h2>
-                            <p>Vypsat zkušenosti se C#, Pythonem, C++, potom WinForms, trochu WinUI 3, viz. ukázka RTSP</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content section 2-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/main_2.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <h2 class="display-4">Vývoj webových aplikací</h2>
-                            <p>Odkaz na bakalářku, práce s databází, frontend, backend, Django</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content section 3-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/main_3.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">IT provoz</h2>
-                            <p>Správa současných systémů, správa IT ve firmě</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content section 4-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/main_4.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <h2 class="display-4">... a mnoho další</h2>
-                            <p>Základní mobilní aplikace, údržba hardwaru, IT asistence</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-3 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and W3.CSS</p></div>
-        </footer>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            const colors = ["7434BD", "1a5214", "14177a", "5f6614"];
+            document.getElementById("page-top").style.background = "radial-gradient(at center bottom, #" + colors[Math.floor(Math.random() * colors.length)]+ " 10%, #010101 90%)";
+        </script>
     </body>
 </html>

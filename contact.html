@@ -18,18 +18,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
     </head>
-    <body id="page-top" onscroll="scrollHandle()" style="background: radial-gradient(at center, #7434BD 10%, #010101 100%);">
+    <body id="page-top" onscroll="scrollHandle()" style="background: radial-gradient(at center bottom, #7434BD 10%, #010101 100%);">
         <!-- Navigation-->
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">Radomír Čech</a>
+                <a class="navbar-brand" href="index.html">Radomír Čech</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Úvod</a></li>
+                        <li class="nav-item"><a class="nav-link" href="features.html">Dovednosti</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects_v2.html">Projekty</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">O mně</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li> -->
                         <li class="nav-item"><a class="nav-link nav-link-active" href="#!">Kontakt</a></li>
                     </ul>
                 </div>
@@ -74,5 +74,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            const colors = ["7434BD", "1a5214", "14177a", "5f6614"];
+            document.getElementById("page-top").style.background = "radial-gradient(at center bottom, #" + colors[Math.floor(Math.random() * colors.length)]+ " 10%, #010101 90%)";
+        </script>
     </body>
 </html>
