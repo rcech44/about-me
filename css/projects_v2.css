@@ -90,6 +90,24 @@ header.masthead {
       background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
       animation: rotate-scale-down 12s linear infinite both;
   }
+
+  header.masthead .bg-circle-7 {
+    height: 2vh;
+    width: 20vw;
+    top: 18vh;
+    left: -60vw;
+    background: linear-gradient(90deg, #916b0300 0%, #749732 80%);
+    animation: rotate-scale-down 7s linear infinite both;
+}
+
+header.masthead .bg-circle-8 {
+    height: 2vh;
+    width: 20vw;
+    top: 37vh;
+    left: -50vw;
+    background: linear-gradient(90deg, #916b0300 0%, #87a838 80%);
+    animation: rotate-scale-down 21s linear infinite both;
+}
   
   
   @keyframes rotate-scale-down {

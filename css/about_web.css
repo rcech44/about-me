@@ -3,20 +3,22 @@ header.masthead {
     overflow: hidden;
     padding-top: calc(7rem + 72px);
     padding-bottom: 7rem;
-    background: #000000ce;
-    /* background: radial-gradient(at center, #7434BD, #010101); */
+    /* background: linear-gradient(-45deg, #7333a7 0%, #1b1b1b 100%); */
+    /* background: radial-gradient(ellipse at top, #7333a7, black),
+                radial-gradient(ellipse at bottom, #7333a7, black); */
+    /* background: #D1A395;
+    background: radial-gradient(at center bottom, #D1A395, #52F911); */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
-    animation: background-opacity 10s infinite normal;
+    animation: sky 60s infinite normal;
   }
   header.masthead .masthead-content {
     padding-top: 3vh;
     padding-bottom: 5vh;
     z-index: 1;
     position: relative;
-    opacity: 100% !important;
   }
   header.masthead .masthead-content .masthead-heading {
     font-size: 4rem;
@@ -59,6 +61,55 @@ header.masthead .bg-cloud-2 {
     width: 15vw;
     top: 28vh;
     animation: cloud-animation-2 60s linear infinite both;
+}
+
+header.masthead .bg-star-7 {
+    height: 0.5vh;
+    width: 10vw;
+    top: 9vh;
+    left: -200vw;
+    background: #d3cf00;
+    animation: falling-star-animation-1 60s linear infinite both;
+}
+header.masthead .bg-star-8 {
+    height: 0.5vh;
+    width: 10vw;
+    top: 4vh;
+    right: -200vw;
+    background: #d3cf00;
+    animation: falling-star-animation-2 60s linear infinite both;
+}
+header.masthead .bg-star-9 {
+    height: 0.5vh;
+    width: 10vw;
+    top: 13vh;
+    left: -200vw;
+    background: #d3cf00;
+    animation: falling-star-animation-3 60s linear infinite both;
+}
+header.masthead .bg-star-10 {
+    height: 0.3vh;
+    width: 10vw;
+    top: 9vh;
+    right: -200vw;
+    background: #d3cf00;
+    animation: falling-star-animation-4 60s linear infinite both;
+}
+header.masthead .bg-star-11 {
+    height: 0.5vh;
+    width: 10vw;
+    top: 16vh;
+    left: -200vw;
+    background: #d3cf00;
+    animation: falling-star-animation-5 60s linear infinite both;
+}
+header.masthead .bg-star-12 {
+    height: 0.3vh;
+    width: 10vw;
+    top: 18vh;
+    right: -200vw;
+    background: #d3cf00;
+    animation: falling-star-animation-6 60s linear infinite both;
 }
 
 @keyframes cloud-animation-1 {
@@ -235,6 +286,67 @@ header.masthead .bg-cloud-2 {
         -webkit-transform: translateX(-800vw);
                 transform: translateX(-800vw);
     }
+}
+
+  header.masthead .bg-star {
+    z-index: 0;
+    position: absolute;
+    font-size: 5vw;
+    transition: 0.3s;
+  }
+
+  header.masthead .bg-star-1 {
+    height: 5vw;
+    width: 5vw;
+    top: 21vh;
+    left: 10vw;
+    /* background: #6786a3; */
+    animation: star-animation-1 60s infinite both;
+}
+
+header.masthead .bg-star-2 {
+    height: 3vw;
+    width: 3vw;
+    top: 9vh;
+    left: 19vw;
+    /* background: #1f5f9c; */
+    animation: star-animation-2 60s infinite both;
+}
+
+header.masthead .bg-star-3 {
+    height: 6vw;
+    width: 6vw;
+    top: 11vh;
+    left: 33vw;
+    /* background: #3e7fbd; */
+    animation: star-animation-3 60s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-4 {
+    height: 8vw;
+    width: 8vw;
+    top: 4vh;
+    left: 57vw;
+    /* background: #719dc7; */
+    animation: star-animation-4 60s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-5 {
+    height: 2vw;
+    width: 2vw;
+    top: 11vh;
+    left: 69vw;
+    /* background: #3387d6; */
+    animation: star-animation-5 60s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-6 {
+    height: 4vw;
+    width: 4vw;
+    top: 18vh;
+    left: 80vw;
+    /* background: #3f6991; */
+    animation: star-animation-6 60s ease-in-out infinite both;
 }
 
 @keyframes star-animation-1 {
@@ -434,18 +546,6 @@ header.masthead .bg-cloud-2 {
       opacity: 0%;
     }
 }
-
-@keyframes background-opacity {
-    0% {
-        background-color: #00000000;
-    }
-    50% {
-        background-color: #00000067;
-    }
-    100% {
-        background-color: #00000000;
-  }
-}
 header.masthead .bg-background-0 {
     width: 100vw;
     height: 15vh;
@@ -481,142 +581,85 @@ header.masthead .bg-background-2 {
     clip-path: polygon(100% 100%, 0% 100% , 0.00% 2.35%, 2.00% 1.41%, 4.00% 0.86%, 6.00% 0.71%, 8.00% 0.97%, 10.00% 1.64%, 12.00% 2.68%, 14.00% 4.05%, 16.00% 5.68%, 18.00% 7.50%, 20.00% 9.42%, 22.00% 11.37%, 24.00% 13.24%, 26.00% 14.96%, 28.00% 16.45%, 30.00% 17.63%, 32.00% 18.46%, 34.00% 18.90%, 36.00% 18.93%, 38.00% 18.54%, 40.00% 17.76%, 42.00% 16.62%, 44.00% 15.17%, 46.00% 13.48%, 48.00% 11.62%, 50.00% 9.68%, 52.00% 7.74%, 54.00% 5.91%, 56.00% 4.25%, 58.00% 2.84%, 60.00% 1.76%, 62.00% 1.04%, 64.00% 0.72%, 66.00% 0.81%, 68.00% 1.32%, 70.00% 2.21%, 72.00% 3.45%, 74.00% 4.98%, 76.00% 6.73%, 78.00% 8.62%, 80.00% 10.57%, 82.00% 12.48%, 84.00% 14.28%, 86.00% 15.87%, 88.00% 17.18%, 90.00% 18.17%, 92.00% 18.77%, 94.00% 18.97%, 96.00% 18.75%, 98.00% 18.13%, 100.00% 17.13%);
 }  
 
-header.masthead .bg-circle {
+  header.masthead .bg-circle {
     width: 8vw;
     height: 8vw;
     max-width: 150px;
     max-height: 150px;
     z-index: 0;
     position: absolute;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 0.3s;
-    opacity: 80%;
+    opacity: 100%;
   }
-  header.masthead .bg-circle-0 {
-    width: 12vw;
-    height: 12vw;
-    max-width: 1500px;
-    max-height: 1500px;
-    bottom:-6vw;
-    left:44vw;
-    background-image: url(../assets/img/planets/sun.png);
-    background-size: cover;
-}
   header.masthead .bg-circle-1 {
-      width: 1vw;
-      height: 1vw;
-      bottom:-0.5vw;
-      left:49.5vw;
-      background-image: url(../assets/img/planets/mercury.png);
-      background-size: cover;
-      animation: myOrbitPlanet1 15s linear infinite;
+      bottom:-4vw;
+      left:46vw;
+      background: #d3d604;
+      /* transform-origin: center center;
+      -webkit-animation: clockwise 1s infinite linear;
+      -moz-animation: clockwise 1s infinite linear; */
+      animation: myOrbitSun 60s linear infinite;
+      /* animation: rotate-scale-down 8s linear infinite both; */
   }
+
+  @keyframes myOrbitSun {
+    from { transform: rotate(0deg) translateX(-46vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(-46vw) rotate(-360deg); }
+}
+@keyframes myOrbitMoon {
+    from { transform: rotate(0deg) translateX(46vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(46vw) rotate(-360deg); }
+}
+
   header.masthead .bg-circle-2 {
-    width: 1vw;
-    height: 1vw;
-    bottom:-1vw;
-    left:49.5vw;
-    background-image: url(../assets/img/planets/venus.png);
-    background-size: cover;
-    animation: myOrbitPlanet2 25s linear infinite;
-    animation-delay: -4s;
-}
-header.masthead .bg-circle-3 {
-    width: 3vw;
-    height: 3vw;
-    bottom:-1.5vw;
-    left:48.5vw;
-    background-image: url(../assets/img/planets/earth.png);
-    background-size: cover;
-    animation: myOrbitPlanet3 30s linear infinite;
-    animation-delay: -23s;
-}
-header.masthead .bg-circle-4 {
-    width: 1vw;
-    height: 1vw;
-    bottom:-1vw;
-    left:49.5vw;
-    background-image: url(../assets/img/planets/mars.png);
-    background-size: cover;
-    animation: myOrbitPlanet4 35s linear infinite;
-    animation-delay: -10s;
-}
-header.masthead .bg-circle-5 {
-    width: 7vw;
-    height: 7vw;
-    bottom:-7.5vw;
-    left:46.5vw;
-    background-image: url(../assets/img/planets/jupiter.png);
-    background-size: cover;
-    animation: myOrbitPlanet5 45s linear infinite;
-    animation-delay: -20s;
-}
-header.masthead .bg-circle-6 {
-    width: 6vw;
-    height: 6vw;
-    bottom:-6vw;
-    left:48vw;
-    background-image: url(../assets/img/planets/saturn.png);
-    background-size: cover;
-    animation: myOrbitPlanet6 50s linear infinite;
-}
-header.masthead .bg-circle-7 {
-    width: 4vw;
-    height: 4vw;
-    bottom:-3.5vw;
-    left:46.5vw;
-    background-image: url(../assets/img/planets/uranus.png);
-    background-size: cover;
-    animation: myOrbitPlanet7 55s linear infinite;
-    animation-delay: -17s;
-}
-header.masthead .bg-circle-8 {
-    width: 4vw;
-    height: 4vw;
-    bottom:-4vw;
-    left:48vw;
-    background-image: url(../assets/img/planets/neptune.png);
-    background-size: cover;
-    animation: myOrbitPlanet8 58s linear infinite;
-    animation-delay: -29s;
-}
-
-@keyframes myOrbitPlanet1 {
-    from { transform: rotate(0deg) translateX(-10vw) rotate(0deg);}
-    to   { transform: rotate(360deg) translateX(-10vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet2 {
-    from { transform: rotate(0deg) translateX(-12vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-12vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet3 {
-    from { transform: rotate(0deg) translateX(-15vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-15vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet4 {
-    from { transform: rotate(0deg) translateX(-19vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-19vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet5 {
-    from { transform: rotate(0deg) translateX(-26vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-26vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet6 {
-    from { transform: rotate(0deg) translateX(-35vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-35vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet7 {
-    from { transform: rotate(0deg) translateX(-40vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-40vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet8 {
-    from { transform: rotate(0deg) translateX(-48vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-48vw) rotate(-360deg); }
-}
-
-
+      bottom:-4vw;
+      left:46vw;
+      background: #6b6b6b;
+      /* transform-origin: center center;
+      -webkit-animation: clockwise 1s infinite linear;
+      -moz-animation: clockwise 1s infinite linear; */
+      animation: myOrbitMoon 60s linear infinite;
+      /* animation: rotate-scale-down 8s linear infinite both; */
+  }
+  
+  header.masthead .bg-circle-3 {
+      height: 1vh;
+      width: 25vw;
+      top: 11vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f74b45 80%);
+      animation: rotate-scale-down 14s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-4 {
+      height: 1vh;
+      width: 20vw;
+      top: 15vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f7cd45 80%);
+      animation: rotate-scale-down 23s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-5 {
+      height: 2vh;
+      width: 35vw;
+      top: 21vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #ad823d 80%);
+      animation: rotate-scale-down 5s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-6 {
+      height: 2vh;
+      width: 20vw;
+      top: 33vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
+      animation: rotate-scale-down 12s linear infinite both;
+  }
   
   @keyframes sky {
     0% {
@@ -670,14 +713,13 @@ header.masthead .bg-circle-8 {
 }
 
   @keyframes rotate-scale-down {
-    0% {
-        opacity: 0%;
-  }
-  50% {
-        opacity: 80%;
+  0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
   }
   100% {
-    opacity: 0%;
+      -webkit-transform: translateX(160vw);
+              transform: translateX(160vw);
   }
   }
 
@@ -699,8 +741,8 @@ header.masthead .bg-circle-8 {
 .btn-primary {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     --bs-btn-color: #fff;
-    --bs-btn-bg: #b2b2b2;
-    --bs-btn-border-color: #b2b2b2;
+    --bs-btn-bg: #acacac;
+    --bs-btn-border-color: #acacac;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #808080;
     --bs-btn-hover-border-color: #808080;
@@ -710,8 +752,8 @@ header.masthead .bg-circle-8 {
     --bs-btn-active-border-color: #808080;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #b2b2b2;
-    --bs-btn-disabled-border-color: #b2b2b2;
+    --bs-btn-disabled-bg: #acacac;
+    --bs-btn-disabled-border-color: #acacac;
   }
 
 .navbar-custom {
@@ -721,104 +763,23 @@ header.masthead .bg-circle-8 {
     animation: navbar-animation 60s linear infinite both;
 }
 
-
-header.masthead .bg-star {
-    z-index: 0;
-    position: absolute;
-    font-size: 3rem;
-    transition: 0.3s;
-  }
-  header.masthead .bg-star-1 {
-      height: 5vw;
-      width: 5vw;
-      top: 21vh;
-      left: 10vw;
-      /* background: #6786a3; */
-      animation: rotate-scale-down 10s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-2 {
-      height: 3vw;
-      width: 3vw;
-      top: 9vh;
-      left: 19vw;
-      /* background: #1f5f9c; */
-      animation: rotate-scale-down 17s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-3 {
-      height: 6vw;
-      width: 6vw;
-      top: 37vh;
-      left: 33vw;
-      /* background: #3e7fbd; */
-      animation: rotate-scale-down 14s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-4 {
-      height: 8vw;
-      width: 8vw;
-      top: 47vh;
-      left: 77vw;
-      /* background: #719dc7; */
-      animation: rotate-scale-down 23s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-5 {
-      height: 2vw;
-      width: 2vw;
-      top: 69vh;
-      left: 69vw;
-      /* background: #3387d6; */
-      animation: rotate-scale-down 13s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-6 {
-      height: 4vw;
-      width: 4vw;
-      top: 81vh;
-      left: 80vw;
-      /* background: #3f6991; */
-      animation: rotate-scale-down 10s ease-in-out infinite both;
-  }
-
-  header.masthead .bg-star-7 {
-    height: 4vw;
-    width: 4vw;
-    top: 23vh;
-    left: 75vw;
-    /* background: #3f6991; */
-    animation: rotate-scale-down 12s ease-in-out infinite both;
-}
-header.masthead .bg-star-8 {
-    height: 4vw;
-    width: 4vw;
-    top: 5vh;
-    left: 91vw;
-    /* background: #3f6991; */
-    animation: rotate-scale-down 18s ease-in-out infinite both;
-}
-header.masthead .bg-star-9 {
-    height: 4vw;
-    width: 4vw;
-    top: 74vh;
-    left: 28vw;
-    /* background: #3f6991; */
-    animation: rotate-scale-down 6s ease-in-out infinite both;
-}
-header.masthead .bg-star-10 {
-    height: 4vw;
-    width: 4vw;
-    top: 90vh;
-    left: 5vw;
-    /* background: #3f6991; */
-    animation: rotate-scale-down 24s ease-in-out infinite both;
-}
-header.masthead .bg-star-11 {
-    height: 4vw;
-    width: 4vw;
-    top: 65vh;
-    left: 14vw;
-    /* background: #3f6991; */
-    animation: rotate-scale-down 29s ease-in-out infinite both;
-}
+@keyframes navbar-animation {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    5% {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    45% {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    95% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    }
