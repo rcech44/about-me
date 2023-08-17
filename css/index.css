@@ -236,7 +236,7 @@ header.masthead .bg-circle-8 {
 header.masthead .bg-star {
     z-index: 0;
     position: absolute;
-    font-size: 2rem;
+    font-size: 3rem;
     transition: 0.3s;
   }
   header.masthead .bg-star-1 {
