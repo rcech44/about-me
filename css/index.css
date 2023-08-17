@@ -236,7 +236,7 @@ header.masthead .bg-circle-8 {
 header.masthead .bg-star {
     z-index: 0;
     position: absolute;
-    font-size: 3rem;
+    font-size: 2rem;
     transition: 0.3s;
   }
   header.masthead .bg-star-1 {
@@ -332,4 +332,9 @@ header.masthead .bg-star-11 {
     left: 14vw;
     /* background: #3f6991; */
     animation: rotate-scale-down 29s ease-in-out infinite both;
+}
+
+@keyframes body-opacity {
+    from { opacity:0% }
+    to   { opacity:100% }
 }

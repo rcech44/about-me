@@ -28,3 +28,19 @@ function scrollHandle()
         }
     }
 }
+
+function pageTransition(el)
+{
+    if (el.classList.contains("active"))
+    {
+        return false;
+    }
+    else
+    {
+        $("#page_transition_div").fadeIn();
+        $("#page_transition_div").promise().done(function(){
+            window.location.replace(el.href);
+        });
+        return false;
+    }
+}

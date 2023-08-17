@@ -10889,3 +10889,12 @@ html {
     font-weight: 900;
 }
 
+
+.page-transition-div {
+    display:none;
+    position:absolute;
+    width: 100000%;
+    height: 100000%;
+    background-color: white;
+    z-index: 999;
+}

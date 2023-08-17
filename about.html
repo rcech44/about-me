@@ -18,19 +18,20 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
     </head>
-    <body id="page-top" onscroll="scrollHandle()">
+    <body id="page-top" onscroll="scrollHandle()" style="display:none;">
+        <div id="page_transition_div" class="page-transition-div"></div>
         <!-- Navigation-->
         <nav id="nav" style="background-color:rgba(0, 0, 0, 0)" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html">Radomír Čech</a>
+                <a class="navbar-brand" href="index.html" onclick="return pageTransition(this);">Radomír Čech</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="features.html">Dovednosti</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects_v2.html">Projekty</a></li>
-                        <li class="nav-item"><a class="nav-link  nav-link-active" href="#!">O mně</a></li>
+                        <li class="nav-item"><a class="nav-link" href="features.html" onclick="return pageTransition(this);">Dovednosti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects_v2.html" onclick="return pageTransition(this);">Projekty</a></li>
+                        <li class="nav-item"><a class="nav-link  nav-link-active active" href="#!" onclick="return pageTransition(this);">O mně</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" onclick="return pageTransition(this);">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,6 +123,9 @@
         <footer class="py-3 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and W3.CSS</p></div>
         </footer>
+        <script>
+            $("#page-top").fadeIn("slow");
+        </script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
