@@ -10896,7 +10896,7 @@ html {
     position:absolute;
     width: 100000%;
     height: 100000%;
-    background-color: white;
+    background-color: black;
     z-index: 999;
 }
 

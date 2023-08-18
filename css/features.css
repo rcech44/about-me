@@ -3,7 +3,7 @@ header.masthead {
     overflow: hidden;
     padding-top: calc(7rem + 72px);
     /* padding-bottom: 7rem; */
-    background: linear-gradient(0deg, #ffffff 0%, #196783 80%);
+    background: linear-gradient(0deg, #ffffff 0%, #196783 90%);
     /* background-image: url(../assets/img/index-bg-1.svg); */
     background-repeat: no-repeat;
     background-position: center center;

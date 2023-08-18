@@ -18,8 +18,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
     </head>
-    <body id="page-top" onscroll="scrollHandle()" style="display:none;">
-        <div id="page_transition_div" class="page-transition-div"></div>
+    <body id="page-top" onscroll="scrollHandle()">
+        <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
         <!-- Navigation-->
         <nav id="nav" style="background-color:rgba(0, 0, 0, 0)" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
@@ -135,7 +135,7 @@
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and W3.CSS</p></div>
         </footer>
         <script>
-            $("#page-top").fadeIn("slow");
+            $("#page_transition_div").fadeOut("slow");
         </script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

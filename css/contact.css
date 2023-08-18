@@ -425,7 +425,7 @@ header.masthead .bg-planet {
     filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 0.3s;
-    opacity: 80%;
+    opacity: 100%;
   }
   header.masthead .bg-planet-1 {
     max-width: 1500px;
