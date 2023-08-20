@@ -118,6 +118,7 @@ header.masthead .bg-star-2 {
     top: 0vh;
     right: -10vw;
     animation: astronaut-animation 35s linear infinite both;
+    animation-delay: -5s;
   }
 
   @keyframes astronaut-animation {

@@ -18,9 +18,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
     </head>
-    <body id="page-top" onscroll="scrollHandle()" style="background: radial-gradient(at right bottom, rgba(0,54,181,1) 10%, rgba(0,0,0,1) 100%);"> 
-        <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
+    <body id="page-top" onscroll="scrollHandle()" style="background: radial-gradient(at center bottom, #7434BD 10%, #010101 100%);">
         <!-- Navigation-->
+        <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html" onclick="return pageTransition(this);">Radomír Čech</a>
@@ -39,10 +39,9 @@
         <!-- Header-->
         <header class="masthead text-center text-white" style="height: 100vh">
             <div class="masthead-content" style="height:100%;">
-                <div class="container px-5" style="height:100%;display:flex;justify-content: center;align-items: center;">
+                <div class="container px-6" style="height:100%;">
                     <div>
                         <h1 class="masthead-heading mb-2">Kontakt</h1>
-                        <!-- <h2 class="masthead-subheading mb-4">Máte dotaz nebo mě chcete kontaktovat?</h2> -->
                         <h4 class="masthead-subsubheading mb-2">Máte dotaz a chcete mě kontaktovat? Využijte prosím můj osobní email níže.<br>rcech44 [zavináč] gmail.com.</h4>
                         <a class="btn btn-primary btn-xl rounded-pill mt-5 text-black" href="mailto:rcech44@gmail.com">Odeslat email</a>
                     </div>
@@ -59,24 +58,28 @@
             <div class="bg-star-9 bg-star">*</div>
             <div class="bg-star-10 bg-star">*</div>
             <div class="bg-star-11 bg-star">*</div>
+            <div class="bg-circle-0 bg-circle"></div>
             <div class="bg-circle-1 bg-circle"></div>
-            <div class="bg-circle-2 bg-circle"></div>      
-            <div class="bg-circle-3 bg-circle"></div>      
-            <div class="bg-circle-4 bg-circle"></div>      
-            <div class="bg-circle-5 bg-circle"></div>      
-            <div class="bg-planet-1 bg-planet"></div>      
-            <div class="bg-planet-2 bg-planet"></div>      
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+            <div class="bg-circle-5 bg-circle"></div>
+            <div class="bg-circle-6 bg-circle"></div>
+            <div class="bg-circle-7 bg-circle"></div>
+            <div class="bg-circle-8 bg-circle"></div>
+        
         </header>
         <script>
             $("#page_transition_div").fadeOut("slow");
         </script>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- <script>
+        <script>
             const colors = ["7434BD", "1a5214", "14177a", "5f6614"];
             document.getElementById("page-top").style.background = "radial-gradient(at center bottom, #" + colors[Math.floor(Math.random() * colors.length)]+ " 10%, #010101 90%)";
-        </script> -->
+        </script>
     </body>
 </html>
