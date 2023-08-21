@@ -16,7 +16,7 @@ header.masthead {
     padding-bottom: 5vh;
     z-index: 1;
     position: relative;
-    opacity: 100% !important;
+    opacity: 100%;
   }
   header.masthead .masthead-content .masthead-heading {
     font-size: 4rem;

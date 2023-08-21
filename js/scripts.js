@@ -40,12 +40,34 @@ function pageTransition(el)
         $("#page_transition_div").promise().done(function(){
             window.location.replace(el.href);
         });
-        return false;
+        try {
+            $("#header_text").fadeOut();
+        }
+        catch {
+
+        }
+        finally {
+            return false;
+        }
     }
 }
 
 function setModal(type)
 {
+    var childrenCount = 0;
+    Array.from(document.getElementById("carousel_inner_1").children).forEach((element) => 
+    {
+        if (childrenCount++ == 0) element.classList.add("active");
+        else element.classList.remove("active");
+    });
+
+    childrenCount = 0;
+    Array.from(document.getElementById("carousel_indicators_1").children).forEach((element) => 
+    {
+        if (childrenCount++ == 0) element.classList.add("active");
+        else element.classList.remove("active");
+    });
+
     var pic_1 = document.getElementById("modal_pic_1");
     var pic_2 = document.getElementById("modal_pic_2");
     var pic_3 = document.getElementById("modal_pic_3");

@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/bootstrap.css" rel="stylesheet" />
-        <link href="css/projects_v2.css" rel="stylesheet" />
+        <link href="css/projects.css" rel="stylesheet" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
         <!-- Bootstrap core JS-->
@@ -144,6 +144,27 @@
             </div>
         </section>
 
+        <!-- Content section 4-->
+        <section id="chapter_7" style="display:none;" >
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-4">
+                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_5.png" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="p-5">
+                            <h2 class="display-4">Ostatní</h2>
+                            <ul>
+                                <li>GPU bug check pro Legion 5 - kontrola vady grafické karty pro tento notebook, kontrola špatně nastaveného taktu paměti hned po startu notebooku</li>
+                                <li>Spotify Discord bot - Discord bot, který monitoruje Spotify aktivitu uživatelů na serveru a poté vydává statistiky poslechu jednotlivých uživatelů nebo žebříček nejlepších posluchačů a jejich oblíbených písniček</li>
+                                <li>Generátor rozvrhu UPOL - webová aplikace, která generuje skript, který automaticky zvolí rozvrh podle zadaných předmětů a termínů</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -154,13 +175,13 @@
                 </div>
                 <div class="modal-body">
                     <div id="carouselExampleCaptions" class="carousel slide">
-                        <div class="carousel-indicators">
+                        <div id="carousel_indicators_1" class="carousel-indicators">
                           <button id="carousel_indicator_1" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                           <button id="carousel_indicator_2" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                           <button id="carousel_indicator_3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                           <button id="carousel_indicator_4" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div id="carousel_inner_1" class="carousel-inner">
                           <div class="carousel-item active">
                             <img id="modal_pic_1" src="assets/img/covid_showcase/1.jpg" class="d-block w-100 carousel-pic" alt="...">
                           </div>
@@ -230,7 +251,7 @@
         </div>
 
         <!-- Footer-->
-        <footer id="chapter_7" style="display:none;" class="py-3 bg-black">
+        <footer id="chapter_8" style="display:none;" class="py-3 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and icons from Freepik - Flaticon</p></div>
         </footer>
 
@@ -258,6 +279,9 @@
             setTimeout(function () {
                 $("#chapter_7").fadeIn("slow");
             }, 700);
+            setTimeout(function () {
+                $("#chapter_8").fadeIn("slow");
+            }, 800);
         </script>
 
         <!-- Core theme JS-->
