@@ -10910,8 +10910,8 @@ html {
 .page-transition-div {
     display:none;
     position:absolute;
-    width: 100000%;
-    height: 100000%;
+    width: 200%;
+    height: 2000%;
     background-color: black;
     z-index: 998;
 }

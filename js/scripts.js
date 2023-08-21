@@ -125,11 +125,45 @@ function randomizeIndex()
     // Fade out everything
     $("#background_elements").fadeOut(fadeSpeed);
     $("#page_transition_div").fadeIn(fadeSpeed);
+    $("#easteregg_text").fadeOut(fadeSpeed);
     setTimeout(function() {
         if (planets[randomNumber] != "mercury" && planets[randomNumber] != "black-hole") document.getElementById("moon_planet").style.display = "block";
         else document.getElementById("moon_planet").style.display = "none";
+        document.getElementById("moon_planet_2").style.display = "none";
+        document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/planets/moon.png";
         document.getElementById("page-top").style.background = "radial-gradient(at right bottom, " + planetColors[randomNumber] + " 10%, rgba(0,0,0,1) 100%)";
         document.getElementById("main_planet").style.backgroundImage = "url(assets/img/planets/" + planets[randomNumber] + ".png)";
         document.getElementById("randomize_button").innerHTML = "změnit pozadí (právě " + planetsCzech[randomNumber] + ")";
+    }, fadeSpeed);
+}
+
+function easterEgg()
+{
+    if (pendingIndexChange) return;
+
+    // Initial stuff
+    var fadeSpeed = 1000;
+    var transitionLength = 1200;
+    currentPlanetNumber = 6;
+    pendingIndexChange = true;
+    setTimeout(function() {
+        $("#background_elements").fadeIn(fadeSpeed);
+        $("#easteregg_text").fadeIn(fadeSpeed);
+        $("#page_transition_div").fadeOut(fadeSpeed);
+        pendingIndexChange = false;
+    }, transitionLength);
+
+    // Fade out everything
+    $("#background_elements").fadeOut(fadeSpeed);
+    $("#page_transition_div").fadeIn(fadeSpeed);
+    $("#easteregg_text").fadeOut(fadeSpeed);
+    setTimeout(function() {
+        document.getElementById("moon_planet").style.display = "block";
+        document.getElementById("moon_planet_2").style.display = "block";
+        document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/milk.png";
+        document.getElementById("moon_planet_2").style.backgroundImage = "url(assets/img/astronaut.png";
+        document.getElementById("page-top").style.background = "radial-gradient(at right bottom, rgba(125, 76, 39, 1) 10%, rgba(0,0,0,1) 100%)";
+        document.getElementById("main_planet").style.backgroundImage = "url(assets/img/cookie.png)";
+        document.getElementById("randomize_button").innerHTML = "změnit pozadí (právě secret)";
     }, fadeSpeed);
 }
