@@ -7,7 +7,7 @@ const planetColors = ["rgba(0,54,181,1)", "rgba(181, 116, 38, 1)", "rgba(9, 127,
 
 function scrollHandle()
 {
-    if (window.scrollY == 0)
+    if (window.scrollY < 200)
     {
         scrolledUp = true;
         $("#nav").stop().animate({backgroundColor: 'rgba(0,0,0,0)'}, 300);
