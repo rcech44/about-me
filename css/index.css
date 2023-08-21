@@ -3,13 +3,13 @@ header.masthead {
     overflow: hidden;
     padding-top: calc(7rem + 72px);
     padding-bottom: 7rem;
-    background: #000000ce;
+    background: #00000065;
     /* background: radial-gradient(at center, #7434BD, #010101); */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
-    animation: background-opacity 13s infinite normal;
+    /* animation: background-opacity 13s infinite normal; */
   }
   header.masthead .masthead-content {
     padding-top: 3vh;
@@ -448,16 +448,17 @@ header.masthead .bg-planet {
     animation: planet-animation-2 20s linear(0, 0.30 90%, 0.95 10%, 1) infinite;
 }
   header.masthead .bg-planet-3 {
-    width: 3vw;
-    height: 3vw;
+    width: 4vw;
+    height: 4vw;
     max-width: 1500px;
     max-height: 1500px;
     bottom:-4vw;
     right:-2.5vw;
-    background-image: url(../assets/img/planets/moon.png);
+    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3 50s linear(0, 0.30 90%, 0.95 10%, 1) infinite;
-    animation-delay: 0.3s;
+    animation-delay: 2s;
 }
 @keyframes planet-animation-1 {
     from {
@@ -474,6 +475,6 @@ header.masthead .bg-planet {
 }
 
 @keyframes planet-animation-3 {
-    from { transform: rotate(0deg) translateX(-40vw) rotate(0deg) rotate(0deg);}
-    to   { transform: rotate(360deg) translateX(-40vw) rotate(-360deg) rotate(15000deg); }
+    from { transform: rotate(0deg) translateX(-20vw) rotate(0deg) rotate(0deg);}
+    to   { transform: rotate(360deg) translateX(-20vw) rotate(-360deg) rotate(10000deg); }
 }

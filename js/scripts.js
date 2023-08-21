@@ -129,7 +129,7 @@ function randomizeIndex()
     setTimeout(function() {
         if (planets[randomNumber] != "mercury" && planets[randomNumber] != "black-hole") document.getElementById("moon_planet").style.display = "block";
         else document.getElementById("moon_planet").style.display = "none";
-        document.getElementById("moon_planet_2").style.display = "none";
+        // document.getElementById("moon_planet_2").style.display = "none";
         document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/planets/moon.png";
         document.getElementById("page-top").style.background = "radial-gradient(at right bottom, " + planetColors[randomNumber] + " 10%, rgba(0,0,0,1) 100%)";
         document.getElementById("main_planet").style.backgroundImage = "url(assets/img/planets/" + planets[randomNumber] + ".png)";
