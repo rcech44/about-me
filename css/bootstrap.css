@@ -5319,6 +5319,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* max-height: 80vh; */
   color: var(--bs-modal-color);
   pointer-events: auto;
   background-color: var(--bs-modal-bg);
@@ -10929,5 +10930,5 @@ body::-webkit-scrollbar {
 
 .carousel-pic {
     object-fit: contain;
-    max-height: 70vh;
+    max-height: 60vh;
 }
