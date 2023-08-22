@@ -144,6 +144,7 @@ function randomizeIndex()
 function randomizeIndexStartup()
 {
     var randomNumber = Math.floor(Math.random() * (planets.length - 0) + 0);
+    currentPlanetNumber = randomNumber;
     document.getElementById("moon_planet_2").style.display = "block";
     if (planets[randomNumber] != "mercury" && planets[randomNumber] != "black-hole") document.getElementById("moon_planet").style.display = "block";
     else document.getElementById("moon_planet").style.display = "none";
