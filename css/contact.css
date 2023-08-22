@@ -338,3 +338,9 @@ header.masthead .bg-star-11 {
     from { opacity:0% }
     to   { opacity:100% }
 }
+
+.contact-social-image {
+    width: 3rem;
+    height: 3rem;
+    filter: grayscale() brightness(220%);
+}

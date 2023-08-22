@@ -3,13 +3,13 @@ header.masthead {
     overflow: hidden;
     padding-top: calc(7rem + 72px);
     padding-bottom: 7rem;
-    background: #00000065;
+    background: #000000a9;
     /* background: radial-gradient(at center, #7434BD, #010101); */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
-    /* animation: background-opacity 13s infinite normal; */
+    animation: background-opacity 13s infinite normal;
   }
   header.masthead .masthead-content {
     padding-top: 3vh;

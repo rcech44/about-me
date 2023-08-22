@@ -96,7 +96,7 @@ header.masthead {
     width: 20vw;
     top: 18vh;
     left: -60vw;
-    background: linear-gradient(90deg, #916b0300 0%, #749732 80%);
+    background: linear-gradient(90deg, #916b0300 0%, #d4b346 80%);
     animation: rotate-scale-down 7s linear infinite both;
 }
 
@@ -105,7 +105,7 @@ header.masthead .bg-circle-8 {
     width: 20vw;
     top: 37vh;
     left: -50vw;
-    background: linear-gradient(90deg, #916b0300 0%, #87a838 80%);
+    background: linear-gradient(90deg, #916b0300 0%, #d3b614 80%);
     animation: rotate-scale-down 21s linear infinite both;
 }
   
