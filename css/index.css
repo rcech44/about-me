@@ -10,97 +10,74 @@ header.masthead {
     background-attachment: scroll;
     background-size: cover;
     animation: background-opacity 13s infinite normal;
-  }
-  header.masthead .masthead-content {
+}
+
+header.masthead .masthead-content {
     padding-top: 3vh;
     padding-bottom: 5vh;
     z-index: 1;
     position: relative;
     opacity: 100%;
-  }
-  header.masthead .masthead-content .masthead-heading {
+}
+
+header.masthead .masthead-content .masthead-heading {
     font-size: 4rem;
-  }
-  header.masthead .masthead-content .masthead-subheading {
+}
+
+header.masthead .masthead-content .masthead-subheading {
     font-size: 2rem;
-  }
-  header.masthead .masthead-content .masthead-subsubheading {
+}
+
+header.masthead .masthead-content .masthead-subsubheading {
     font-weight: lighter;
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
-  }
+}
 
 @keyframes background-opacity {
     0% {
         background-color: #00000000;
     }
+
     50% {
-        background-color: #000000b7;
+        background-color: #00000086;
     }
+
     100% {
         background-color: #00000000;
-  }
+    }
 }
 
-@keyframes myOrbitPlanet1 {
-    from { transform: rotate(0deg) translateX(-10vw) rotate(0deg);}
-    to   { transform: rotate(360deg) translateX(-10vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet2 {
-    from { transform: rotate(0deg) translateX(-12vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-12vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet3 {
-    from { transform: rotate(0deg) translateX(-15vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-15vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet4 {
-    from { transform: rotate(0deg) translateX(-19vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-19vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet5 {
-    from { transform: rotate(0deg) translateX(-26vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-26vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet6 {
-    from { transform: rotate(0deg) translateX(-35vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-35vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet7 {
-    from { transform: rotate(0deg) translateX(-40vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-40vw) rotate(-360deg); }
-}
-@keyframes myOrbitPlanet8 {
-    from { transform: rotate(0deg) translateX(-48vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-48vw) rotate(-360deg); }
-}
-
-  @keyframes rotate-scale-down {
+@keyframes star-opacity-animation {
     0% {
         opacity: 0%;
-  }
-  50% {
-        opacity: 80%;
-  }
-  100% {
-    opacity: 0%;
-  }
-  }
-
-  @media (min-width: 992px) {
-    header.masthead {
-      padding-top: calc(10rem + 55px);
-      padding-bottom: 10rem;
     }
+
+    50% {
+        opacity: 80%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        padding-top: calc(10rem + 55px);
+        padding-bottom: 10rem;
+    }
+
     header.masthead .masthead-content .masthead-heading {
         text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
         font-size: 6rem;
-      }
-      header.masthead .masthead-content .masthead-subheading {
-          text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    header.masthead .masthead-content .masthead-subheading {
+        text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
         font-size: 3rem;
-      }
-  }
+    }
+}
 
 .btn-primary {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -118,10 +95,10 @@ header.masthead {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #b2b2b2;
     --bs-btn-disabled-border-color: #b2b2b2;
-  }
+}
 
 .navbar-custom {
-    background-color:rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     padding-top: 1rem;
     padding-bottom: 1rem;
     animation: navbar-animation 60s linear infinite both;
@@ -133,125 +110,131 @@ header.masthead .bg-star {
     position: absolute;
     font-size: 3rem;
     transition: 0.3s;
-  }
-  header.masthead .bg-star-1 {
-      height: 5vw;
-      width: 5vw;
-      top: 21vh;
-      left: 10vw;
-      /* background: #6786a3; */
-      animation: rotate-scale-down 10s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-2 {
-      height: 3vw;
-      width: 3vw;
-      top: 9vh;
-      left: 19vw;
-      /* background: #1f5f9c; */
-      animation: rotate-scale-down 17s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-3 {
-      height: 6vw;
-      width: 6vw;
-      top: 37vh;
-      left: 33vw;
-      /* background: #3e7fbd; */
-      animation: rotate-scale-down 14s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-4 {
-      height: 8vw;
-      width: 8vw;
-      top: 47vh;
-      left: 77vw;
-      /* background: #719dc7; */
-      animation: rotate-scale-down 23s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-5 {
-      height: 2vw;
-      width: 2vw;
-      top: 69vh;
-      left: 69vw;
-      /* background: #3387d6; */
-      animation: rotate-scale-down 13s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-6 {
-      height: 4vw;
-      width: 4vw;
-      top: 81vh;
-      left: 80vw;
-      /* background: #3f6991; */
-      animation: rotate-scale-down 10s ease-in-out infinite both;
-  }
+}
 
-  header.masthead .bg-star-7 {
+header.masthead .bg-star-1 {
+    height: 5vw;
+    width: 5vw;
+    top: 21vh;
+    left: 10vw;
+    /* background: #6786a3; */
+    animation: star-opacity-animation 10s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-2 {
+    height: 3vw;
+    width: 3vw;
+    top: 9vh;
+    left: 19vw;
+    /* background: #1f5f9c; */
+    animation: star-opacity-animation 17s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-3 {
+    height: 6vw;
+    width: 6vw;
+    top: 37vh;
+    left: 33vw;
+    /* background: #3e7fbd; */
+    animation: star-opacity-animation 14s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-4 {
+    height: 8vw;
+    width: 8vw;
+    top: 47vh;
+    left: 77vw;
+    /* background: #719dc7; */
+    animation: star-opacity-animation 23s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-5 {
+    height: 2vw;
+    width: 2vw;
+    top: 69vh;
+    left: 69vw;
+    /* background: #3387d6; */
+    animation: star-opacity-animation 13s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-6 {
+    height: 4vw;
+    width: 4vw;
+    top: 81vh;
+    left: 80vw;
+    /* background: #3f6991; */
+    animation: star-opacity-animation 10s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-7 {
     height: 4vw;
     width: 4vw;
     top: 23vh;
     left: 75vw;
     /* background: #3f6991; */
-    animation: rotate-scale-down 12s ease-in-out infinite both;
+    animation: star-opacity-animation 12s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-8 {
     height: 4vw;
     width: 4vw;
     top: 5vh;
     left: 91vw;
     /* background: #3f6991; */
-    animation: rotate-scale-down 18s ease-in-out infinite both;
+    animation: star-opacity-animation 18s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-9 {
     height: 4vw;
     width: 4vw;
     top: 74vh;
     left: 28vw;
     /* background: #3f6991; */
-    animation: rotate-scale-down 6s ease-in-out infinite both;
+    animation: star-opacity-animation 6s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-10 {
     height: 4vw;
     width: 4vw;
     top: 90vh;
     left: 5vw;
     /* background: #3f6991; */
-    animation: rotate-scale-down 24s ease-in-out infinite both;
+    animation: star-opacity-animation 24s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-11 {
     height: 4vw;
     width: 4vw;
     top: 65vh;
     left: 14vw;
     /* background: #3f6991; */
-    animation: rotate-scale-down 29s ease-in-out infinite both;
+    animation: star-opacity-animation 29s ease-in-out infinite both;
 }
 
-header.masthead .bg-circle {
+header.masthead .bg-falling-star {
     z-index: 0;
     position: absolute;
     /* -webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(247, 170, 69, 0)), color-stop(100%, rgba(247, 170, 69, 1))); */
     /* mask-size: 100%; */
     background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
-    filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
+    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.6));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 3s;
     opacity: 70%;
-  }
-  header.masthead .bg-circle-1 {
-      height: 0.8vh;
-      width: 15vw;
-      top: -20vh;
-      right: -20vw;
-      rotate: 135deg;
-      border-radius: 5% / 50%;
-      background: linear-gradient(90deg, #ffffff00 10%, #ffffff 80%);
-      animation: star-animation-1 15s linear infinite both;
-  }
-  
-  header.masthead .bg-circle-2 {
+}
+
+header.masthead .bg-falling-star-1 {
+    height: 0.8vh;
+    width: 15vw;
+    top: -20vh;
+    right: -20vw;
+    rotate: 135deg;
+    border-radius: 5% / 50%;
+    background: linear-gradient(90deg, #ffffff00 10%, #ffffff 80%);
+    animation: falling-star-animation-1 15s linear infinite both;
+}
+
+header.masthead .bg-falling-star-2 {
     height: 0.5vh;
     width: 10vw;
     top: 20vh;
@@ -259,11 +242,11 @@ header.masthead .bg-circle {
     rotate: 135deg;
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 10%, #ffffff 80%);
-    animation: star-animation-2 70s linear infinite both;
+    animation: falling-star-animation-2 70s linear infinite both;
     animation-delay: 1s;
 }
 
-header.masthead .bg-circle-3 {
+header.masthead .bg-falling-star-3 {
     height: 1vh;
     width: 10vw;
     top: 60vh;
@@ -271,11 +254,11 @@ header.masthead .bg-circle-3 {
     rotate: 135deg;
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 30%, #ffffff 100%);
-    animation: star-animation-3 30s linear infinite both;
+    animation: falling-star-animation-3 30s linear infinite both;
     animation-delay: 3s;
 }
 
-header.masthead .bg-circle-4 {
+header.masthead .bg-falling-star-4 {
     height: 1vh;
     width: 40vw;
     top: -40vh;
@@ -283,11 +266,11 @@ header.masthead .bg-circle-4 {
     rotate: 135deg;
     border-radius: 3% / 50%;
     background: linear-gradient(90deg, #ffffff00 30%, #ffffff 100%);
-    animation: star-animation-4 20s linear infinite both;
+    animation: falling-star-animation-4 20s linear infinite both;
     animation-delay: 1s;
 }
 
-header.masthead .bg-circle-5 {
+header.masthead .bg-falling-star-5 {
     height: 0.7vh;
     width: 20vw;
     top: 50vh;
@@ -295,186 +278,220 @@ header.masthead .bg-circle-5 {
     rotate: 135deg;
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 30%, #ffffff 100%);
-    animation: star-animation-5 10s linear infinite both;
+    animation: falling-star-animation-5 10s linear infinite both;
     animation-delay: 0s;
 }
 
-@keyframes star-animation-1 {
+@keyframes falling-star-animation-1 {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 0%;
+        transform: translateX(0);
+        opacity: 0%;
     }
+
     10% {
         -webkit-transform: translateX(10vw);
-                transform: translateX(10vw);
-                opacity: 70%;
+        transform: translateX(10vw);
+        opacity: 70%;
     }
+
     90% {
         -webkit-transform: translateX(90vw);
-                transform: translateX(90vw);
-                opacity: 70%;
+        transform: translateX(90vw);
+        opacity: 70%;
     }
+
     100% {
         -webkit-transform: translateX(100vw);
-                transform: translateX(100vw);
-                opacity: 0%;
+        transform: translateX(100vw);
+        opacity: 0%;
     }
 }
 
-@keyframes star-animation-2 {
+@keyframes falling-star-animation-2 {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 0%;
+        transform: translateX(0);
+        opacity: 0%;
     }
+
     10% {
         -webkit-transform: translateX(8vw);
-                transform: translateX(8vw);
-                opacity: 70%;
+        transform: translateX(8vw);
+        opacity: 70%;
     }
+
     90% {
         -webkit-transform: translateX(72vw);
-                transform: translateX(72vw);
-                opacity: 70%;
+        transform: translateX(72vw);
+        opacity: 70%;
     }
+
     100% {
         -webkit-transform: translateX(80vw);
-                transform: translateX(80vw);
-                opacity: 0%;
+        transform: translateX(80vw);
+        opacity: 0%;
     }
 }
 
-@keyframes star-animation-3 {
+@keyframes falling-star-animation-3 {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 0%;
+        transform: translateX(0);
+        opacity: 0%;
     }
+
     10% {
         -webkit-transform: translateX(6vw);
-                transform: translateX(6vw);
-                opacity: 70%;
+        transform: translateX(6vw);
+        opacity: 70%;
     }
+
     90% {
         -webkit-transform: translateX(54vw);
-                transform: translateX(54vw);
-                opacity: 70%;
+        transform: translateX(54vw);
+        opacity: 70%;
     }
+
     100% {
         -webkit-transform: translateX(60vw);
-                transform: translateX(60vw);
-                opacity: 0%;
+        transform: translateX(60vw);
+        opacity: 0%;
     }
 }
 
-@keyframes star-animation-4 {
+@keyframes falling-star-animation-4 {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 0%;
+        transform: translateX(0);
+        opacity: 0%;
     }
+
     10% {
         -webkit-transform: translateX(10vw);
-                transform: translateX(10vw);
-                opacity: 70%;
+        transform: translateX(10vw);
+        opacity: 70%;
     }
+
     90% {
         -webkit-transform: translateX(90vw);
-                transform: translateX(90vw);
-                opacity: 70%;
+        transform: translateX(90vw);
+        opacity: 70%;
     }
+
     100% {
         -webkit-transform: translateX(100vw);
-                transform: translateX(100vw);
-                opacity: 0%;
+        transform: translateX(100vw);
+        opacity: 0%;
     }
 }
 
-@keyframes star-animation-5 {
+@keyframes falling-star-animation-5 {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 0%;
+        transform: translateX(0);
+        opacity: 0%;
     }
+
     10% {
         -webkit-transform: translateX(6vw);
-                transform: translateX(6vw);
-                opacity: 70%;
+        transform: translateX(6vw);
+        opacity: 70%;
     }
+
     90% {
         -webkit-transform: translateX(54vw);
-                transform: translateX(54vw);
-                opacity: 70%;
+        transform: translateX(54vw);
+        opacity: 70%;
     }
+
     100% {
         -webkit-transform: translateX(60vw);
-                transform: translateX(60vw);
-                opacity: 0%;
+        transform: translateX(60vw);
+        opacity: 0%;
     }
 }
 
 header.masthead .bg-planet {
-    width: 20vw;
-    height: 20vw;
-    max-width: 150px;
-    max-height: 150px;
-    z-index: 0;
+
     position: absolute;
     /* border-radius: 50%; */
-    filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
+    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.6));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 0.3s;
     opacity: 100%;
-  }
-  header.masthead .bg-planet-1 {
+}
+
+header.masthead .bg-planet-1 {
+    width: 30vh;
+    height: 30vh;
     max-width: 1500px;
     max-height: 1500px;
-    bottom:-10vw;
-    right:-10vw;
+    bottom: -15vh;
+    right: -15vh;
     background-image: url(../assets/img/planets/earth.png);
     background-size: cover;
     animation: planet-animation-1 30s linear infinite both;
 }
-  header.masthead .bg-planet-2 {
-    width: 3vw;
-    height: 3vw;
+
+header.masthead .bg-planet-2 {
+    width: 3vh;
+    height: 3vh;
     max-width: 1500px;
     max-height: 1500px;
-    bottom:-2.5vw;
-    right:-2.5vw;
+    bottom: -2.5vh;
+    right: -2.5vh;
     background-image: url(../assets/img/planets/moon.png);
     background-size: cover;
     animation: planet-animation-2 20s linear(0, 0.30 90%, 0.95 10%, 1) infinite;
 }
-  header.masthead .bg-planet-3 {
-    width: 4vw;
-    height: 4vw;
+
+header.masthead .bg-planet-3 {
+    width: 4vh;
+    height: 4vh;
     max-width: 1500px;
     max-height: 1500px;
-    bottom:-4vw;
-    right:-2.5vw;
+    bottom: -4vh;
+    right: -2.5vh;
     filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295));
     background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3 50s linear(0, 0.30 90%, 0.95 10%, 1) infinite;
     animation-delay: 2s;
 }
+
 @keyframes planet-animation-1 {
     from {
-        transform: rotate(0deg)
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-        transform: rotate(360deg)
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes planet-animation-2 {
-    from { transform: rotate(0deg) translateX(-30vw) rotate(0deg) rotate(0deg);}
-    to   { transform: rotate(360deg) translateX(-30vw) rotate(-360deg) rotate(720deg); }
+    from {
+        -webkit-transform: rotate(0deg) translateX(-40vh) rotate(0deg) rotate(0deg);
+        transform: rotate(0deg) translateX(-40vh) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg) translateX(-40vh) rotate(-360deg) rotate(720deg);
+        transform: rotate(360deg) translateX(-40vh) rotate(-360deg) rotate(720deg);
+    }
 }
 
 @keyframes planet-animation-3 {
-    from { transform: rotate(0deg) translateX(-20vw) rotate(0deg) rotate(0deg);}
-    to   { transform: rotate(360deg) translateX(-20vw) rotate(-360deg) rotate(10000deg); }
+    from {
+        -webkit-transform: rotate(0deg) translateX(-30vh) rotate(0deg) rotate(0deg);
+        transform: rotate(0deg) translateX(-30vh) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg) translateX(-30vh) rotate(-360deg) rotate(10000deg);
+        transform: rotate(360deg) translateX(-30vh) rotate(-360deg) rotate(10000deg);
+    }
 }

@@ -10869,6 +10869,7 @@ html {
     text-transform: uppercase;
     font-weight: light;
     padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
     font-size: 0.8rem;
     /* font-weight: 700; */
     letter-spacing: 0.1rem;
@@ -10910,7 +10911,7 @@ html {
 .page-transition-div {
     display:none;
     position:absolute;
-    width: 200%;
+    width: 100%;
     height: 2000%;
     background-color: black;
     z-index: 998;
