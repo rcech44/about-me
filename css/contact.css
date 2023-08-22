@@ -1,7 +1,7 @@
 header.masthead {
     position: relative;
     overflow: hidden;
-    padding-top: calc(7rem + 72px);
+    padding-top: 4rem;
     padding-bottom: 7rem;
     background: #000000ce;
     /* background: radial-gradient(at center, #7434BD, #010101); */
@@ -10,36 +10,42 @@ header.masthead {
     background-attachment: scroll;
     background-size: cover;
     animation: background-opacity 10s infinite normal;
-  }
-  header.masthead .masthead-content {
+}
+
+header.masthead .masthead-content {
     padding-top: 3vh;
     padding-bottom: 5vh;
     z-index: 1;
     position: relative;
     opacity: 100% !important;
-  }
-  header.masthead .masthead-content .masthead-heading {
+}
+
+header.masthead .masthead-content .masthead-heading {
     font-size: 4rem;
-  }
-  header.masthead .masthead-content .masthead-subheading {
+}
+
+header.masthead .masthead-content .masthead-subheading {
     font-size: 2rem;
-  }
-  header.masthead .masthead-content .masthead-subsubheading {
+}
+
+header.masthead .masthead-content .masthead-subsubheading {
     font-weight: lighter;
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
-  }
+}
 
 @keyframes background-opacity {
     0% {
         background-color: #00000000;
     }
+
     50% {
         background-color: #00000067;
     }
+
     100% {
         background-color: #00000000;
-  }
+    }
 }
 
 header.masthead .bg-circle {
@@ -50,94 +56,103 @@ header.masthead .bg-circle {
     z-index: 0;
     position: absolute;
     /* border-radius: 50%; */
-    filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
+    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.6));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 0.3s;
     opacity: 80%;
-  }
-  header.masthead .bg-circle-0 {
+}
+
+header.masthead .bg-circle-0 {
     width: 10vw;
     height: 10vw;
     max-width: 1500px;
     max-height: 1500px;
-    bottom:3vw;
-    left:45vw;
+    bottom: 3vw;
+    left: 45vw;
     background-image: url(../assets/img/planets/sun.png);
     background-size: cover;
 }
-  header.masthead .bg-circle-1 {
-      width: 1vw;
-      height: 1vw;
-      bottom:8vw;
-      left:49.5vw;
-      background-image: url(../assets/img/planets/mercury.png);
-      background-size: cover;
-      animation: myOrbitPlanet1 15s linear infinite;
-  }
-  header.masthead .bg-circle-2 {
+
+header.masthead .bg-circle-1 {
     width: 1vw;
     height: 1vw;
-    bottom:8vw;
-    left:49.5vw;
+    bottom: 8vw;
+    left: 49.5vw;
+    background-image: url(../assets/img/planets/mercury.png);
+    background-size: cover;
+    animation: myOrbitPlanet1 15s linear infinite;
+}
+
+header.masthead .bg-circle-2 {
+    width: 1vw;
+    height: 1vw;
+    bottom: 8vw;
+    left: 49.5vw;
     background-image: url(../assets/img/planets/venus.png);
     background-size: cover;
     animation: myOrbitPlanet2 25s linear infinite;
     animation-delay: -4s;
 }
+
 header.masthead .bg-circle-3 {
     width: 3vw;
     height: 3vw;
-    bottom:7vw;
-    left:48.5vw;
+    bottom: 7vw;
+    left: 48.5vw;
     background-image: url(../assets/img/planets/earth.png);
     background-size: cover;
     animation: myOrbitPlanet3 30s linear infinite;
     animation-delay: -23s;
 }
+
 header.masthead .bg-circle-4 {
     width: 1vw;
     height: 1vw;
-    bottom:8vw;
-    left:49.5vw;
+    bottom: 8vw;
+    left: 49.5vw;
     background-image: url(../assets/img/planets/mars.png);
     background-size: cover;
     animation: myOrbitPlanet4 35s linear infinite;
     animation-delay: -10s;
 }
+
 header.masthead .bg-circle-5 {
     width: 7vw;
     height: 7vw;
-    bottom:5.5vw;
-    left:46.5vw;
+    bottom: 5.5vw;
+    left: 46.5vw;
     background-image: url(../assets/img/planets/jupiter.png);
     background-size: cover;
     animation: myOrbitPlanet5 45s linear infinite;
     animation-delay: -20s;
 }
+
 header.masthead .bg-circle-6 {
     width: 6vw;
     height: 6vw;
-    bottom:5.5vw;
-    left:48vw;
+    bottom: 5.5vw;
+    left: 48vw;
     background-image: url(../assets/img/planets/saturn.png);
     background-size: cover;
     animation: myOrbitPlanet6 50s linear infinite;
 }
+
 header.masthead .bg-circle-7 {
     width: 4vw;
     height: 4vw;
-    bottom:6vw;
-    left:46.5vw;
+    bottom: 6vw;
+    left: 46.5vw;
     background-image: url(../assets/img/planets/uranus.png);
     background-size: cover;
     animation: myOrbitPlanet7 55s linear infinite;
     animation-delay: -17s;
 }
+
 header.masthead .bg-circle-8 {
     width: 4vw;
     height: 4vw;
-    bottom:6vw;
-    left:48vw;
+    bottom: 6vw;
+    left: 48vw;
     background-image: url(../assets/img/planets/neptune.png);
     background-size: cover;
     animation: myOrbitPlanet8 58s linear infinite;
@@ -145,67 +160,118 @@ header.masthead .bg-circle-8 {
 }
 
 @keyframes myOrbitPlanet1 {
-    from { transform: rotate(0deg) translateX(-10vw) rotate(0deg);}
-    to   { transform: rotate(360deg) translateX(-10vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-10vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-10vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet2 {
-    from { transform: rotate(0deg) translateX(-12vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-12vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-12vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-12vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet3 {
-    from { transform: rotate(0deg) translateX(-15vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-15vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-15vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-15vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet4 {
-    from { transform: rotate(0deg) translateX(-19vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-19vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-19vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-19vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet5 {
-    from { transform: rotate(0deg) translateX(-24vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-24vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-24vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-24vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet6 {
-    from { transform: rotate(0deg) translateX(-34vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-34vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-34vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-34vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet7 {
-    from { transform: rotate(0deg) translateX(-39vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-39vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-39vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-39vw) rotate(-360deg);
+    }
 }
+
 @keyframes myOrbitPlanet8 {
-    from { transform: rotate(0deg) translateX(-47vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(-47vw) rotate(-360deg); }
+    from {
+        transform: rotate(0deg) translateX(-47vw) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-47vw) rotate(-360deg);
+    }
 }
 
 
 
 
-  @keyframes rotate-scale-down {
+@keyframes rotate-scale-down {
     0% {
         opacity: 0%;
-  }
-  50% {
-        opacity: 80%;
-  }
-  100% {
-    opacity: 0%;
-  }
-  }
-
-  @media (min-width: 992px) {
-    header.masthead {
-      padding-top: calc(10rem + 55px);
-      padding-bottom: 10rem;
     }
+
+    50% {
+        opacity: 80%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        padding-top: 15vh;
+        /* padding-bottom: 10rem; */
+    }
+
     header.masthead .masthead-content .masthead-heading {
         text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
-        font-size: 6rem;
-      }
-      header.masthead .masthead-content .masthead-subheading {
-          text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+        font-size: 5rem;
+    }
+
+    header.masthead .masthead-content .masthead-subheading {
+        text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
         font-size: 3rem;
-      }
-  }
+    }
+}
 
 .btn-primary {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -223,10 +289,10 @@ header.masthead .bg-circle-8 {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #b2b2b2;
     --bs-btn-disabled-border-color: #b2b2b2;
-  }
+}
 
 .navbar-custom {
-    background-color:rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     padding-top: 1rem;
     padding-bottom: 1rem;
     animation: navbar-animation 60s linear infinite both;
@@ -238,62 +304,63 @@ header.masthead .bg-star {
     position: absolute;
     font-size: 3rem;
     transition: 0.3s;
-  }
-  header.masthead .bg-star-1 {
-      height: 5vw;
-      width: 5vw;
-      top: 21vh;
-      left: 10vw;
-      /* background: #6786a3; */
-      animation: rotate-scale-down 10s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-2 {
-      height: 3vw;
-      width: 3vw;
-      top: 9vh;
-      left: 19vw;
-      /* background: #1f5f9c; */
-      animation: rotate-scale-down 17s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-3 {
-      height: 6vw;
-      width: 6vw;
-      top: 37vh;
-      left: 33vw;
-      /* background: #3e7fbd; */
-      animation: rotate-scale-down 14s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-4 {
-      height: 8vw;
-      width: 8vw;
-      top: 47vh;
-      left: 77vw;
-      /* background: #719dc7; */
-      animation: rotate-scale-down 23s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-5 {
-      height: 2vw;
-      width: 2vw;
-      top: 69vh;
-      left: 69vw;
-      /* background: #3387d6; */
-      animation: rotate-scale-down 13s ease-in-out infinite both;
-  }
-  
-  header.masthead .bg-star-6 {
-      height: 4vw;
-      width: 4vw;
-      top: 81vh;
-      left: 80vw;
-      /* background: #3f6991; */
-      animation: rotate-scale-down 10s ease-in-out infinite both;
-  }
+}
 
-  header.masthead .bg-star-7 {
+header.masthead .bg-star-1 {
+    height: 5vw;
+    width: 5vw;
+    top: 21vh;
+    left: 10vw;
+    /* background: #6786a3; */
+    animation: rotate-scale-down 10s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-2 {
+    height: 3vw;
+    width: 3vw;
+    top: 9vh;
+    left: 19vw;
+    /* background: #1f5f9c; */
+    animation: rotate-scale-down 17s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-3 {
+    height: 6vw;
+    width: 6vw;
+    top: 37vh;
+    left: 33vw;
+    /* background: #3e7fbd; */
+    animation: rotate-scale-down 14s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-4 {
+    height: 8vw;
+    width: 8vw;
+    top: 47vh;
+    left: 77vw;
+    /* background: #719dc7; */
+    animation: rotate-scale-down 23s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-5 {
+    height: 2vw;
+    width: 2vw;
+    top: 69vh;
+    left: 69vw;
+    /* background: #3387d6; */
+    animation: rotate-scale-down 13s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-6 {
+    height: 4vw;
+    width: 4vw;
+    top: 81vh;
+    left: 80vw;
+    /* background: #3f6991; */
+    animation: rotate-scale-down 10s ease-in-out infinite both;
+}
+
+header.masthead .bg-star-7 {
     height: 4vw;
     width: 4vw;
     top: 23vh;
@@ -301,6 +368,7 @@ header.masthead .bg-star {
     /* background: #3f6991; */
     animation: rotate-scale-down 12s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-8 {
     height: 4vw;
     width: 4vw;
@@ -309,6 +377,7 @@ header.masthead .bg-star-8 {
     /* background: #3f6991; */
     animation: rotate-scale-down 18s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-9 {
     height: 4vw;
     width: 4vw;
@@ -317,6 +386,7 @@ header.masthead .bg-star-9 {
     /* background: #3f6991; */
     animation: rotate-scale-down 6s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-10 {
     height: 4vw;
     width: 4vw;
@@ -325,6 +395,7 @@ header.masthead .bg-star-10 {
     /* background: #3f6991; */
     animation: rotate-scale-down 24s ease-in-out infinite both;
 }
+
 header.masthead .bg-star-11 {
     height: 4vw;
     width: 4vw;
@@ -335,8 +406,13 @@ header.masthead .bg-star-11 {
 }
 
 @keyframes body-opacity {
-    from { opacity:0% }
-    to   { opacity:100% }
+    from {
+        opacity: 0%
+    }
+
+    to {
+        opacity: 100%
+    }
 }
 
 .contact-social-image {
