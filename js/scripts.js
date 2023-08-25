@@ -1,9 +1,10 @@
 var pendingIndexChange = false;
 var currentPlanetNumber = 0;
 var scrolledUp = true;
-const planets = ["earth", "jupiter", "neptune", "mercury", "mars", "black-hole", "alien"];
-const planetsCzech = ["Země", "Jupiter", "Neptun", "Merkur", "Mars", "Černá díra", "Mimozemšťané"];
-const planetColors = ["rgba(0,54,181,1)", "rgba(181, 116, 38, 1)", "rgba(9, 127, 181, 1)", "rgba(130, 130, 130, 1)", "rgba(171, 54, 48, 1)", "rgba(106, 43, 173, 1)", "rgba(47, 194, 86, 1)"];
+const planets = ["earth", "jupiter", "neptune", "mercury", "mars", "black-hole", "alien", "uranus", "exoplanet_1", "exoplanet_2", "moon"];
+const planetsCzech = ["Země", "Jupiter", "Neptun", "Merkur", "Mars", "Černá díra", "Mimozemšťané", "Uran", "Exoplaneta 1", "Exoplaneta 2", "Měsíc"];
+const planetsEnglish = ["Earth", "Jupiter", "Neptune", "Mercury", "Mars", "Black Hole", "Aliens", "Uranus", "Exoplanet 1", "Exoplanet 2", "Moon"];
+const planetColors = ["rgba(0,54,181,1)", "rgba(184, 106, 70, 1)", "rgba(9, 127, 181, 1)", "rgba(130, 130, 130, 1)", "rgba(171, 54, 48, 1)", "rgba(83, 71, 173, 1)", "rgba(40, 168, 74, 1)", "rgba(62, 102, 171, 1)", "rgba(129, 69, 168, 1)", "rgba(181, 130, 40, 1)", "rgba(135, 135, 135, 1)"];
 
 function scrollHandle()
 {
@@ -102,6 +103,28 @@ function setModal(type)
     }
 }
 
+function setBackground(index)
+{
+    document.getElementById("moon_planet_2").style.display = "block";
+    document.getElementById("moon_planet_2").style.backgroundImage = "url(assets/img/astronaut.png";
+    if (planets[index] != "mercury" && planets[index] != "black-hole" && planets[index] != "moon") document.getElementById("moon_planet").style.display = "block";
+    else document.getElementById("moon_planet").style.display = "none";
+    if (planets[index] == "alien") {
+        document.getElementById("moon_planet_2").style.display = "none";
+        document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/ufo.png";
+    }
+    else if (planets[index] == "earth") {
+        document.getElementById("moon_planet_2").style.backgroundImage = "url(assets/img/satellite.png";
+    }
+    else if (planets[index] == "moon") {
+        document.getElementById("moon_planet_2").style.backgroundImage = "url(assets/img/rocket.png";
+    }
+    else document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/planets/moon.png";
+    document.getElementById("page-top").style.background = "radial-gradient(at right bottom, " + planetColors[index] + " 10%, rgba(0,0,0,1) 100%)";
+    document.getElementById("main_planet").style.backgroundImage = "url(assets/img/planets/" + planets[index] + ".png)";
+    document.getElementById("randomize_button").innerHTML = "změnit pozadí (právě " + planetsCzech[index] + ")";
+}
+
 function randomizeIndex()
 {
     if (pendingIndexChange) return;
@@ -127,17 +150,7 @@ function randomizeIndex()
     $("#page_transition_div").fadeIn(fadeSpeed);
     $("#easteregg_text").fadeOut(fadeSpeed);
     setTimeout(function() {
-        document.getElementById("moon_planet_2").style.display = "block";
-        if (planets[randomNumber] != "mercury" && planets[randomNumber] != "black-hole") document.getElementById("moon_planet").style.display = "block";
-        else document.getElementById("moon_planet").style.display = "none";
-        if (planets[randomNumber] == "alien") {
-            document.getElementById("moon_planet_2").style.display = "none";
-            document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/ufo.png";
-        }
-        else document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/planets/moon.png";
-        document.getElementById("page-top").style.background = "radial-gradient(at right bottom, " + planetColors[randomNumber] + " 10%, rgba(0,0,0,1) 100%)";
-        document.getElementById("main_planet").style.backgroundImage = "url(assets/img/planets/" + planets[randomNumber] + ".png)";
-        document.getElementById("randomize_button").innerHTML = "změnit pozadí (právě " + planetsCzech[randomNumber] + ")";
+        setBackground(randomNumber);
     }, fadeSpeed);
 }
 
@@ -145,17 +158,7 @@ function randomizeIndexStartup()
 {
     var randomNumber = Math.floor(Math.random() * (planets.length - 0) + 0);
     currentPlanetNumber = randomNumber;
-    document.getElementById("moon_planet_2").style.display = "block";
-    if (planets[randomNumber] != "mercury" && planets[randomNumber] != "black-hole") document.getElementById("moon_planet").style.display = "block";
-    else document.getElementById("moon_planet").style.display = "none";
-    if (planets[randomNumber] == "alien") {
-        document.getElementById("moon_planet_2").style.display = "none";
-        document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/ufo.png";
-    }
-    else document.getElementById("moon_planet").style.backgroundImage = "url(assets/img/planets/moon.png";
-    document.getElementById("page-top").style.background = "radial-gradient(at right bottom, " + planetColors[randomNumber] + " 10%, rgba(0,0,0,1) 100%)";
-    document.getElementById("main_planet").style.backgroundImage = "url(assets/img/planets/" + planets[randomNumber] + ".png)";
-    document.getElementById("randomize_button").innerHTML = "změnit pozadí (právě " + planetsCzech[randomNumber] + ")";
+    setBackground(randomNumber);
 }
 
 function easterEgg()
