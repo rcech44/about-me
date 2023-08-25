@@ -1,0 +1,154 @@
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    background: linear-gradient(0deg, #ffffff 0%, #8a5532 70%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  header.masthead .masthead-content {
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    z-index: 1;
+    position: relative;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+  }
+  header.masthead .bg-circle {
+    z-index: 0;
+    position: absolute;
+    border-radius: 0%;
+    /* -webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(247, 170, 69, 0)), color-stop(100%, rgba(247, 170, 69, 1))); */
+    mask-size: 100%;
+    background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
+    filter: drop-shadow(20px 1px 10px rgba(0,0,0,0.6));
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
+    transition: 0.3s;
+    opacity: 70%;
+  }
+  header.masthead .bg-circle-1 {
+      height: 1vh;
+      width: 30vw;
+      top: 42vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f76045 80%);
+      animation: rotate-scale-down 8s linear infinite both;
+  }
+  
+  /* header.masthead .bg-circle:active {
+      background: #000000;
+  } */
+  
+  header.masthead .bg-circle-2 {
+      height: 2vh;
+      width: 15vw;
+      top: 5vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f79245 80%);
+      animation: rotate-scale-down 17s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-3 {
+      height: 1vh;
+      width: 25vw;
+      top: 11vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f74b45 80%);
+      animation: rotate-scale-down 14s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-4 {
+      height: 1vh;
+      width: 20vw;
+      top: 15vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f7cd45 80%);
+      animation: rotate-scale-down 23s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-5 {
+      height: 2vh;
+      width: 35vw;
+      top: 21vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #ad823d 80%);
+      animation: rotate-scale-down 5s linear infinite both;
+  }
+  
+  header.masthead .bg-circle-6 {
+      height: 2vh;
+      width: 20vw;
+      top: 33vh;
+      left: -60vw;
+      background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
+      animation: rotate-scale-down 12s linear infinite both;
+  }
+
+  header.masthead .bg-circle-7 {
+    height: 2vh;
+    width: 20vw;
+    top: 18vh;
+    left: -60vw;
+    background: linear-gradient(90deg, #916b0300 0%, #d4b346 80%);
+    animation: rotate-scale-down 7s linear infinite both;
+}
+
+header.masthead .bg-circle-8 {
+    height: 2vh;
+    width: 20vw;
+    top: 37vh;
+    left: -50vw;
+    background: linear-gradient(90deg, #916b0300 0%, #d3b614 80%);
+    animation: rotate-scale-down 21s linear infinite both;
+}
+  
+  
+  @keyframes rotate-scale-down {
+  0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+  }
+  100% {
+      -webkit-transform: translateX(160vw);
+              transform: translateX(160vw);
+  }
+  }
+
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-top: calc(10rem + 55px);
+      padding-bottom: 10rem;
+    }
+    header.masthead .masthead-content .masthead-heading {
+        text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+        font-size: 6rem;
+      }
+      header.masthead .masthead-content .masthead-subheading {
+          text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+        font-size: 3rem;
+      }
+  }
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #b58300;
+    --bs-btn-border-color: #b58300;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #825e00;
+    --bs-btn-hover-border-color: #825e00;
+    --bs-btn-focus-shadow-rgb: 241, 46, 141;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #825e00;
+    --bs-btn-active-border-color: #825e00;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #b58300;
+    --bs-btn-disabled-border-color: #b58300;
+  }

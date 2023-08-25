@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Projekty | Radomír Čech</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon_projects.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/news.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body id="page-top" onscroll="scrollHandle()">
+        <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
+        <!-- Navigation-->
+        <nav id="nav" style="background-color:rgba(0, 0, 0, 0)" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="https://www.rcech.cz/index" onclick="return pageTransition(this);">Radomír Čech</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link nav-link-active active" href="https://www.rcech.cz/news" onclick="return pageTransition(this);">Novinky</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/features" onclick="return pageTransition(this);">Dovednosti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/projects" onclick="return pageTransition(this);">Projekty</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/about" onclick="return pageTransition(this);">O mně</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/contact" onclick="return pageTransition(this);">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white" style="-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-2">Novinky</h1>
+                    <h2 class="masthead-subheading mb-2">Co je u mě nového?</h2>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#chapter_1">Posunout dolů</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+            <div class="bg-circle-5 bg-circle"></div>
+            <div class="bg-circle-6 bg-circle"></div>
+            <div class="bg-circle-7 bg-circle"></div>
+            <div class="bg-circle-8 bg-circle"></div>
+        </header>
+
+        <div class="container px-5" id="chapter_1" style="display:none;" >
+            <h2 class="display-4">Nejnovější</h2>
+        </div>
+
+        <!-- Content section 1-->
+        <section id="chapter_2" style="display:none; margin-bottom: 5rem;" >
+            <div class="container py-4">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-8">
+                        <div class="px-5">
+                            <p>22. srpen 2023</p>
+                            <h2 class="display-4">Spuštěn web</h2>
+                            <p>Ayy spustil jsem tento web lmao</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="px-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_1.png" alt="..." /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 2-->
+
+        <div class="container px-5" id="chapter_3" style="display:none;" >
+            <h2 class="display-4">Archív</h2>
+        </div>
+
+        
+
+        <!-- Footer-->
+        <footer id="chapter_8" style="display:none;" class="py-3 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and icons from <a style="color:white;" href="https://www.flaticon.com/authors/freepik">Freepik - Flaticon</a></p></div>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            $("#page_transition_div").fadeOut("slow");
+            setTimeout(function () {
+                $("#chapter_1").fadeIn("slow");
+            }, 100);
+            setTimeout(function () {
+                $("#chapter_2").fadeIn("slow");
+            }, 200);
+            setTimeout(function () {
+                $("#chapter_3").fadeIn("slow");
+            }, 300);
+            setTimeout(function () {
+                $("#chapter_4").fadeIn("slow");
+            }, 400);
+            setTimeout(function () {
+                $("#chapter_5").fadeIn("slow");
+            }, 500);
+            setTimeout(function () {
+                $("#chapter_6").fadeIn("slow");
+            }, 600);
+            setTimeout(function () {
+                $("#chapter_7").fadeIn("slow");
+            }, 700);
+            setTimeout(function () {
+                $("#chapter_8").fadeIn("slow");
+            }, 800);
+        </script>
+
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -108,107 +108,210 @@ header.masthead .masthead-content .masthead-subsubheading {
 header.masthead .bg-star {
     z-index: 0;
     position: absolute;
-    font-size: 3rem;
+    font-size: 0.5vw;
     transition: 0.3s;
+    width: 4vw;
+    height: 4vw;
+    text-shadow: rgb(255, 255, 255) 0px 0 5px;
 }
 
-header.masthead .bg-star-1 {
-    height: 5vw;
-    width: 5vw;
-    top: 21vh;
-    left: 10vw;
-    /* background: #6786a3; */
+#background_stars div:nth-child(1) {
+    /* Asterism Big Dipper */
+    top: 10vh;
+    left: 7vw;
     animation: star-opacity-animation 10s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-2 {
-    height: 3vw;
-    width: 3vw;
-    top: 9vh;
-    left: 19vw;
-    /* background: #1f5f9c; */
+#background_stars div:nth-child(2) {
+    /* Asterism Big Dipper */
+    top: 12vh;
+    left: 12vw;
     animation: star-opacity-animation 17s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-3 {
-    height: 6vw;
-    width: 6vw;
+#background_stars div:nth-child(3) {
     top: 37vh;
     left: 33vw;
-    /* background: #3e7fbd; */
     animation: star-opacity-animation 14s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-4 {
-    height: 8vw;
-    width: 8vw;
+#background_stars div:nth-child(4) {
     top: 47vh;
     left: 77vw;
-    /* background: #719dc7; */
     animation: star-opacity-animation 23s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-5 {
-    height: 2vw;
-    width: 2vw;
+#background_stars div:nth-child(5) {
     top: 69vh;
     left: 69vw;
-    /* background: #3387d6; */
     animation: star-opacity-animation 13s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-6 {
-    height: 4vw;
-    width: 4vw;
+#background_stars div:nth-child(6) {
     top: 81vh;
-    left: 80vw;
-    /* background: #3f6991; */
+    left: 88vw;
     animation: star-opacity-animation 10s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-7 {
-    height: 4vw;
-    width: 4vw;
+#background_stars div:nth-child(7) {
     top: 23vh;
     left: 75vw;
-    /* background: #3f6991; */
     animation: star-opacity-animation 12s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-8 {
-    height: 4vw;
-    width: 4vw;
+#background_stars div:nth-child(8) {
     top: 5vh;
     left: 91vw;
-    /* background: #3f6991; */
     animation: star-opacity-animation 18s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-9 {
-    height: 4vw;
-    width: 4vw;
+#background_stars div:nth-child(9) {
     top: 74vh;
     left: 28vw;
-    /* background: #3f6991; */
     animation: star-opacity-animation 6s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-10 {
-    height: 4vw;
-    width: 4vw;
+#background_stars div:nth-child(10) {
     top: 90vh;
     left: 5vw;
-    /* background: #3f6991; */
     animation: star-opacity-animation 24s ease-in-out infinite both;
 }
 
-header.masthead .bg-star-11 {
-    height: 4vw;
-    width: 4vw;
+#background_stars div:nth-child(11) {
     top: 65vh;
     left: 14vw;
-    /* background: #3f6991; */
     animation: star-opacity-animation 29s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(12) {
+    top: 12vh;
+    left: 44vw;
+    animation: star-opacity-animation 24s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(13) {
+    top: 36vh;
+    left: 90vw;
+    animation: star-opacity-animation 27s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(14) {
+    top: 80vh;
+    left: 57vw;
+    animation: star-opacity-animation 18s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(15) {
+    top: 95vh;
+    left: 37vw;
+    animation: star-opacity-animation 12s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(16) {
+    top: 62vh;
+    left: 1vw;
+    animation: star-opacity-animation 21s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(17) {
+    /* Asterism Big Dipper */
+    top: 17vh;
+    left: 14vw;
+    animation: star-opacity-animation 34s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(18) {
+    /* Asterism Big Dipper */
+    top: 21vh;
+    left: 17vw;
+    animation: star-opacity-animation 9s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(19) {
+    /* Asterism Big Dipper */
+    top: 24vh;
+    left: 25vw;
+    animation: star-opacity-animation 19s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(20) {
+    /* Asterism Big Dipper */
+    top: 31vh;
+    left: 22vw;
+    animation: star-opacity-animation 32s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(21) {
+    /* Asterism Big Dipper */
+    top: 27vh;
+    left: 16.5vw;
+    animation: star-opacity-animation 14s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(22) {
+    top: 4vh;
+    left: 65vw;
+    animation: star-opacity-animation 21s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(23) {
+    top: 70vh;
+    left: 97vw;
+    animation: star-opacity-animation 18s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(24) {
+    top: 90vh;
+    left: 70vw;
+    animation: star-opacity-animation 24s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(25) {
+    top: 85vh;
+    left: 18vw;
+    animation: star-opacity-animation 29s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(26) {
+    top: 70vh;
+    left: 40vw;
+    animation: star-opacity-animation 12s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(27) {
+    top: 32vh;
+    left: 60vw;
+    animation: star-opacity-animation 14s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(28) {
+    top: 66vh;
+    left: 80vw;
+    animation: star-opacity-animation 22s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(29) {
+    top: 98vh;
+    left: 78vw;
+    animation: star-opacity-animation 38s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(30) {
+    top: 6vh;
+    left: 28vw;
+    animation: star-opacity-animation 21s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(31) {
+    top: 19vh;
+    left: 55vw;
+    animation: star-opacity-animation 15s ease-in-out infinite both;
+}
+
+#background_stars div:nth-child(32) {
+    top: 37vh;
+    left: 5vw;
+    animation: star-opacity-animation 12s ease-in-out infinite both;
 }
 
 header.masthead .bg-falling-star {
@@ -217,13 +320,13 @@ header.masthead .bg-falling-star {
     /* -webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(247, 170, 69, 0)), color-stop(100%, rgba(247, 170, 69, 1))); */
     /* mask-size: 100%; */
     background: linear-gradient(90deg, #916b0300 0%, #f7aa45 80%);
-    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(8px 0 8px rgb(255, 255, 255));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 3s;
     opacity: 70%;
 }
 
-header.masthead .bg-falling-star-1 {
+#background_falling_stars div:nth-child(1) {
     height: 0.8vh;
     width: 15vw;
     top: -20vh;
@@ -231,10 +334,10 @@ header.masthead .bg-falling-star-1 {
     rotate: 135deg;
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 10%, #ffffff 80%);
-    animation: falling-star-animation-1 15s linear infinite both;
+    animation: falling-star-animation-1 25s linear infinite both;
 }
 
-header.masthead .bg-falling-star-2 {
+#background_falling_stars div:nth-child(2) {
     height: 0.5vh;
     width: 10vw;
     top: 20vh;
@@ -242,23 +345,23 @@ header.masthead .bg-falling-star-2 {
     rotate: 135deg;
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 10%, #ffffff 80%);
-    animation: falling-star-animation-2 70s linear infinite both;
+    animation: falling-star-animation-2 35s linear infinite both;
     animation-delay: 1s;
 }
 
-header.masthead .bg-falling-star-3 {
+#background_falling_stars div:nth-child(3) {
     height: 1vh;
-    width: 10vw;
+    width: 17vw;
     top: 60vh;
     right: 30vw;
     rotate: 135deg;
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 30%, #ffffff 100%);
-    animation: falling-star-animation-3 30s linear infinite both;
+    animation: falling-star-animation-3 25s linear infinite both;
     animation-delay: 3s;
 }
 
-header.masthead .bg-falling-star-4 {
+#background_falling_stars div:nth-child(4) {
     height: 1vh;
     width: 40vw;
     top: -40vh;
@@ -270,7 +373,7 @@ header.masthead .bg-falling-star-4 {
     animation-delay: 1s;
 }
 
-header.masthead .bg-falling-star-5 {
+#background_falling_stars div:nth-child(5) {
     height: 0.7vh;
     width: 20vw;
     top: 50vh;
@@ -279,6 +382,18 @@ header.masthead .bg-falling-star-5 {
     border-radius: 5% / 50%;
     background: linear-gradient(90deg, #ffffff00 30%, #ffffff 100%);
     animation: falling-star-animation-5 10s linear infinite both;
+    animation-delay: 0s;
+}
+
+#background_falling_stars div:nth-child(6) {
+    height: 0.6vh;
+    width: 30vw;
+    top: -20vh;
+    right: 20vw;
+    rotate: 135deg;
+    border-radius: 5% / 50%;
+    background: linear-gradient(90deg, #ffffff00 30%, #ffffff 100%);
+    animation: falling-star-animation-6 15s linear infinite both;
     animation-delay: 0s;
 }
 
@@ -412,11 +527,37 @@ header.masthead .bg-falling-star-5 {
     }
 }
 
+@keyframes falling-star-animation-6 {
+    0% {
+        -webkit-transform: translateX(0) translateY(0) rotate(135deg);
+        transform: translateX(0) translateY(0) rotate(135deg);
+        opacity: 0%;
+    }
+
+    10% {
+        -webkit-transform: translateX(-6vw) translateY(6vw) rotate(135deg);
+        transform: translateX(-6vw) translateY(6vw) rotate(135deg);
+        opacity: 70%;
+    }
+
+    90% {
+        -webkit-transform: translateX(-54vw) translateY(54vw) rotate(135deg);
+        transform: translateX(-54vw) translateY(54vw) rotate(135deg);
+        opacity: 70%;
+    }
+
+    100% {
+        -webkit-transform: translateX(-60vw) translateY(60vw) rotate(135deg);
+        transform: translateX(-60vw) translateY(60vw) rotate(135deg);
+        opacity: 0%;
+    }
+}
+
 header.masthead .bg-planet {
 
     position: absolute;
     /* border-radius: 50%; */
-    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
     transition: 0.3s;
     opacity: 100%;
