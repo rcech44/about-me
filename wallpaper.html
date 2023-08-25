@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,400;0,500;1,300&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/bootstrap_wallpaper.css" rel="stylesheet" />
+    <link href="css/wallpaper.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body id="page-top" style="background: radial-gradient(at right bottom, rgba(0,54,181,1) 10%, rgba(0,0,0,1) 100%);">
+    <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
+    <header class="masthead text-center text-white" style="height: 100vh">
+        <div id="background_elements">
+            <div id="background_stars">
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+                <div class="bg-star">•</div>
+            </div>
+            <div id="background_falling_stars">
+                <div class="bg-falling-star"></div>
+                <div class="bg-falling-star"></div>
+                <div class="bg-falling-star"></div>
+                <div class="bg-falling-star"></div>
+                <div class="bg-falling-star"></div>
+                <div class="bg-falling-star"></div>
+            </div>
+            <div id="star_flare" class="star-flare"><img src="assets/img/flare.png" style="vertical-align: middle;height: 100%;"></div>
+            <div id="main_planet" class="bg-planet-1 bg-planet"></div>
+            <div id="moon_planet" class="bg-planet-2 bg-planet"></div>
+            <div id="moon_planet_2" class="bg-planet-3 bg-planet" style="display:block;"></div>
+        </div>
+        <div style="position:absolute;bottom: 2rem !important;left: 2rem !important;">
+            <a id="settings_button" onclick="toggleSettings()" class="btn btn-s rounded-pill"
+                style="margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;"><i
+                    class="fa fa-gear"></i></a>
+            <a id="randomize_button" class="btn btn-s rounded-pill" onclick="randomizeIndex()"
+                style="display:none; margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">change theme (currently earth)</a>
+            <a id="change_location" class="btn btn-s rounded-pill" onclick="changeLocation()"
+                style="display:none; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">change position</a>
+        </div>
+    </header>
+    <!-- Core theme JS-->
+    <script src="js/scripts_wallpaper.js"></script>
+    <script>
+        randomizeIndexStartup();
+        $("#page_transition_div").fadeOut("slow");
+    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
