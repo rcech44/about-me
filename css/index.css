@@ -77,6 +77,9 @@ header.masthead .masthead-content .masthead-subsubheading {
         text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
         font-size: 3rem;
     }
+    header.masthead .bg-star {
+        font-size: 0.5vw !important;
+    }
 }
 
 .btn-primary {
@@ -108,7 +111,7 @@ header.masthead .masthead-content .masthead-subsubheading {
 header.masthead .bg-star {
     z-index: 0;
     position: absolute;
-    font-size: 0.5vw;
+    font-size: 1vw;
     transition: 0.3s;
     width: 4vw;
     height: 4vw;
