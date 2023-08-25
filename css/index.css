@@ -597,7 +597,6 @@ header.masthead .bg-planet-3 {
     max-height: 1500px;
     bottom: -4vh;
     right: -2.5vh;
-    filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295));
     background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3 50s linear(0, 0.30 90%, 0.95 10%, 1) infinite;
