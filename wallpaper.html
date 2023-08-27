@@ -19,7 +19,7 @@
 
 <body id="page-top" style="background: radial-gradient(at right bottom, rgba(0,54,181,1) 10%, rgba(0,0,0,1) 100%);">
     <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
-    <header class="masthead text-center text-white" style="height: 100vh">
+    <header id="header" class="masthead text-center text-white" style="height: 100vh">
         <div id="background_elements">
             <div id="background_stars">
                 <div class="bg-star">•</div>
@@ -55,6 +55,18 @@
                 <div class="bg-star">•</div>
                 <div class="bg-star">•</div>
             </div>
+            <div id="background_stars_small">
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+                <div class="bg-star-small">•</div>
+            </div>
             <div id="background_falling_stars">
                 <div class="bg-falling-star"></div>
                 <div class="bg-falling-star"></div>
@@ -68,14 +80,20 @@
             <div id="moon_planet" class="bg-planet-2 bg-planet"></div>
             <div id="moon_planet_2" class="bg-planet-3 bg-planet" style="display:block;"></div>
         </div>
-        <div style="position:absolute;bottom: 2rem !important;left: 2rem !important;">
+        <div style="position:absolute;bottom: 4rem !important;left: 2rem !important;">
             <a id="settings_button" onclick="toggleSettings()" class="btn btn-s rounded-pill"
                 style="margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;"><i
                     class="fa fa-gear"></i></a>
             <a id="randomize_button" class="btn btn-s rounded-pill" onclick="randomizeIndex()"
-                style="display:none; margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">change theme (currently earth)</a>
+                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">theme: </a>
             <a id="change_location" class="btn btn-s rounded-pill" onclick="changeLocation()"
-                style="display:none; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">change position</a>
+                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">position: center</a>
+            <a id="change_brightness" class="btn btn-s rounded-pill" onclick="changeBrightness()"
+                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">brightness: animated bright</a>
+            <a id="change_falling_stars" class="btn btn-s rounded-pill" onclick="changeFallingStars()"
+                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">falling stars: on</a>
+            <a id="change_rotating_objects" class="btn btn-s rounded-pill" onclick="changeRotatingObjects()"
+                style="display:none; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">rotating objects: on</a>
         </div>
     </header>
     <!-- Core theme JS-->

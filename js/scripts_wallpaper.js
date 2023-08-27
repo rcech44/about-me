@@ -6,13 +6,29 @@ const PlanetLocation = {
     Centered: 'center',
     RightBottom: 'right bottom'
 };
+const BrightnessOptions = {
+    0: {'value': 0, 'text': 'Animated Bright', 'animationName': 'background-opacity-animated-bright'},
+    1: {'value': 1, 'text': 'Bright', 'animationName': 'background-opacity-bright'},
+    2: {'value': 2, 'text': 'Animated Dark', 'animationName': 'background-opacity-animated-dark'},
+    3: {'value': 3, 'text': 'Dark', 'animationName': 'background-opacity-dark'},
+    4: {'value': 4, 'text': 'Shining', 'animationName': 'background-opacity-extra-dark'},
+    5: {'value': 5, 'text': 'Black', 'animationName': 'background-opacity-black'}
+
+};
+const BrightnessOptionsLength = 6;
 
 var pendingIndexChange = false;
 var currentPlanetNumber = 0;
 var randomNumber = 0;
 var settings = false;
+var fallingStars = true;
+var rotatingObjects = true;
+var showMoon1 = true;
+var showMoon2 = true;
 var currentPlanetLocation = PlanetLocation.Centered;
 var currentPlanetLocationRotating = false;
+var currentBrightness = BrightnessOptions[0];
+var currentShininess = "100%";
 
 function generateStarFlarePositionCenter()
 {
@@ -52,8 +68,10 @@ var starFlareInterval = setInterval(setStarFlarePosition, 8000);
 
 function setBackground(index)
 {
-    document.getElementById("moon_planet").style.display = "block";
-    document.getElementById("moon_planet_2").style.display = "block";
+    showMoon1 = true;
+    showMoon2 = true;
+    if (rotatingObjects) document.getElementById("moon_planet").style.display = "block";
+    if (rotatingObjects) document.getElementById("moon_planet_2").style.display = "block";
     document.getElementById("moon_planet_2").style.backgroundImage = "url(assets/img/astronaut.png)";
     currentPlanetLocationRotating = true;
 
@@ -69,14 +87,23 @@ function setBackground(index)
     }
 
     // Show small moon
-    if (planets[index] != "mercury" && planets[index] != "moon" && planets[index] != "black-hole") document.getElementById("moon_planet").style.display = "block";
-    else document.getElementById("moon_planet").style.display = "none";
+    if (planets[index] != "mercury" && planets[index] != "moon" && planets[index] != "black-hole")
+    {
+        showMoon1 = true;
+        if (rotatingObjects) document.getElementById("moon_planet").style.display = "block";
+    }
+    else 
+    {
+        showMoon1 = false;
+        document.getElementById("moon_planet").style.display = "none";
+    }
 
     // Alien scenario
     if (planets[index] == "alien") 
     {
         currentPlanetLocationRotating = false;
         document.getElementById("moon_planet").style.display = "none";
+        showMoon1 = false;
         document.getElementById("moon_planet_2").style.backgroundImage = "url(assets/img/ufo.png)";
         if (currentPlanetLocation == PlanetLocation.Centered)
         {
@@ -129,7 +156,8 @@ function setBackground(index)
 
     document.getElementById("page-top").style.background = "radial-gradient(at " + currentPlanetLocation  + ", " + planetColors[index] + " 10%, rgba(0,0,0,1) 100%)";
     document.getElementById("main_planet").style.backgroundImage = "url(assets/img/planets/" + planets[index] + ".png)";
-    document.getElementById("randomize_button").innerHTML = "change theme (currently " + planetsEnglish[index] + ")";
+    document.getElementById("randomize_button").innerHTML = "theme: " + planetsEnglish[index];
+    if (currentBrightness.text == "Shining") document.getElementById("main_planet").style.webkitFilter = "drop-shadow(0 0 130px " + planetColors[randomNumber] + ")";
 }
 
 function randomizeIndex()
@@ -195,6 +223,7 @@ function changeLocation()
     {
         currentPlanetLocation = PlanetLocation.RightBottom;
         setTimeout(function() {
+            document.getElementById("change_location").innerHTML = "position: corner";
             document.getElementById("page-top").style.background = "radial-gradient(at " + currentPlanetLocation  + ", " + planetColors[randomNumber] + " 10%, rgba(0,0,0,1) 100%)";
             document.getElementById("main_planet").classList.remove("bg-planet-1");
             document.getElementById("moon_planet").classList.remove("bg-planet-2");
@@ -210,6 +239,7 @@ function changeLocation()
     {
         currentPlanetLocation = PlanetLocation.Centered;
         setTimeout(function() {
+            document.getElementById("change_location").innerHTML = "position: center";
             document.getElementById("page-top").style.background = "radial-gradient(at " + currentPlanetLocation  + ", " + planetColors[randomNumber] + " 10%, rgba(0,0,0,1) 100%)";
             document.getElementById("main_planet").classList.remove("bg-planet-1-right-bottom");
             document.getElementById("moon_planet").classList.remove("bg-planet-2-right-bottom");
@@ -221,7 +251,6 @@ function changeLocation()
             else document.getElementById("moon_planet_2").classList.add("bg-planet-3");
         }, fadeSpeed);
     }
-
 }
 
 function toggleSettings()
@@ -230,12 +259,70 @@ function toggleSettings()
     {
         $("#randomize_button").fadeIn("slow");
         $("#change_location").fadeIn("slow");
+        $("#change_brightness").fadeIn("slow");
+        $("#change_falling_stars").fadeIn("slow");
+        $("#change_rotating_objects").fadeIn("slow");
         settings = true;
     }
     else
     {
         $("#randomize_button").fadeOut("slow");
         $("#change_location").fadeOut("slow");
+        $("#change_brightness").fadeOut("slow");
+        $("#change_falling_stars").fadeOut("slow");
+        $("#change_rotating_objects").fadeOut("slow");
         settings = false;
+    }
+}
+
+function changeBrightness()
+{
+    if (currentBrightness.value == BrightnessOptionsLength - 1) currentBrightness = BrightnessOptions[0];
+    else currentBrightness = BrightnessOptions[currentBrightness.value + 1];
+    if (currentBrightness.text == "Shining")
+    {
+        document.getElementById("main_planet").style.removeProperty("filter");
+        document.getElementById("main_planet").style.setProperty("filter", "drop-shadow(0 0 130px " + planetColors[randomNumber] + ")");
+    }
+    else 
+    {
+        document.getElementById("main_planet").style.removeProperty("filter");
+        document.getElementById("main_planet").style.setProperty("filter", "drop-shadow(0 0 10px rgba(0, 0, 0, 0.295))");
+    }
+    document.getElementById("header").style.animation = currentBrightness.animationName + " 25s infinite normal";
+    document.getElementById("change_brightness").innerHTML = "brightness: " + currentBrightness.text;
+}
+
+function changeFallingStars()
+{
+    if (fallingStars)
+    {
+        document.getElementById("background_falling_stars").style.display = "none";
+        document.getElementById("change_falling_stars").innerHTML = "falling stars: off";
+        fallingStars = false;
+    }
+    else
+    {
+        document.getElementById("background_falling_stars").style.display = "block";
+        document.getElementById("change_falling_stars").innerHTML = "falling stars: on";
+        fallingStars = true;
+    }
+}
+
+function changeRotatingObjects()
+{
+    if (rotatingObjects)
+    {
+        document.getElementById("moon_planet").style.display = "none";
+        document.getElementById("moon_planet_2").style.display = "none";
+        document.getElementById("change_rotating_objects").innerHTML = "rotating objects: off";
+        rotatingObjects = false;
+    }
+    else
+    {
+        if (showMoon1) document.getElementById("moon_planet").style.display = "block";
+        if (showMoon2) document.getElementById("moon_planet_2").style.display = "block";
+        document.getElementById("change_rotating_objects").innerHTML = "rotating objects: on";
+        rotatingObjects = true;
     }
 }

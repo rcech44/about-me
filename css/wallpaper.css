@@ -9,7 +9,7 @@ header.masthead {
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
-    animation: background-opacity 25s infinite normal;
+    animation: background-opacity-animated-bright 25s infinite normal;
 }
 
 header.masthead .masthead-content {
@@ -34,19 +34,74 @@ header.masthead .masthead-content .masthead-subsubheading {
     letter-spacing: 0.15rem;
 }
 
-@keyframes background-opacity {
+@keyframes background-opacity-animated-bright {
     0% {
         background-color: #00000000;
     }
 
     50% {
-        background-color: #000000a9;
+        background-color: #0000009d;
     }
 
     100% {
         background-color: #00000000;
     }
 }
+
+@keyframes background-opacity-bright {
+    0% {
+        background-color: #00000028;
+    }
+
+    100% {
+        background-color: #00000028;
+    }
+}
+
+@keyframes background-opacity-animated-dark {
+    0% {
+        background-color: #00000077;
+    }
+
+    50% {
+        background-color: #000000d8;
+    }
+
+    100% {
+        background-color: #00000077;
+    }
+}
+
+@keyframes background-opacity-dark {
+    0% {
+        background-color: #000000be;
+    }
+
+    100% {
+        background-color: #000000be;
+    }
+}
+
+@keyframes background-opacity-extra-dark {
+    0% {
+        background-color: #000000e7;
+    }
+
+    100% {
+        background-color: #000000e7;
+    }
+}
+
+@keyframes background-opacity-black {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #000000;
+    }
+}
+
 
 @keyframes star-opacity-animation {
     0% {
@@ -104,6 +159,76 @@ header.masthead .masthead-content .masthead-subsubheading {
     animation: navbar-animation 60s linear infinite both;
 }
 
+header.masthead .bg-star-small {
+    z-index: 0;
+    position: absolute;
+    font-size: 0.1vw;
+    transition: 0.3s;
+    opacity: 80%;
+    width: 4vw;
+    height: 4vw;
+    text-shadow: rgb(255, 255, 255) 0px 0 5px;
+}
+
+#background_stars_small div:nth-child(1) {
+    top: 15vh;
+    left: 3vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(2) {
+    top: 30vh;
+    left: 40vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(3) {
+    top: 57vh;
+    left: 63vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(4) {
+    top: 50vh;
+    left: 30vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(5) {
+    top: 90vh;
+    left: 50vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(6) {
+    top: 57vh;
+    left: 83vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(7) {
+    top: 40vh;
+    left: 20vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(8) {
+    top: 63vh;
+    left: 58vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(9) {
+    top: 64vh;
+    left: 27vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
+
+#background_stars_small div:nth-child(10) {
+    top: 14vh;
+    left: 95vw;
+    /* animation: star-opacity-animation 10s ease-in-out infinite both; */
+}
 
 header.masthead .bg-star {
     z-index: 0;
@@ -597,10 +722,7 @@ header.masthead .bg-falling-star {
 header.masthead .bg-planet {
 
     position: absolute;
-    /* border-radius: 50%; */
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
-    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
-    transition: 0.3s;
+    transition: 0.5s;
     opacity: 100%;
 }
 
@@ -612,7 +734,8 @@ header.masthead .bg-planet-1 {
     right: 0;
     bottom: 0;
     margin: auto;
-    background-image: url(earth.png);
+    background-image: url(../assets/img/planets/earth.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
     background-size: cover;
     background-repeat: repeat-y;
     animation: planet-animation-1 60s linear infinite both;
@@ -625,7 +748,8 @@ header.masthead .bg-planet-1-right-bottom {
     max-height: 1500px;
     bottom: -17.5vh;
     right: -17.5vh;
-    background-image: url(earth.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/planets/earth.png);
     background-size: cover;
     animation: planet-animation-1 30s linear infinite both;
 }
@@ -638,7 +762,8 @@ header.masthead .bg-planet-2 {
     right: 0;
     bottom: 0;
     margin: auto;
-    background-image: url(moon.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/planets/moon.png);
     background-size: cover;
     animation: planet-animation-2 40s linear infinite;
 }
@@ -650,7 +775,8 @@ header.masthead .bg-planet-2-right-bottom {
     max-height: 1500px;
     bottom: -2.5vh;
     right: -2.5vh;
-    background-image: url(moon.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(assets/img/planets/moon.png);
     background-size: cover;
     animation: planet-animation-2-right-bottom 20s linear infinite;
 }
@@ -663,8 +789,8 @@ header.masthead .bg-planet-3 {
     right: 0;
     bottom: 0;
     margin: auto;
-    /* filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295)); */
-    background-image: url(astronaut.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3 120s linear infinite;
 }
@@ -677,8 +803,8 @@ header.masthead .bg-planet-3-non-rotate {
     right: 0;
     bottom: 0;
     margin: auto;
-    /* filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295)); */
-    background-image: url(astronaut.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3-non-rotate 60s linear infinite;
 }
@@ -690,8 +816,8 @@ header.masthead .bg-planet-3-right-bottom {
     max-height: 1500px;
     bottom: -4vh;
     right: -2.5vh;
-    /* filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295)); */
-    background-image: url(astronaut.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3-right-bottom 50s linear infinite;
     animation-delay: 2s;
@@ -704,8 +830,8 @@ header.masthead .bg-planet-3-non-rotate-right-bottom {
     max-height: 1500px;
     bottom: -4vh;
     right: -2.5vh;
-    /* filter: drop-shadow(20px 1px 10px rgba(0, 0, 0, 0.295)); */
-    background-image: url(astronaut.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
+    background-image: url(../assets/img/astronaut.png);
     background-size: cover;
     animation: planet-animation-3-non-rotate-right-bottom 40s linear infinite;
     animation-delay: 2s;
