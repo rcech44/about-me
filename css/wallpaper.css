@@ -445,7 +445,7 @@ header.masthead .bg-star {
     top: 10vh;
     right: 20vw;
     position: absolute;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.466) 0%, rgba(255,255,255,0) 50%);
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.466) 0%, rgba(255, 255, 255, 0) 50%);
     /* background-image: url(flare.png);
     background-size: cover; */
     -webkit-filter: drop-shadow(0 0 10px white);
@@ -720,10 +720,10 @@ header.masthead .bg-falling-star {
 }
 
 header.masthead .bg-planet {
-
     position: absolute;
     transition: 0.5s;
     opacity: 100%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
 }
 
 header.masthead .bg-planet-1 {
@@ -776,7 +776,7 @@ header.masthead .bg-planet-2-right-bottom {
     bottom: -2.5vh;
     right: -2.5vh;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.295));
-    background-image: url(assets/img/planets/moon.png);
+    background-image: url(../assets/img/planets/moon.png);
     background-size: cover;
     animation: planet-animation-2-right-bottom 20s linear infinite;
 }
@@ -836,6 +836,371 @@ header.masthead .bg-planet-3-non-rotate-right-bottom {
     animation: planet-animation-3-non-rotate-right-bottom 40s linear infinite;
     animation-delay: 2s;
 }
+
+header.masthead .solar-system-planet-1 {
+    width: 1vh;
+    height: 1vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/mercury.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(130, 130, 130, 1));
+    animation: solar-system-planet-animation-1 15s linear infinite;
+}
+
+header.masthead .solar-system-planet-2 {
+    width: 1vh;
+    height: 1vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/venus.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(255, 220, 110, 1));
+    animation: solar-system-planet-animation-2 25s linear infinite;
+    animation-delay: -4s;
+}
+
+header.masthead .solar-system-planet-3 {
+    width: 3vh;
+    height: 3vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/earth.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(0, 54, 181, 1));
+    animation: solar-system-planet-animation-3 30s linear infinite;
+    animation-delay: -23s;
+}
+
+header.masthead .solar-system-planet-4 {
+    width: 1vh;
+    height: 1vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/mars.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(171, 54, 48, 1));
+    animation: solar-system-planet-animation-4 35s linear infinite;
+    animation-delay: -10s;
+}
+
+header.masthead .solar-system-planet-5 {
+    width: 7vh;
+    height: 7vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/jupiter.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(184, 106, 70, 1));
+    animation: solar-system-planet-animation-5 45s linear infinite;
+    animation-delay: -20s;
+}
+
+header.masthead .solar-system-planet-6 {
+    width: 6vh;
+    height: 6vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/saturn.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(184, 106, 70, 1));
+    animation: solar-system-planet-animation-6 50s linear infinite;
+}
+
+header.masthead .solar-system-planet-7 {
+    width: 4vh;
+    height: 4vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/uranus.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(62, 102, 171, 1));
+    animation: solar-system-planet-animation-7 55s linear infinite;
+    animation-delay: -17s;
+}
+
+header.masthead .solar-system-planet-8 {
+    width: 4vh;
+    height: 4vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/planets/neptune.png);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(9, 127, 181, 1));
+    animation: solar-system-planet-animation-8 58s linear infinite;
+    animation-delay: -29s;
+}
+
+header.masthead .solar-system-planet-1-right-bottom {
+    width: 2vh;
+    height: 2vh;
+    right: 0;
+    bottom: -1vh;
+    background-image: url(../assets/img/planets/mercury.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-1-right-bottom 15s linear infinite;
+}
+
+header.masthead .solar-system-planet-2-right-bottom {
+    width: 2vh;
+    height: 2vh;
+    right: 0;
+    bottom: -1vh;
+    background-image: url(../assets/img/planets/venus.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-2-right-bottom 25s linear infinite;
+    animation-delay: -4s;
+}
+
+header.masthead .solar-system-planet-3-right-bottom {
+    width: 5vh;
+    height: 5vh;
+    right: 0;
+    bottom: -2.5vh;
+    background-image: url(../assets/img/planets/earth.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-3-right-bottom 30s linear infinite;
+    animation-delay: -23s;
+}
+
+header.masthead .solar-system-planet-4-right-bottom {
+    width: 2vh;
+    height: 2vh;
+    right: 0;
+    bottom: -1vh;
+    background-image: url(../assets/img/planets/mars.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-4-right-bottom 35s linear infinite;
+    animation-delay: -10s;
+}
+
+header.masthead .solar-system-planet-5-right-bottom {
+    width: 10vh;
+    height: 10vh;
+    right: 0;
+    bottom: -5vh;
+    background-image: url(../assets/img/planets/jupiter.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-5-right-bottom 45s linear infinite;
+    animation-delay: -20s;
+}
+
+header.masthead .solar-system-planet-6-right-bottom {
+    width: 8vh;
+    height: 8vh;
+    right: 0;
+    bottom: -4vh;
+    background-image: url(../assets/img/planets/saturn.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-6-right-bottom 50s linear infinite;
+}
+
+header.masthead .solar-system-planet-7-right-bottom {
+    width: 6vh;
+    height: 6vh;
+    right: 0;
+    bottom: -3vh;
+    background-image: url(../assets/img/planets/uranus.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-7-right-bottom 55s linear infinite;
+    animation-delay: -17s;
+}
+
+header.masthead .solar-system-planet-8-right-bottom {
+    width: 6vh;
+    height: 6vh;
+    right: 0;
+    bottom: -3vh;
+    background-image: url(../assets/img/planets/neptune.png);
+    background-size: cover;
+    animation: solar-system-planet-animation-8-right-bottom 58s linear infinite;
+    animation-delay: -29s;
+}
+
+@keyframes solar-system-planet-animation-1 {
+    from {
+        transform: rotate(0deg) translateX(-10vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-10vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-2 {
+    from {
+        transform: rotate(0deg) translateX(-12vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-12vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-3 {
+    from {
+        transform: rotate(0deg) translateX(-15vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-15vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-4 {
+    from {
+        transform: rotate(0deg) translateX(-18vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-18vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-5 {
+    from {
+        transform: rotate(0deg) translateX(-22vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-22vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-6 {
+    from {
+        transform: rotate(0deg) translateX(-28vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-28vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-7 {
+    from {
+        transform: rotate(0deg) translateX(-34vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-34vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-8 {
+    from {
+        transform: rotate(0deg) translateX(-40vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-40vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-1-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-14vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-14vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-2-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-18vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-18vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-3-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-22vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-22vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-4-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-27vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-27vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-5-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-31vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-31vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-6-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-39vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-39vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-7-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-46vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-46vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
+@keyframes solar-system-planet-animation-8-right-bottom {
+    from {
+        transform: rotate(0deg) translateX(-52vw) rotate(0deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(-52vw) rotate(-360deg) rotate(360deg);
+    }
+}
+
 
 @keyframes planet-animation-1 {
     from {

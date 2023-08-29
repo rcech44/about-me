@@ -101,6 +101,13 @@ function setModal(type)
         pic_3.src = "assets/img/game_showcase/3.jpg";
         pic_4.src = "assets/img/game_showcase/4.jpg";
     }
+    else if (type == "wallpaper")
+    {
+        pic_1.src = "assets/img/wallpaper_showcase/1.png";
+        pic_2.src = "assets/img/wallpaper_showcase/2.png";
+        pic_3.src = "assets/img/wallpaper_showcase/3.png";
+        pic_4.src = "assets/img/wallpaper_showcase/4.png";
+    }
 }
 
 function setBackground(index)

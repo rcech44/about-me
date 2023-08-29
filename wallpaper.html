@@ -12,14 +12,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Core theme CSS (includes Bootstrap)-->
+    <script src="js/obfuscated_wallpaper_css.js"></script>
     <link href="css/bootstrap_wallpaper.css" rel="stylesheet" />
-    <link href="css/wallpaper.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body id="page-top" style="background: radial-gradient(at right bottom, rgba(0,54,181,1) 10%, rgba(0,0,0,1) 100%);">
     <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
-    <header id="header" class="masthead text-center text-white" style="height: 100vh">
+    <header id="header" class="masthead text-white" style="height: 100vh">
         <div id="background_elements">
             <div id="background_stars">
                 <div class="bg-star">•</div>
@@ -79,27 +81,59 @@
             <div id="main_planet" class="bg-planet-1 bg-planet"></div>
             <div id="moon_planet" class="bg-planet-2 bg-planet"></div>
             <div id="moon_planet_2" class="bg-planet-3 bg-planet" style="display:block;"></div>
-        </div>
-        <div style="position:absolute;bottom: 4rem !important;left: 2rem !important;">
-            <a id="settings_button" onclick="toggleSettings()" class="btn btn-s rounded-pill"
-                style="margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;"><i
-                    class="fa fa-gear"></i></a>
-            <a id="randomize_button" class="btn btn-s rounded-pill" onclick="randomizeIndex()"
-                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">theme: </a>
-            <a id="change_location" class="btn btn-s rounded-pill" onclick="changeLocation()"
-                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">position: center</a>
-            <a id="change_brightness" class="btn btn-s rounded-pill" onclick="changeBrightness()"
-                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">brightness: animated bright</a>
-            <a id="change_falling_stars" class="btn btn-s rounded-pill" onclick="changeFallingStars()"
-                style="display:none; margin-right: 10px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">falling stars: on</a>
-            <a id="change_rotating_objects" class="btn btn-s rounded-pill" onclick="changeRotatingObjects()"
-                style="display:none; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">rotating objects: on</a>
+            <div id="solar_system_planet_1" class="solar-system-planet-1 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_2" class="solar-system-planet-2 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_3" class="solar-system-planet-3 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_4" class="solar-system-planet-4 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_5" class="solar-system-planet-5 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_6" class="solar-system-planet-6 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_7" class="solar-system-planet-7 bg-planet" style="display:none;"></div>
+            <div id="solar_system_planet_8" class="solar-system-planet-8 bg-planet" style="display:none;"></div>
         </div>
     </header>
+    <div style="position:absolute;top: 2vh !important;left: 2vw !important;">
+        <a id="settings_button" onclick="toggleSettings()" class="btn btn-s rounded-pill"
+            style="position:relative;z-index: 100;margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;"><i
+                class="fa fa-gear"></i></a>
+        <div class="btn-group rounded-pill" style="font-family: 'Open Sans', sans-serif;text-transform: uppercase;">
+            <button id="randomize_button" type="button" class="btn btn-s dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:none; margin-right: 5px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">
+                Action
+            </button>
+            <div class="dropdown-menu">
+                <a onclick="randomizeIndex(11)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/sun.png">solar system</a>
+                <a onclick="randomizeIndex(3)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/mercury.png">mercury</a>
+                <a onclick="randomizeIndex(12)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/venus.png">venus</a>
+                <a onclick="randomizeIndex(0)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/earth.png">Earth</a>
+                <a onclick="randomizeIndex(10)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/moon.png">moon</a>
+                <a onclick="randomizeIndex(4)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/mars.png">mars</a>
+                <a onclick="randomizeIndex(1)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/jupiter.png">Jupiter</a>
+                <a onclick="randomizeIndex(13)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/saturn.png">saturn</a>
+                <a onclick="randomizeIndex(7)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/uranus.png">uranus</a>
+                <a onclick="randomizeIndex(2)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/neptune.png">neptune</a>
+                <a onclick="randomizeIndex(5)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/black-hole.png">black hole</a>
+                <a onclick="randomizeIndex(6)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/alien.png">aliens</a>
+                <a onclick="randomizeIndex(8)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/exoplanet_1.png">exoplanet 1</a>
+                <a onclick="randomizeIndex(9)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/planets/exoplanet_2.png">exoplanet 2</a>
+                <a onclick="randomizeIndex(14)" class="dropdown-item rounded-pill" href="#"><img style="width: 13px; height: 13px; margin-right: 10px;" src="assets/img/cookie.png">cookie</a>
+            </div>
+        </div>
+        <a id="change_location" class="btn btn-s rounded-pill" onclick="changeLocationSwitch()"
+            style="display:none; margin-right: 5px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">position: center</a>
+        <a id="change_brightness" class="btn btn-s rounded-pill" onclick="changeBrightnessSwitch()"
+            style="display:none; margin-right: 5px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">brightness: animated bright</a>
+        <a id="change_falling_stars" class="btn btn-s rounded-pill" onclick="changeFallingStarsSwitch()"
+            style="display:none; margin-right: 5px; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">falling stars: on</a>
+        <a id="change_rotating_objects" class="btn btn-s rounded-pill" onclick="changeRotatingObjectsSwitch()"
+            style="display:none; background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">rotating objects: on</a>
+    </div>
+    <div id="hidden_text" style="display:none;position:absolute;top: 85vh !important;left: 0 !important; right: 0 !important;text-align: center; width:100%;font-size: 16px; color: #d1d1d1; font-family: 'Open Sans', sans-serif;">
+        <a>Thank you for using this wallpaper. :) Made by Oreo in free time.</a><br>
+        <a>Visit me on my website (www.rcech.cz).</a>
+    </div>
     <!-- Core theme JS-->
-    <script src="js/scripts_wallpaper.js"></script>
+    <script src="js/obfucated_scripts_wallpaper.js"></script>
     <script>
-        randomizeIndexStartup();
+        loadStartup();
         $("#page_transition_div").fadeOut("slow");
     </script>
     <!-- Bootstrap core JS-->
