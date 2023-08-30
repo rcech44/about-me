@@ -93,8 +93,8 @@
     </header>
     <div style="position:absolute;top: 2vh !important;left: 2vw !important;">
         <a id="settings_button" onclick="toggleSettings()" class="btn btn-s rounded-pill"
-            style="position:relative;z-index: 100;margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;"><i
-                class="fa fa-gear"></i></a>
+            style="position:relative;z-index: 100;margin-right: 10px;background-color: rgba(0, 0, 0, 0.226); border-color: #464646; border-width: 0.5px;color: #adadad; font-family: 'Open Sans', sans-serif;"><i
+                class="fa fa-gear" style="margin-right:10px;"></i>Settings</a>
         <div class="btn-group rounded-pill" style="font-family: 'Open Sans', sans-serif;text-transform: uppercase;">
             <button id="randomize_button" type="button" class="btn btn-s dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:none; margin-right: 5px;background-color: rgba(0, 0, 0, 0.226); color: #adadad; font-family: 'Open Sans', sans-serif;">
                 Action
@@ -130,11 +130,26 @@
         <a>Thank you for using this wallpaper. :) Made by Oreo in free time.</a><br>
         <a>Visit me on my website (www.rcech.cz).</a>
     </div>
+
+    <!-- toast -->
+    <div class="toast-container position-absolute p-3 bottom-0 start-50 translate-middle-x" id="toastPlacement">
+        <div id="test" class="toast" data-bs-autohide="false">
+          <div class="toast-header">
+            <strong class="me-auto">👋🏽 First time launch message</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Welcome! To customize your wallpaper, use settings button in the left upper corner. Settings are automatically saved after each change and will re-apply after restart or switching wallpaper.<br><br>
+            If you encounter any bugs or issues, please send a comment on Steam Workshop page.
+          </div>
+        </div>
+    </div>
+
     <!-- Core theme JS-->
-    <script src="js/obfucated_scripts_wallpaper.js"></script>
+    <script src="js/obfuscated_scripts_wallpaper.js"></script>
     <script>
         loadStartup();
-        $("#page_transition_div").fadeOut("slow");
+        $("#page_transition_div").fadeOut("slow", showToast);
     </script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

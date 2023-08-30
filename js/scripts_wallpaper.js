@@ -17,6 +17,7 @@ const BrightnessOptions = {
 };
 const BrightnessOptionsLength = 6;
 
+var firstLaunch = false;
 var pendingIndexChange = false;
 var currentPlanetNumber = 0;
 var randomNumber = 0;
@@ -518,6 +519,7 @@ function loadStartup()
         localStorage.setItem('wallpaperFallingStars', true);
         localStorage.setItem('wallpaperRotatingObjects', true);
 
+        firstLaunch = true;
         currentPlanetNumber = 11;
         randomNumber = 11;
         fallingStars = true;
@@ -530,4 +532,12 @@ function loadStartup()
     setRotatingObjects();
     setFallingStars();
     randomizeIndexStartup();
+}
+
+function showToast()
+{
+    if (firstLaunch == true)
+    {
+        $("#test").toast("show");
+    }
 }
