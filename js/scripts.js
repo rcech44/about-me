@@ -6,10 +6,6 @@ const planetsCzech = ["Země", "Jupiter", "Neptun", "Merkur", "Mars", "Černá d
 const planetsEnglish = ["Earth", "Jupiter", "Neptune", "Mercury", "Mars", "Black Hole", "Aliens", "Uranus", "Exoplanet 1", "Exoplanet 2", "Moon"];
 const planetColors = ["rgba(0,54,181,1)", "rgba(184, 106, 70, 1)", "rgba(9, 127, 181, 1)", "rgba(130, 130, 130, 1)", "rgba(171, 54, 48, 1)", "rgba(83, 71, 173, 1)", "rgba(40, 168, 74, 1)", "rgba(62, 102, 171, 1)", "rgba(129, 69, 168, 1)", "rgba(181, 130, 40, 1)", "rgba(135, 135, 135, 1)"];
 
-window.onhashchange = function() {
-    $("#page_transition_div").fadeOut();
-}
-
 function scrollHandle()
 {
     if (window.scrollY < 150)
@@ -43,10 +39,14 @@ function pageTransition(el)
     {
         $("#page_transition_div").fadeIn();
         $("#page_transition_div").promise().done(function(){
-            window.location.assign(el.href);
-            // window.location.href = el.href;
-            // $("#page_transition_div").fadeOut();
-            // $("#header_text").fadeIn();
+            window.location.href = el.href;
+            setTimeout(function() {
+                $("#page_transition_div").fadeOut();
+                try {
+                    $("#header_text").fadeIn();
+                }
+                catch {}
+            }, 2000);
         });
         try {
             $("#header_text").fadeOut();
