@@ -39,9 +39,10 @@ function pageTransition(el)
     {
         $("#page_transition_div").fadeIn();
         $("#page_transition_div").promise().done(function(){
-            window.location.href = el.href;
-            $("#page_transition_div").fadeOut();
-            $("#header_text").fadeIn();
+            window.location.assign(el.href);
+            // window.location.href = el.href;
+            // $("#page_transition_div").fadeOut();
+            // $("#header_text").fadeIn();
         });
         try {
             $("#header_text").fadeOut();
