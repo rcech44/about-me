@@ -567,12 +567,12 @@ header.masthead .bg-planet {
 }
 
 header.masthead .bg-planet-1 {
-    width: 30vh;
-    height: 30vh;
+    width: 40vh;
+    height: 40vh;
     max-width: 1500px;
     max-height: 1500px;
-    bottom: -15vh;
-    right: -15vh;
+    bottom: -20vh;
+    right: -20vh;
     background-image: url(../assets/img/planets/earth.png);
     background-size: cover;
     animation: planet-animation-1 30s linear infinite both;
@@ -629,12 +629,12 @@ header.masthead .bg-planet-3 {
 
 @keyframes planet-animation-3 {
     from {
-        -webkit-transform: rotate(0deg) translateX(-30vh) rotate(0deg) rotate(0deg);
-        transform: rotate(0deg) translateX(-30vh) rotate(0deg) rotate(0deg);
+        -webkit-transform: rotate(0deg) translateX(-33vh) rotate(0deg) rotate(0deg);
+        transform: rotate(0deg) translateX(-33vh) rotate(0deg) rotate(0deg);
     }
 
     to {
-        -webkit-transform: rotate(360deg) translateX(-30vh) rotate(-360deg) rotate(10000deg);
-        transform: rotate(360deg) translateX(-30vh) rotate(-360deg) rotate(10000deg);
+        -webkit-transform: rotate(360deg) translateX(-33vh) rotate(-360deg) rotate(10000deg);
+        transform: rotate(360deg) translateX(-33vh) rotate(-360deg) rotate(10000deg);
     }
 }
