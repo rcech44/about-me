@@ -39,7 +39,7 @@ function pageTransition(el)
     {
         $("#page_transition_div").fadeIn();
         $("#page_transition_div").promise().done(function(){
-            window.location.replace(el.href);
+            window.location.href = el.href;
         });
         try {
             $("#header_text").fadeOut();
