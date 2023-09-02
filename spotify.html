@@ -13,17 +13,12 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            background-color: black;
         }
 
         #background {
             width: 100%;
             height: 100%;
-            /* box-sizing: border-box;
-            box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
-            background-color: transparent; */
-            /* z-index: 1000;
-            position: absolute; */
-            /* animation: background_img_scaling 5s linear both infinite; */
         }
 
         #image {
@@ -51,19 +46,50 @@
         #spotify-window-2 {
             position: absolute;
             z-index: 7;
-            bottom: 3vw;
-            left: 3vw;
-            width: 25vw;
-            height: 25vh;
+            bottom: 2vw;
+            left: 2vw;
+            height: 80px;
+            width: 590px;
+            background-color: #282828;
+            padding: 5px;
+            box-shadow: 0 0 20px black;
+            border-radius: 15px;
+            display:flex;
+            opacity: 50%;
+            transition: opacity 4s;
+            transition-delay: 5s;
+        }
+
+        #spotify-window-2:hover {
+            opacity: 100% !important;
+            transition: opacity 0.5s;
+        }
+
+        #playlist-button:hover {
+            background-color: #161616 !important;
+            cursor: pointer;
         }
 
         @keyframes background_img_scaling {
             0% {
-                scale: 100%;
+                scale: 110%;
+                rotate: -3deg;
+                opacity: 0%;
             }
-
+            10% {
+                scale: 112%;
+                rotate: -2deg;
+                opacity: 100%;
+            }
+            90% {
+                scale: 128%;
+                rotate: 6deg;
+                opacity: 100%;
+            }
             100% {
                 scale: 130%;
+                rotate: 7deg;
+                opacity: 0%;
             }
         }
     </style>
@@ -75,19 +101,25 @@
 
 <body>
     <div id="background">
-        <div id="image" style="background-image: url('assets/lofi_pictures/5.jpg');">
-        </div>
+        <div id="image" style="background-image: url('assets/lofi_pictures/5.jpg');"></div>
         <div id="vignette"></div>
         <div id="spotify-window-2">
-            <div id="spotify-window"></div>
+            <div style="flex: 1;width: 100%; height: 100%;">
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <svg id="playlist-button" style="box-shadow: 0 0 5px black; border-radius: 10px; padding: 5px; background-color:#222222;" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 5V18M16 18C16 19.1046 14.6569 20 13 20C11.3431 20 10 19.1046 10 18C10 16.8954 11.3431 16 13 16C14.6569 16 16 16.8954 16 18ZM4 5H12M4 9H12M4 13H8M16 4L20 3V7L16 8V4Z" stroke="#aaaaaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>   
+                </div>
+            </div>
+            <div style="flex: 0; width:3px; height: 100%;margin-right: 10px;margin-left: 5px;">
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <svg style="stroke: #707070; stroke-width:3" id="chart" width="3px" height="80px">
+                        <line x1="0" y1="10" x2="0" y2="70"></line>
+                      </svg>     
+                </div>
+            </div>
+            <div style="flex: 1;" id="spotify-window"></div>
         </div>
-        
-            <!-- <iframe class="spotifyEmbed" style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/5QXj8hf0nVRdeKZY6nhTwd?utm_source=generator&theme=0"
-                width="100%" height="100%" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe> -->
-        
     </div>
     <script src="js/spotify.js"></script>
 </body>
