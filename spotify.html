@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Babylon Template</title>
+
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #background {
+            width: 100%;
+            height: 100%;
+            /* box-sizing: border-box;
+            box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
+            background-color: transparent; */
+            /* z-index: 1000;
+            position: absolute; */
+            /* animation: background_img_scaling 5s linear both infinite; */
+        }
+
+        #image {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            background-size: cover;
+            background-position: center;
+            animation: background_img_scaling 30s linear both infinite;
+            z-index: 5;
+            position: absolute;
+        }
+
+        #vignette {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
+            background-color: transparent;
+            /* animation: background_img_scaling 5s linear both infinite; */
+            z-index: 6;
+            position: absolute;
+        }
+
+        #spotify-window-2 {
+            position: absolute;
+            z-index: 7;
+            bottom: 3vw;
+            left: 3vw;
+            width: 25vw;
+            height: 25vh;
+        }
+
+        @keyframes background_img_scaling {
+            0% {
+                scale: 100%;
+            }
+
+            100% {
+                scale: 130%;
+            }
+        }
+    </style>
+
+    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+
+
+</head>
+
+<body>
+    <div id="background">
+        <div id="image" style="background-image: url('assets/lofi_pictures/5.jpg');">
+        </div>
+        <div id="vignette"></div>
+        <div id="spotify-window-2">
+            <div id="spotify-window"></div>
+        </div>
+        
+            <!-- <iframe class="spotifyEmbed" style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/5QXj8hf0nVRdeKZY6nhTwd?utm_source=generator&theme=0"
+                width="100%" height="100%" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe> -->
+        
+    </div>
+    <script src="js/spotify.js"></script>
+</body>
+
+</html>
