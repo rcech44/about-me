@@ -3,9 +3,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Babylon Template</title>
+    <title>Oreo's Spotify</title>
 
     <style>
+        @font-face { font-family: Spotify; src: url('assets/fonts/GothamMedium.ttf'); } 
+
         html,
         body {
             overflow: hidden;
@@ -43,27 +45,48 @@
             position: absolute;
         }
 
-        #spotify-window-2 {
+        #spotify-current-info {
             position: absolute;
             z-index: 7;
             bottom: 2vw;
             left: 2vw;
-            height: 80px;
-            width: 590px;
-            background-color: #282828;
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            color: white;
             padding: 5px;
-            box-shadow: 0 0 20px black;
-            border-radius: 15px;
-            display:flex;
-            opacity: 50%;
+            opacity: 100%;
             transition: opacity 4s;
             transition-delay: 5s;
         }
 
-        #spotify-window-2:hover {
+        #spotify-window-2 {
+            position: absolute;
+            z-index: 7;
+            top: 2vw;
+            left: 2vw;
+            height: 80px;
+            width: 1000px;
+            background-color: #282828;
+            padding: 5px;
+            box-shadow: 0 0 20px black;
+            border-radius: 15px;
+            display: flex;
+            opacity: 100%;
+            transition: opacity 4s;
+            transition-delay: 5s;
+        }
+
+        .spotify-font {
+            font-family: Spotify;
+        }
+
+        /* #spotify-window-2:hover {
             opacity: 100% !important;
             transition: opacity 0.5s;
-        }
+        } */
 
         #playlist-button:hover {
             background-color: #161616 !important;
@@ -93,16 +116,20 @@
             }
         }
     </style>
-
-    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
-
-
+        <script src="spotify/spotify_core.js" type="module"></script>
+        <script src="spotify/spotify_other.js"></script>
 </head>
 
 <body>
     <div id="background">
         <div id="image" style="background-image: url('assets/lofi_pictures/5.jpg');"></div>
         <div id="vignette"></div>
+        <div id="spotify-current-info" class="spotify-font">
+            <a style="color: #ffffffa8; margin-bottom: 10px;">Currently playing</a>
+            <a style="font-size: 12px;" id="track-info-artist">test</a>
+            <a style="font-size: ;" id="track-info-album">test</a>
+            <a style="font-size: ;" id="track-info-name">test</a>
+        </div>
         <div id="spotify-window-2">
             <div style="flex: 1;width: 100%; height: 100%;">
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
@@ -118,11 +145,12 @@
                       </svg>     
                 </div>
             </div>
-            <div style="flex: 1;" id="spotify-window"></div>
+            <div style="flex: 1;color:white;vertical-align: middle;"><a id="play-button">Play</a></div>
+            <div style="flex: 1;color:white;vertical-align: middle;"><a id="next-track-button">Next</a></div>
+            <div style="flex: 1;color:white;vertical-align: middle;"><a id="previous-track-button">Previous</a></div>
+            <div style="flex: 1;color:white;vertical-align: middle;"><a id="playlist-button-1">Play playlist</a></div>
         </div>
     </div>
-    <script src="js/spotify.js"></script>
-    <script src="spotify/spotify.js" type="module"></script>
 </body>
 
 </html>
