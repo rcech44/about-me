@@ -30,26 +30,17 @@ setInterval(function() {
     document.getElementById("image").style.display = "block";
 }, 30000);
 
-// const myElement = document.getElementById("spotify-window-2");
+// Testing new Spotify API
 
-// myElement.addEventListener("mouseover", () => {
-//   // Při najetí myši, nastavíme plnou průhlednost
-//   myElement.style.opacity = "100%";
-// //   console.log("over");
-// });
-
-// let timer;
-
-// myElement.addEventListener("mouseout", () => {
-//   // Při odjetí myši, spustíme časovač
-//   console.log("out");
-//   timer = setTimeout(() => {
-//     myElement.style.opacity = "50%"; // Nastavíme zpět průhlednost po určité době
-//   }, 1000); // Změňte tuto hodnotu na požadovaný časový interval v milisekundách (zde 1000 ms = 1 sekunda)
-// });
-
-// myElement.addEventListener("mouseenter", () => {
-//   // Při znovu najetí myši, zrušíme časovač
-//   clearTimeout(timer);
-//   console.log("enter");
-// });
+function test()
+{
+    $.ajax({
+        url: 'https://api.wit.ai/message?v=20140826&q=',
+        beforeSend: function(xhr) {
+             xhr.setRequestHeader("Authorization", "Bearer 6QXNMEMFHNY4FJ5ELNFMP5KRW52WFXN5")
+        }, success: function(data){
+            alert(data);
+            //process the JSON data etc
+        }
+})
+}
