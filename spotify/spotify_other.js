@@ -1,4 +1,5 @@
 var currentPictureNumber = 1;
+var menuShow = false;
 
 setInterval(function() {
     document.getElementById("image").style.display = "none";
@@ -46,4 +47,41 @@ function play()
         'position_ms': 0
     })
     });
+}
+
+function toast(msg, type)
+{
+    var snackbar = document.getElementById("snackbar");
+    var snackbar_msg = document.getElementById("snackbar-message");
+    if (snackbar.className == 'show')
+    {
+        setTimeout(function() {
+            toast(msg, type);
+        }, 3000);
+    }
+    else
+    {
+        snackbar.className = "show";
+        snackbar_msg.innerHTML = msg;
+        if (type == 'error') snackbar.style.borderColor = "red";
+        else if (type == 'success') snackbar.style.borderColor = "green";
+        else snackbar.style.borderColor = "transparent";
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 5000);
+    }
+}
+
+function showMenu()
+{
+    if (menuShow == false)
+    {
+        document.getElementById('menu-arrow-down').style.display = "none";
+        document.getElementById('menu-arrow-up').style.display = "block";
+        menuShow = true;
+    }
+    else
+    {
+        document.getElementById('menu-arrow-up').style.display = "none";
+        document.getElementById('menu-arrow-down').style.display = "block";
+        menuShow = false;
+    }
 }

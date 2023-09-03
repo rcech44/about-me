@@ -56,12 +56,70 @@
             position: absolute;
         }
 
+        #playback-settings-area {
+            position: absolute;
+            z-index: 7;
+            bottom: calc(3vw + 160px);
+            left: calc(3vw + 5px);
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.55);
+            border-radius: 15px;
+            border-style: solid;
+            border-color: transparent;
+            color: white;
+            opacity: 30%;
+            transition: opacity 4s;
+            transition-delay: 5s;
+        }
+
+        #playback-settings-area:hover {
+            opacity: 100% !important;
+            transition: opacity 0.5s;
+        }
+
+        #scroll-button-area {
+            position: absolute;
+            z-index: 7;
+            bottom: 1vw;
+            left: calc(50vw - 10px);
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            background-color: transparent;
+            color: white;
+            opacity: 100%;
+            transition: opacity 4s;
+            transition-delay: 5s;
+        }
+
+        #scroll-button-area:hover {
+            background-color: #4d4d4d94;
+            cursor: pointer;
+        }
+            
+        #scroll-button-area:active {
+            background-color: #3a3a3a94;
+            cursor: pointer;
+        }
+
+        .playback-button {
+            background-color: #4d4d4d94;
+            cursor: pointer;
+        }
+
+        .playback-button:active {
+            background-color: #3a3a3a94;
+            cursor: pointer;
+        }
+
         #spotify-current-info {
             position: absolute;
             z-index: 7;
             bottom: 3vw;
             left: 3vw;
-            height: fit-content;
+            height: 136px;
             width: fit-content;
             display: flex;
             background-color: transparent;
@@ -70,6 +128,9 @@
             opacity: 100%;
             transition: opacity 4s;
             transition-delay: 5s;
+            white-space: nowrap;
+            /* overflow: hidden; */
+            text-overflow: ellipsis;
         }
 
         #spotify-current-info-img {
@@ -150,6 +211,62 @@
                 opacity: 0%;
             }
         }
+
+        #snackbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Spotify;
+            filter: drop-shadow(0 0 20px black);
+            visibility: hidden; /* Hidden by default. Visible on click */
+            min-width: 300px; /* Set a default minimum width */
+            max-width: 300px; /* Set a default minimum width */
+            height: fit-content; /* Set a default minimum width */
+            margin-left: -150px; /* Divide value of min-width by 2 */
+            background-color: #333; /* Black background color */
+            color: #fff; /* White text color */
+            text-align: center; /* Centered text */
+            border-radius: 10px; /* Rounded borders */
+            border-style: solid;
+            border-width: 3px;
+            padding: 16px; /* Padding */
+            position: fixed; /* Sit on top of the screen */
+            z-index: 100; /* Add a z-index if needed */
+            left: 50%; /* Center the snackbar */
+            top: 30px; /* 30px from the bottom */
+        }
+
+            /* Show the snackbar when clicking on a button (class added with JavaScript) */
+        #snackbar.show {
+            visibility: visible; /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+            However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+            animation: fadein 0.5s, fadeout 0.5s 4.5s;
+        }
+
+            /* Animations to fade the snackbar in and out */
+        @-webkit-keyframes fadein {
+            from {top: 0; opacity: 0;}
+            to {top: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+            from {top: 0; opacity: 0;}
+            to {top: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+            from {top: 30px; opacity: 1;}
+            to {top: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+            from {top: 30px; opacity: 1;}
+            to {top: 0; opacity: 0;}
+        }
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="spotify/spotify_core.js" type="module"></script>
@@ -172,6 +289,36 @@
                 <a class="font-shadow-1" style="font-size: 48px; color: white;" id="track-info-name">Initializing...</a>
             </div>
         </div>
+        <div id="playback-settings-area" onclick="showMenu()">
+            <a id="playback-settings-left" style="cursor: pointer;width: 20px; height: 20px; margin: 5px; margin-left: 15px;margin-right: 18px; margin-top:10px;border-radius: 50%;margin-bottom:10px;">
+                <svg style="display:block;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
+                    <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/>
+                </svg>
+            </a>
+            <a id="playback-toggle" style="cursor: pointer;width: 20px; height: 20px; margin: 5px; margin-right: 18px; border-radius: 50%;margin-top:10px;margin-bottom:10px;">
+                <svg id="playback-settings-play" style="display:block;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
+                    <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+                </svg>
+                <svg id="playback-settings-pause" style="display:none;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
+                    <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/>                </svg>
+                </svg>
+            </a>
+            <a id="playback-settings-right" style="cursor: pointer;width: 20px; height: 20px; margin: 5px; ;border-radius: 50%;margin-top:10px;margin-bottom:10px;margin-left: 5px;margin-right:10px;">
+                <svg style="display:block;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
+                    <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
+                </svg>
+            </a>
+        </div>
+        <div id="scroll-button-area" style=" border-radius: 50%;" onclick="showMenu()">
+            <a style="background-color: transparent; width: 20px; height: 20px; margin: 5px;">
+                <svg id="menu-arrow-down" style="display:block;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
+                    <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/>
+                </svg>
+                <svg id="menu-arrow-up" style="display:none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
+                    <path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"/>
+                </svg>
+            </a>
+        </div>
         <div style="display:none;" id="spotify-window-2">
             <div style="flex: 1;width: 100%; height: 100%;">
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
@@ -192,6 +339,12 @@
             <div style="flex: 1;color:white;vertical-align: middle;"><a id="previous-track-button">Previous</a></div>
             <div style="flex: 1;color:white;vertical-align: middle;"><a id="playlist-button-1">Play playlist</a></div>
         </div>
+    </div>
+    <div id="snackbar">
+        <svg style="margin-right: 5px;" width="25px" height="25px" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12C4.5 7.85786 7.85786 4.5 12 4.5C16.1421 4.5 19.5 7.85786 19.5 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM11.25 13.5V8.25H12.75V13.5H11.25ZM11.25 15.75V14.25H12.75V15.75H11.25Z" fill="#ffffff"/>
+        </svg>
+        <a id="snackbar-message" style="word-wrap:break-word; max-width: 250px;">lmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmao</a>
     </div>
 </body>
 

@@ -14,7 +14,7 @@ async function redirectToAuthCodeFlow(clientId) {
     const params = new URLSearchParams()
     params.append("client_id", clientId)
     params.append("response_type", "code")
-    params.append("redirect_uri", "http://rcech.cz/spotify.html")
+    params.append("redirect_uri", "http://localhost:8080/spotify.html")
     params.append("scope", "user-read-currently-playing user-modify-playback-state user-read-playback-state user-read-email user-read-private user-read-email streaming app-remote-control")
     params.append("code_challenge_method", "S256")
     params.append("code_challenge", challenge)
@@ -29,7 +29,7 @@ async function getAccessToken(clientId, code) {
     params.append("client_id", clientId)
     params.append("grant_type", "authorization_code")
     params.append("code", code)
-    params.append("redirect_uri", "http://rcech.cz/spotify.html")
+    params.append("redirect_uri", "http://localhost:8080/spotify.html")
     params.append("code_verifier", verifier)
   
     const result = await fetch("https://accounts.spotify.com/api/token", {
@@ -81,12 +81,13 @@ function initSpotify()
         {
             name: 'Oreo Spotify Website',
             getOAuthToken: cb => { cb(token); },
-            volume: 0.5
+            volume: 0.3
         });
 
         // Ready + set device playback
         player.addListener('ready', ({ device_id }) => {
             console.log('Ready with Device ID', device_id);
+            toast('Initialized successfuly', 'success');
             const result = fetch("https://api.spotify.com/v1/me/player", {
                 method: "PUT", headers: { Authorization: `Bearer ${token}` }, body: JSON.stringify({
                     'device_ids': [
@@ -95,12 +96,14 @@ function initSpotify()
                 })
             }).then(function() {
                 console.log("Transfered playback to website.");
+                toast('Transfered playback to website', 'success');
             });
         });
 
         // Not Ready
         player.addListener('not_ready', ({ device_id }) => {
             console.log('Device ID has gone offline', device_id);
+            toast('Device offline', 'error');
         });
 
         // Player state changed
@@ -119,6 +122,9 @@ function initSpotify()
                     document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
                     document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                     document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                    // document.getElementById("playback-settings-area").style.backgroundColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
+                    // document.getElementById("playback-settings-area").style.boxShadow = "0 0 10px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                    // document.getElementById("playback-settings-area").style.borderColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                 } 
                 else {
                     image.addEventListener('load', function() {
@@ -126,6 +132,9 @@ function initSpotify()
                         document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
                         document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                         document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                        // document.getElementById("playback-settings-area").style.backgroundColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
+                        // document.getElementById("playback-settings-area").style.boxShadow = "0 0 10px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                        // document.getElementById("playback-settings-area").style.borderColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                     });
                 }
             }, 500);
@@ -135,28 +144,46 @@ function initSpotify()
         // Init error
         player.addListener('initialization_error', ({ message }) => {
             console.error(message);
+            toast('Initialization error', 'error');
         });
 
         // Auth error
         player.addListener('authentication_error', ({ message }) => {
             console.error(message);
+            toast('Authentication error', 'error');
         });
 
         // Account error
         player.addListener('account_error', ({ message }) => {
             console.error(message);
+            toast('Account error (non-premium user)', 'error');
         });
 
         // Set buttons
-        document.getElementById('play-button').onclick = function() 
+        document.getElementById('playback-toggle').onclick = function() 
         {
             player.togglePlay();
+            player.getCurrentState().then(state => {
+                if (state['paused'] == true) {
+                  document.getElementById("playback-settings-play").style.display = "none";
+                  document.getElementById("playback-settings-pause").style.display = "block";
+                  return;
+                }
+                else
+                {
+                    document.getElementById("playback-settings-pause").style.display = "none";
+                    document.getElementById("playback-settings-play").style.display = "block";
+                    return;
+                }
+            });
         };
-        document.getElementById('next-track-button').onclick = function() 
+
+        document.getElementById('playback-settings-right').onclick = function() 
         {
             player.nextTrack();
         };
-        document.getElementById('previous-track-button').onclick = function() 
+
+        document.getElementById('playback-settings-left').onclick = function() 
         {
             player.previousTrack();
         };
