@@ -1,6 +1,7 @@
 const clientId = "cf932bfcf55749eeb64c3cccc6aafb10"; // Replace with your client ID
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
+const colorThief = new ColorThief();
 var token;
 var player;
 
@@ -107,6 +108,28 @@ function initSpotify()
             document.getElementById("track-info-name").innerHTML = current_track['name'];
             document.getElementById("track-info-artist").innerHTML = current_track['artists'][0]['name'];
             document.getElementById("track-info-album").innerHTML = "from " + current_track['album']['name'];
+            document.getElementById("album-cover").src = current_track['album']['images'][0]['url'];
+            setTimeout(function() {
+                const img = document.getElementById("album-cover");
+                var color = [];
+
+                // Make sure image is finished loading
+                if (img.complete) {
+                    color = colorThief.getColor(img);
+                    document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
+                    document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                    document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                } 
+                else {
+                    image.addEventListener('load', function() {
+                        color = colorThief.getColor(img);
+                        document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
+                        document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                        document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                    });
+                }
+            }, 500);
+            console.log(current_track);
         });
 
         // Init error

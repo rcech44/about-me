@@ -30,7 +30,7 @@
             background-size: cover;
             background-position: center;
             animation: background_img_scaling 30s linear both infinite;
-            z-index: 5;
+            z-index: 4;
             position: absolute;
         }
 
@@ -41,25 +41,56 @@
             box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
             background-color: transparent;
             /* animation: background_img_scaling 5s linear both infinite; */
-            z-index: 6;
+            z-index: 5;
+            position: absolute;
+        }
+
+        #ambient-light-bottom {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
+            background-color: transparent;
+            /* animation: background_img_scaling 5s linear both infinite; */
+            z-index: 5;
             position: absolute;
         }
 
         #spotify-current-info {
             position: absolute;
             z-index: 7;
-            bottom: 2vw;
-            left: 2vw;
+            bottom: 3vw;
+            left: 3vw;
             height: fit-content;
             width: fit-content;
             display: flex;
-            flex-direction: column;
             background-color: transparent;
             color: white;
             padding: 5px;
             opacity: 100%;
             transition: opacity 4s;
             transition-delay: 5s;
+        }
+
+        #spotify-current-info-img {
+            display: flex;
+            flex-direction: column;
+            margin-right: 25px;
+        }
+
+        .album-img {
+            object-fit: contain;
+            width: 130px;
+            border-radius: 15px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: transparent;
+            filter: drop-shadow(0 0 10px black);
+        }
+
+        #spotify-current-info-text {
+            display: flex;
+            flex-direction: column;
         }
 
         #spotify-window-2 {
@@ -81,6 +112,10 @@
 
         .spotify-font {
             font-family: Spotify;
+        }
+
+        .font-shadow-1 {
+            filter: drop-shadow(0 0 10px black);
         }
 
         /* #spotify-window-2:hover {
@@ -116,21 +151,28 @@
             }
         }
     </style>
-        <script src="spotify/spotify_core.js" type="module"></script>
-        <script src="spotify/spotify_other.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="spotify/spotify_core.js" type="module"></script>
+    <script src="spotify/spotify_other.js"></script>
 </head>
 
 <body>
     <div id="background">
         <div id="image" style="background-image: url('assets/lofi_pictures/5.jpg');"></div>
         <div id="vignette"></div>
+        <div id="vignette-color"></div>
         <div id="spotify-current-info" class="spotify-font">
-            <a style="color: #ffffffa8; margin-bottom: 10px;">Currently playing</a>
-            <a style="font-size: 12px;" id="track-info-artist">test</a>
-            <a style="font-size: ;" id="track-info-album">test</a>
-            <a style="font-size: ;" id="track-info-name">test</a>
+            <div id="spotify-current-info-img">
+                <img id="album-cover" class="album-img" src="assets/img/cookie.png" crossorigin="anonymous" onclick="play()">
+            </div>
+            <div id="spotify-current-info-text">
+                <a style="font-size: 18px; color: #ffffff44; margin-bottom: 10px;">Currently playing</a>
+                <a class="font-shadow-1" style="font-size: 18px; color: #ffffffa8; margin-bottom: 5px;" id="track-info-artist"> </a>
+                <a class="font-shadow-1" style="font-size: 18px; color: #ffffffa8; margin-bottom: 5px;" id="track-info-album"> </a>
+                <a class="font-shadow-1" style="font-size: 48px; color: white;" id="track-info-name"> </a>
+            </div>
         </div>
-        <div id="spotify-window-2">
+        <div style="display:none;" id="spotify-window-2">
             <div style="flex: 1;width: 100%; height: 100%;">
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
                     <svg id="playlist-button" style="box-shadow: 0 0 5px black; border-radius: 10px; padding: 5px; background-color:#222222;" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

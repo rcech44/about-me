@@ -29,3 +29,21 @@ function playPlaylist()
     })
     });
 }
+
+function play()
+{
+    fetch('https://api.spotify.com/v1/me/player/play', {
+    method: 'PUT',
+    headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem("token"),
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        'context_uri': 'spotify:playlist:2v7467edUJbPMWwiw3Xkrf',
+        'offset': {
+            'position': 0
+        },
+        'position_ms': 0
+    })
+    });
+}
