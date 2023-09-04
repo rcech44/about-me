@@ -169,15 +169,70 @@ async function downloadPlaylists()
 
 function fillPlaylists()
 {
+    // <div style="flex:1; margin: 5px; max-height: 50px; display:flex; flex-direction: row;align-items: flex-start;">
+    //     <img style="margin-right: 10px;flex:0;object-fit: contain;width:45px; height: 45px;" width="45px" height="45px" src="assets/img/cookie.png">
+    //     <div style="flex:1;display:flex;flex-direction: column;">
+    //         <a class="font-1" style="flex:1;font-size: 18px;margin-top: 2px;">Test text yeah lol</a>
+    //         <a class="font-1" style="flex:1;font-size: 13px;margin-top: 3px;">Test text yeah lol</a>
+    //     </div>
+    // </div>
+
+
     var area = document.getElementById("playlist-list");
     playlists.sort(sortPlaylists);
 
     playlists.forEach( (playlist) => {
-        var new_element = document.createElement("div");
-        new_element.style.flex = "1";
-        new_element.innerHTML = playlist['name'];
-        new_element.onclick = async function() {await getPlaylistTracks(playlist['id'])};
-        area.appendChild(new_element);
+        var div_1 = document.createElement("div");
+        div_1.style.display = "flex";
+        div_1.style.margin = "5px";
+        div_1.style.marginBottom = "8px";
+        div_1.style.maxHeight = "50px";
+        div_1.style.flex = "1";
+        div_1.style.flexDirection = "row";
+        div_1.style.alignItems = "flex-start";
+    
+        var img = document.createElement("img");
+        img.src = playlist['images'][0]['url'];
+        img.style.marginRight = "10px";
+        img.style.backgroundSize = "cover";
+        img.style.backgroundPosition = "center";
+        img.style.objectFit = "fill";
+        img.style.width = "45px";
+        img.width = "45px";
+        img.style.height = "45px";
+        img.height = "45px";
+        img.style.borderRadius = "5px";
+    
+        var div_2 = document.createElement('div');
+        div_2.style.flex = "1";
+        div_2.style.display = "flex";
+        div_2.style.flexDirection = "column";
+    
+        var a_1 = document.createElement('a');
+        a_1.className = "spotify-font";
+        a_1.style.flex = "1";
+        a_1.style.fontSize = "18px";
+        a_1.style.color = "white";
+        a_1.style.marginTop = "2px";
+        a_1.innerHTML = playlist['name'];
+    
+        var a_2 = document.createElement('a');
+        a_2.className = "font-1";
+        a_2.style.flex = "1";
+        a_2.style.fontSize = "13px";
+        a_2.style.color = "#bbbbbb";
+        a_2.style.marginTop = "3px";
+        a_2.style.wordBreak = "none";
+        a_2.style.whiteSpace = "nowrap";
+        a_2.innerHTML = playlist['description'];
+    
+        div_2.appendChild(a_1);
+        div_2.appendChild(a_2);
+        div_1.appendChild(img);
+        div_1.appendChild(div_2);
+
+        div_1.onclick = async function() {await getPlaylistTracks(playlist['id'])};
+        area.appendChild(div_1);
     });
 }
 
