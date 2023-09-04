@@ -123,6 +123,7 @@ function initSpotify()
                     document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
                     document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                     document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                    document.getElementById("menu").style.setProperty("background-color", "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)");
                     // document.getElementById("playback-settings-area").style.backgroundColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                     // document.getElementById("playback-settings-area").style.boxShadow = "0 0 10px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                     // document.getElementById("playback-settings-area").style.borderColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
@@ -133,6 +134,7 @@ function initSpotify()
                         document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
                         document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                         document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+                        document.getElementById("menu").style.setProperty("background-color", "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)");
                         // document.getElementById("playback-settings-area").style.backgroundColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                         // document.getElementById("playback-settings-area").style.boxShadow = "0 0 10px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                         // document.getElementById("playback-settings-area").style.borderColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";

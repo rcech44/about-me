@@ -86,6 +86,7 @@
             transition: all 0.5s ease-in-out;
             margin: 4vh;
             border-radius: 20px;
+            backdrop-filter: blur(10px);
         }
 
         #playback-settings-area {
@@ -103,6 +104,7 @@
             color: white;
             opacity: 30%;
             transition: all 0.5s ease-in-out;
+            /* transition-delay: 5s; */
         }
 
         #playback-settings-area:hover {
@@ -377,34 +379,33 @@
         <!-- Menu -->
         <div id="menu" style="display:flex; flex-direction:row;">
             <!-- Column 1 -->
-            <div style="flex: 1; max-width:fit-content;background-color: red; margin: 10px;">
+            <div style="flex: 1; max-width:fit-content; margin: 10px;">
                 <div style="display: flex; flex-direction: column;margin:10px;">
-                    <div style="flex: 1">text</div>
-                    <div style="flex: 1">text</div>
-                    <div style="flex: 1">text</div>
-                    <div style="flex: 1">text</div>
+                    <a style="flex: 1; width:45px; border-radius: 5px;padding-left:8px;padding-top:8px;padding-bottom: 5px;padding-right: 2px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="35px" width="35px" viewBox="0 0 512 512"><style>svg{fill:#cacaca;}</style><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+                    </a>
                 </div>
             </div>
 
             <!-- Column divider -->
-            <div style="flex: 1; max-width: 10px; background-color: yellow; margin: 10px;">
-
+            <div style="flex: 1; max-width: 2px; background-color: rgba(58, 58, 58, 0.678); margin: 10px;margin-top: 30px; margin-bottom: 30px;">
+ 
             </div>
 
             <!-- Column 2 -->
             <div style="flex: 1; background-color: transparent; margin: 10px;">
-                <div class="spotify-font no-scrollbar" id="playlist-list" style="display: flex; flex-direction: column;margin:10px;max-height: calc(62vh - 40px); overflow: scroll;max-width:70vw;">
+                <div class="spotify-font no-scrollbar" id="playlist-list" style="display: flex; flex-direction: column;margin:10px;max-height: calc(62vh - 40px); overflow: scroll;max-width:60vw;">
                     
                 </div>
             </div>
 
             <!-- Column divider -->
-            <div style="flex: 1; max-width: 10px; background-color: yellow; margin: 10px;">
+            <div style="flex: 1; max-width: 2px; background-color: rgba(58, 58, 58, 0.678); margin: 10px;margin-top: 30px; margin-bottom: 30px;">
 
             </div>
 
             <!-- Column 3 -->
-            <div style="flex: 1; max-width:fit-content; background-color: blue; margin: 10px;">
+            <div style="flex: 1; max-width:fit-content; margin: 10px;">
                 <div id="tracks-list" class="no-scrollbar" style="display: flex; flex-direction: column;margin:10px;max-height: calc(62vh - 40px); overflow: scroll;">
 
                 </div>
@@ -424,7 +425,7 @@
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
                     <svg style="stroke: #707070; stroke-width:3" id="chart" width="3px" height="80px">
                         <line x1="0" y1="10" x2="0" y2="70"></line>
-                      </svg>     
+                    </svg>     
                 </div>
             </div>
             <div style="flex: 1;color:white;vertical-align: middle;"><a id="play-button">Play</a></div>
