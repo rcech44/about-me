@@ -4,7 +4,7 @@ var initialized = false;
 var playlists = [];
 var selectedPlaylistTracks = [];
 
-setInterval(function() {
+var imagesInterval = setInterval(function() {
     document.getElementById("image").style.display = "none";
     var randomNumber = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
     while (randomNumber == currentPictureNumber)
@@ -15,6 +15,12 @@ setInterval(function() {
     document.getElementById("image").style.backgroundImage = "url('assets/lofi_pictures/" + currentPictureNumber + ".jpg')";
     document.getElementById("image").style.display = "block";
 }, 30000);
+
+function playVideo()
+{
+    clearInterval(imagesInterval);
+    
+}
 
 function playPlaylist()
 {
