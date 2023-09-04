@@ -15,7 +15,7 @@ async function redirectToAuthCodeFlow(clientId) {
     params.append("client_id", clientId)
     params.append("response_type", "code")
     params.append("redirect_uri", "http://localhost:8080/spotify.html")
-    params.append("scope", "user-read-currently-playing user-modify-playback-state user-read-playback-state user-read-email user-read-private user-read-email streaming app-remote-control")
+    params.append("scope", "playlist-read-private playlist-read-collaborative user-read-currently-playing user-modify-playback-state user-read-playback-state user-read-email user-read-private user-read-email streaming app-remote-control")
     params.append("code_challenge_method", "S256")
     params.append("code_challenge", challenge)
   
@@ -98,6 +98,7 @@ function initSpotify()
                 console.log("Transfered playback to website.");
                 toast('Transfered playback to website', 'success');
             });
+            downloadMe();
         });
 
         // Not Ready

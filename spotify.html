@@ -11,21 +11,21 @@
         html,
         body {
             overflow: hidden;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             margin: 0;
             padding: 0;
             background-color: black;
         }
 
         #background {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
         }
 
         #image {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             touch-action: none;
             background-size: cover;
             background-position: center;
@@ -35,8 +35,8 @@
         }
 
         #vignette {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             box-sizing: border-box;
             box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
             background-color: transparent;
@@ -45,22 +45,49 @@
             position: absolute;
         }
 
+        #menu-vignette {
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            /* box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952); */
+            background-color:#000000;
+            /* animation: background_img_scaling 5s linear both infinite; */
+            z-index: 6;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+        }
+
         #ambient-light-bottom {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             box-sizing: border-box;
             box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952);
             background-color: transparent;
             /* animation: background_img_scaling 5s linear both infinite; */
             z-index: 5;
             position: absolute;
+        }
+
+        #menu {
+            width: calc(100vw - 8vh);
+            height: 62vh;
+            bottom: -70vh;
+            box-sizing: border-box;
+            /* box-shadow: inset 0 0 7vw 7vw rgba(0, 0, 0, 0.952); */
+            background-color:rgba(255, 255, 255, 0.24);
+            /* animation: background_img_scaling 5s linear both infinite; */
+            z-index: 7;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+            margin: 4vh;
+            border-radius: 20px;
         }
 
         #playback-settings-area {
             position: absolute;
             z-index: 7;
-            bottom: calc(3vw + 160px);
-            left: calc(3vw + 5px);
+            bottom: calc(4vh + 160px);
+            left: calc(4vh + 5px);
             height: fit-content;
             width: fit-content;
             display: flex;
@@ -70,8 +97,7 @@
             border-color: transparent;
             color: white;
             opacity: 30%;
-            transition: opacity 4s;
-            transition-delay: 5s;
+            transition: all 0.5s ease-in-out;
         }
 
         #playback-settings-area:hover {
@@ -82,7 +108,7 @@
         #scroll-button-area {
             position: absolute;
             z-index: 7;
-            bottom: 1vw;
+            bottom: 1vh;
             left: calc(50vw - 10px);
             height: fit-content;
             width: fit-content;
@@ -90,8 +116,7 @@
             background-color: transparent;
             color: white;
             opacity: 100%;
-            transition: opacity 4s;
-            transition-delay: 5s;
+            transition: all 0.5s ease-in-out;
         }
 
         #scroll-button-area:hover {
@@ -117,8 +142,8 @@
         #spotify-current-info {
             position: absolute;
             z-index: 7;
-            bottom: 3vw;
-            left: 3vw;
+            bottom: 4vh;
+            left: 4vh;
             height: 136px;
             width: fit-content;
             display: flex;
@@ -126,8 +151,7 @@
             color: white;
             padding: 5px;
             opacity: 100%;
-            transition: opacity 4s;
-            transition-delay: 5s;
+            transition: all 0.5s ease-in-out;
             white-space: nowrap;
             /* overflow: hidden; */
             text-overflow: ellipsis;
@@ -212,6 +236,10 @@
             }
         }
 
+        .no-scrollbar::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
+
         #snackbar {
             display: flex;
             justify-content: center;
@@ -275,9 +303,15 @@
 
 <body>
     <div id="background">
+
+        <!-- Background image -->
         <div id="image" style="background-image: url('assets/lofi_pictures/5.jpg');"></div>
+
+        <!-- Image vignette -->
         <div id="vignette"></div>
         <div id="vignette-color"></div>
+
+        <!-- Playback track info -->
         <div id="spotify-current-info" class="spotify-font">
             <div id="spotify-current-info-img">
                 <img id="album-cover" class="album-img" src="assets/img/cookie.png" crossorigin="anonymous" onclick="play()">
@@ -289,7 +323,9 @@
                 <a class="font-shadow-1" style="font-size: 48px; color: white;" id="track-info-name">Initializing...</a>
             </div>
         </div>
-        <div id="playback-settings-area" onclick="showMenu()">
+
+        <!-- Playback switches and toggles -->
+        <div id="playback-settings-area">
             <a id="playback-settings-left" style="cursor: pointer;width: 20px; height: 20px; margin: 5px; margin-left: 15px;margin-right: 18px; margin-top:10px;border-radius: 50%;margin-bottom:10px;">
                 <svg style="display:block;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
                     <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/>
@@ -309,6 +345,8 @@
                 </svg>
             </a>
         </div>
+
+        <!-- Scroll arrow -->
         <div id="scroll-button-area" style=" border-radius: 50%;" onclick="showMenu()">
             <a style="background-color: transparent; width: 20px; height: 20px; margin: 5px;">
                 <svg id="menu-arrow-down" style="display:block;"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#bbbbbb" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" enable-background="new 0 0 448 512" xml:space="preserve">
@@ -319,6 +357,48 @@
                 </svg>
             </a>
         </div>
+
+        <!-- Menu vignette -->
+        <div id="menu-vignette" style="display:block; opacity: 0%;"></div>
+
+        <!-- Menu -->
+        <div id="menu" style="display:flex; flex-direction:row;">
+            <!-- Column 1 -->
+            <div style="flex: 1; max-width:fit-content;background-color: red; margin: 10px;">
+                <div style="display: flex; flex-direction: column;margin:10px;">
+                    <div style="flex: 1">text</div>
+                    <div style="flex: 1">text</div>
+                    <div style="flex: 1">text</div>
+                    <div style="flex: 1">text</div>
+                </div>
+            </div>
+
+            <!-- Column divider -->
+            <div style="flex: 1; max-width: 10px; background-color: yellow; margin: 10px;">
+
+            </div>
+
+            <!-- Column 2 -->
+            <div style="flex: 1; background-color: green; margin: 10px;">
+                <div id="playlist-list" class="no-scrollbar" style="display: flex; flex-direction: column;margin:10px;max-height: calc(62vh - 40px); overflow: scroll;">
+
+                </div>
+            </div>
+
+            <!-- Column divider -->
+            <div style="flex: 1; max-width: 10px; background-color: yellow; margin: 10px;">
+
+            </div>
+
+            <!-- Column 3 -->
+            <div style="flex: 1; max-width:fit-content; background-color: blue; margin: 10px;">
+                <div id="tracks-list" class="no-scrollbar" style="display: flex; flex-direction: column;margin:10px;max-height: calc(62vh - 40px); overflow: scroll;">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Unused -->
         <div style="display:none;" id="spotify-window-2">
             <div style="flex: 1;width: 100%; height: 100%;">
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
@@ -340,6 +420,8 @@
             <div style="flex: 1;color:white;vertical-align: middle;"><a id="playlist-button-1">Play playlist</a></div>
         </div>
     </div>
+
+    <!-- Notification snackbar -->
     <div id="snackbar">
         <svg style="margin-right: 5px;" width="25px" height="25px" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12C4.5 7.85786 7.85786 4.5 12 4.5C16.1421 4.5 19.5 7.85786 19.5 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM11.25 13.5V8.25H12.75V13.5H11.25ZM11.25 15.75V14.25H12.75V15.75H11.25Z" fill="#ffffff"/>
