@@ -123,7 +123,10 @@ function initSpotify()
                     document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
                     document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                     document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
-                    document.getElementById("menu").style.setProperty("background-color", "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)");
+                    // document.getElementById("menu").style.setProperty("background-color", "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)");
+                    document.getElementById("menu").style.setProperty("background", "linear-gradient(0deg, rgba(" + color[0] + "," + color[1] + "," + color[2] + ",0.534) 0%, rgba(0, 0, 0, 0) 100%)");
+                    // document.getElementById("menu").style.setProperty("background", "linear-gradient(0deg, rgba(15,121,160,0.534) 50%, rgba(0, 0, 0, 0.534) 100%);");
+                    // document.getElementById("menu").style.setProperty("background", "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);");
                     // document.getElementById("playback-settings-area").style.backgroundColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                     // document.getElementById("playback-settings-area").style.boxShadow = "0 0 10px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                     // document.getElementById("playback-settings-area").style.borderColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
@@ -134,13 +137,14 @@ function initSpotify()
                         document.getElementById("track-info-name").style.setProperty("filter", "drop-shadow(0 0 5px rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.7))");
                         document.getElementById("album-cover").style.boxShadow = "0 0 20px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                         document.getElementById("album-cover").style.borderColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
-                        document.getElementById("menu").style.setProperty("background-color", "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)");
+                        // document.getElementById("menu").style.setProperty("background-color", "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)");
+                        document.getElementById("menu").style.setProperty("background", "linear-gradient(0deg, rgba(" + color[0] + "," + color[1] + "," + color[2] + ",0.534) 0%, rgba(0, 0, 0, 0) 100%)");
                         // document.getElementById("playback-settings-area").style.backgroundColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                         // document.getElementById("playback-settings-area").style.boxShadow = "0 0 10px rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
                         // document.getElementById("playback-settings-area").style.borderColor = "rgba(" + color[0] + "," + color[1] + "," + color[2] + ", 0.4)";
                     });
                 }
-            }, 500);
+            }, 100);
             console.log(current_track);
         });
 
