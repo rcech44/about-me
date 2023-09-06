@@ -181,9 +181,7 @@ function fillPlaylists()
         var div_1 = document.createElement("div");
         div_1.className = "item-hover";
         div_1.style.display = "flex";
-        div_1.style.padding = "5px";
-        div_1.style.paddingBottom = "8px";
-        div_1.style.paddingTop = "8px";
+        div_1.style.padding = "8px";
         div_1.style.maxHeight = "50px";
         div_1.style.flex = "1";
         div_1.style.flexDirection = "row";
@@ -391,9 +389,7 @@ function fillTracks(playlistInfo)
         div_1 = document.createElement("div");
         div_1.className = "item-hover";
         div_1.style.display = "flex";
-        div_1.style.padding = "5px";
-        div_1.style.paddingBottom = "8px";
-        div_1.style.paddingTop = "8px";
+        div_1.style.padding = "8px";
         div_1.style.flex = "1";
         div_1.style.flexDirection = "row";
         div_1.style.alignItems = "flex-start";
