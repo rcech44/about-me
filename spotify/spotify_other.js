@@ -372,17 +372,13 @@ function fillTracks(playlistInfo)
     area_playlist.appendChild(playButton);
 
     // Divider between playlist info and tracks
-    var div_3 = document.createElement("div");
-    div_3.style.backgroundColor = "rgba(58, 58, 58, 0.678)";
-    div_3.style.margin = "10px";
-    div_3.style.marginTop = "20px";
-    div_3.style.marginBottom = "20px";
-    div_3.style.marginRight = "10px";
-    div_3.style.marginLeft = "10px";
-    div_3.style.minHeight = "2px";
-    div_3.style.flex = "1";
+    // var div_3 = document.createElement("div");
+    // div_3.style.backgroundColor = "rgba(58, 58, 58, 0.678)";
+    // div_3.style.margin = "10px";
+    // div_3.style.minHeight = "2px";
+    // div_3.style.flex = "1";
 
-    area_playlist.appendChild(div_3);
+    // area_playlist.appendChild(div_3);
 
     selectedPlaylistTracks.forEach( (track) => {
 
