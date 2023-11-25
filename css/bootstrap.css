@@ -3175,10 +3175,17 @@ textarea.form-control-lg {
   display: none;
 }
 
+.collapse.show {
+    background-color: #0000004d;
+    padding: 0.5rem;
+}
+
 .collapsing {
   height: 0;
   overflow: hidden;
-  transition: height 0.35s ease;
+  transition: height 0.35s ;
+  background-color: #0000004d;
+  padding: 0.5rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
@@ -3821,8 +3828,10 @@ textarea.form-control-lg {
 
 .navbar-collapse {
   flex-basis: 100%;
+  /* padding: 1rem; */
   flex-grow: 1;
   align-items: center;
+  /* background-color: #0000003a; */
 }
 
 .navbar-toggler {
@@ -3886,6 +3895,7 @@ textarea.form-control-lg {
   .navbar-expand-sm .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    /* background-color: #000; */
   }
   .navbar-expand-sm .navbar-toggler {
     display: none;
