@@ -6,6 +6,7 @@
 <title>Will you be my Valentine?</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="assets/favicon_v.ico" />
 <style>
   /* Apply the Roboto font to the whole page */
   body, html {
@@ -175,13 +176,16 @@
     var count = 0;
     function nope()
     {
-        var but1 = document.getElementsByClassName("button1")[0];
-        var but2 = document.getElementsByClassName("button2")[0];
-        var currentSize = parseInt(but1.style.fontSize);
-        but1.style.fontSize = (currentSize + 5) + "px";
-        const randomIndex = Math.floor(Math.random() * texts.length);
-        but2.innerHTML = texts[randomIndex];
-        count++;
+        if (count < 15)
+        {
+            var but1 = document.getElementsByClassName("button1")[0];
+            var but2 = document.getElementsByClassName("button2")[0];
+            var currentSize = parseInt(but1.style.fontSize);
+            but1.style.fontSize = (currentSize + 5) + "px";
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            but2.innerHTML = texts[randomIndex];
+            count++;
+        }
         if (count >= 10) but1.innerHTML = "YES!!!";
         else if (count >= 5) but1.innerHTML = "YES";
     }
