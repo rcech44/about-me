@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Webpage</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+  /* Apply the Roboto font to the whole page */
+  body, html {
+    overflow: hidden;
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    /* background-color: #f0f0f0; Light grey background */
+  }
+  body {
+    background: linear-gradient(-45deg, #b66fc9, #c96f8d, #bf6969);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+  }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+  /* Style enhancements for the buttons */
+  .button1 {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    padding: 10px 20px;
+    margin: 5px; /* Spacing between buttons */
+    cursor: pointer;
+    border: 3px solid #1f5413;
+    border-radius: 5px;
+    background-color: #3e8030; /* Blue background */
+    color: white; /* White text */
+    font-weight: 500; /* Medium font weight */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  .button2 {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    padding: 10px 20px;
+    margin: 5px; /* Spacing between buttons */
+    cursor: pointer;
+    border: 3px solid #821c19;
+    border-radius: 5px;
+    background-color: #b03e3a; /* Blue background */
+    color: white; /* White text */
+    font-weight: 500; /* Medium font weight */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  /* Change button background color on hover */
+  .button1:hover {
+    background-color: #1f5413;
+  }
+  .button2:hover {
+    background-color: #821c19;
+  }
+</style>
+<style>
+    .background-image {
+        z-index: 1;
+        position: absolute;
+        width: 40%; /* Set max image width */
+        max-width: 400px;
+        animation: fadeIn ease-in-out; /* Apply the falling animation */
+        border-radius: 10px; /* Slightly curved edges */
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for a shine effect */
+    }
+    @keyframes gradientBackground {
+        0% {
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        }
+        100% {
+        background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+        }
+    }
+    @keyframes fall {
+      from {
+        top: -100px; /* Start above the screen */
+      }
+      to {
+        top: 100%; /* Fall to the bottom of the screen */
+      }
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    /* Media queries for responsive image sizing */
+    @media (max-width: 768px) { /* For tablets and smaller */
+        .background-image {
+        width: 30%; /* Larger percentage of the screen width */
+        }
+    }
+
+    @media (max-width: 480px) { /* For mobile phones */
+        .background-image {
+        width: 40%; /* Even larger percentage of the screen width */
+        }
+    }
+
+    .header-container {
+        z-index: 10;
+        position: relative; /* Required for proper positioning */
+        width: 100%; /* Full width */
+        text-align: center; /* Center the text */
+        backdrop-filter: blur(8px); /* Apply blur effect to the background */
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent white background */
+        margin: 20px 20px; /* Add some margin around the container */
+        padding: 20px 0; /* Add padding inside the container for spacing */
+        box-sizing: border-box; /* Include padding in the element's total dimensions */
+    }
+    .shape {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        transform: scale(0.8);
+    }
+    .cir {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    .btn-particles {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+        color: #eee;
+        font-family: monospace;
+        z-index: 50;
+    /* 	filter: url(#gooeyness); */
+    }
+  </style>
+</head>
+<body>
+
+<div class="header-container">
+    <h1 style="z-index: 5;font-size: 5vh; color: #da77db; text-shadow: 0 0 10px rgb(0, 0, 0);">Will you be my Valentine?</h1>
+    <div style="z-index: 5;">
+      <button id="explodeButton" class="button1" style="font-size:16px">Yes</button>
+      <button class="button2" style="font-size:16px" onclick="nope();">No</button>
+    </div>
+</div>
+
+<div id="particles" class="btn-particles"></div>
+<!-- Buttons next to each other -->
+
+<script>
+    const texts = ['Try again', 'Wrong answer', 'Think about it', 'Unacceptable'];
+    var count = 0;
+    function nope()
+    {
+        var but1 = document.getElementsByClassName("button1")[0];
+        var but2 = document.getElementsByClassName("button2")[0];
+        var currentSize = parseInt(but1.style.fontSize);
+        but1.style.fontSize = (currentSize + 5) + "px";
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        but2.innerHTML = texts[randomIndex];
+        count++;
+        if (count >= 10) but1.innerHTML = "YES!!!";
+        else if (count >= 5) but1.innerHTML = "YES";
+    }
+
+</script>
+
+<script>
+    function createImage() {
+      const img = document.createElement('img');
+      const num = Math.floor(Math.random() * 8) + 1; // Random number between 1 and 5
+      img.src = `assets/img/valentine/${num}.jpg`; // Set the source to one of the 5 images
+      img.classList.add('background-image');
+  
+      // Randomly position images and apply a random rotation
+      img.style.top = `${Math.random() * 90}%`;
+      img.style.left = `${Math.random() * 90}%`;
+      const angle = Math.random() * 30 - 10; // Angle between -10 and 10 degrees
+      img.style.transform = `rotate(${angle}deg)`;
+  
+      // Set animation duration and delay to keep the image visible
+      const duration = Math.random() * 2 + 15; // Duration between 3 and 5 seconds
+      img.style.animationDuration = `${duration}s`;
+  
+      document.body.appendChild(img);
+  
+      // Remove the image after the animation ends
+      img.addEventListener('animationend', () => {
+        img.remove();
+      });
+    }
+  
+    // Create an initial set of images and continuously generate new ones
+    // setInterval(createImage, 1000); // Adjust timing as needed
+  
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    var pushed = false;
+        $.fn.boom = function(e) {
+        var colors = [
+            '#eb1ae4',
+            '#ed4ee8',
+            '#b354b0',
+            '#cc5a6d',
+            '#ff5c77',
+            '#ff47ac',
+            '#ff47f3',
+            //You can add more color code for more effect..
+        ];
+        var shapes = [
+            '<path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/>',
+        ];
+
+        var btn = $(this);
+        var group = [];
+        var num = 500;
+
+        for(i = 0; i < num; i++) {
+            var randBG = Math.floor(Math.random() * colors.length);
+            var getShape = Math.floor(Math.random() * shapes.length);
+            var c = Math.floor(Math.random() * 10) + 5;
+            var scale = Math.floor(Math.random() * (10 - 4 + 1)) + 4;
+            var x = Math.floor(Math.random() * (2500 + 100)) - 1300;
+            var y = Math.floor(Math.random() * (1500 + 100)) - 800;
+            var sec = Math.floor(Math.random() * 5000) + 5000;
+            var cir = $('<div class="cir"></div>');
+            var shape = $('<svg class="shape">'+shapes[getShape]+'</svg>');
+            
+            shape.css({
+                top: e.pageY - btn.offset().top+50,
+                left: e.pageX - btn.offset().left+50,
+                'transform': 'scale('+scale+')',
+                'transition': sec + 'ms',
+                'fill': colors[randBG]
+            });
+
+            $( "#particles" ).append(shape);
+            // btn.siblings('.btn-particles').append(shape);
+
+            group.push({shape: shape, x: x, y: y});
+        }
+        
+        for (var a = 0; a < group.length; a++) {
+            var shape = group[a].shape;
+            var x = group[a].x, y = group[a].y;
+            shape.css({
+                left: x + 50,
+                top: y + 15,
+                'transform': 'scale(0)'
+            });
+        }
+        
+        setTimeout(function() {
+            for (var b = 0; b < group.length; b++) {
+                var shape = group[b].shape;
+                shape.remove();
+            }
+            group = [];
+        }, 10000);
+
+    }	
+
+    $(function() {
+        $(document).on('click', '.button1', function(e) {
+            $(this).boom(e);
+            var snd = new Audio("assets/sounds/valentine.mp3");
+            snd.play();
+            if (pushed == false)
+            {
+                letsgo();
+            }
+        });
+
+    });
+
+    function letsgo()
+    {
+        setInterval(createImage, 1000);
+        pushed = true;
+        document.getElementsByClassName("button2")[0].style.display = "none";
+        document.getElementsByClassName("button1")[0].innerHTML = "Of course!";
+    }
+</script>
+
+</body>
+</html>
