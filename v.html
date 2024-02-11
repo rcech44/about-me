@@ -105,8 +105,8 @@
     }
     @keyframes fadeIn {
         0% { opacity: 0; }
-        20% { opacity: 1; }
-        80% { opacity: 1; }
+        5% { opacity: 1; }
+        95% { opacity: 1; }
         100% { opacity: 0; }
     }
 
@@ -206,7 +206,7 @@
       img.style.transform = `rotate(${angle}deg)`;
   
       // Set animation duration and delay to keep the image visible
-      const duration = Math.random() * 2 + 60; // Duration between 3 and 5 seconds
+      const duration = Math.random() * 2 + 40; // Duration between 3 and 5 seconds
       img.style.animationDuration = `${duration}s`;
   
       document.body.appendChild(img);
