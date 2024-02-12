@@ -1,324 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Will you be my Valentine?</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="assets/favicon_v.ico" />
-<style>
-  /* Apply the Roboto font to the whole page */
-  body, html {
-    overflow: hidden;
-    font-family: 'Dancing Script', cursive;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    /* background-color: #f0f0f0; Light grey background */
-  }
-  body {
-    background: linear-gradient(-45deg, #b66fc9, #c96f8d, #bf6969);
-	background-size: 400% 400%;
-	animation: gradient 7s ease infinite;
-  }
-    
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Will you be my Valentine?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_v.ico" />
+    <style>
+        /* Apply the Roboto font to the whole page */
+        body,
+        html {
+            overflow: hidden;
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            /* background-color: #f0f0f0; Light grey background */
         }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-  /* Style enhancements for the buttons */
-  .button1 {
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    margin: 0;
-    overflow: hidden; /* Prevent scrolling */
-    padding: 10px 20px;
-    margin: 5px; /* Spacing between buttons */
-    cursor: pointer;
-    border: 3px solid #1f5413;
-    border-radius: 5px;
-    background-color: #3e8030; /* Blue background */
-    color: white; /* White text */
-    font-weight: 500; /* Medium font weight */
-    transition: background-color 0.3s; /* Smooth background color transition */
-  }
-  .button2 {
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    margin: 0;
-    overflow: hidden; /* Prevent scrolling */
-    padding: 10px 20px;
-    margin: 5px; /* Spacing between buttons */
-    cursor: pointer;
-    border: 3px solid #821c19;
-    border-radius: 5px;
-    background-color: #b03e3a; /* Blue background */
-    color: white; /* White text */
-    font-weight: 500; /* Medium font weight */
-    transition: background-color 0.3s; /* Smooth background color transition */
-  }
-  /* Change button background color on hover */
-  .button1:hover {
-    background-color: #1f5413;
-  }
-  .button2:hover {
-    background-color: #821c19;
-  }
-</style>
-<style>
-    .background-image {
-        z-index: 1;
-        position: absolute;
-        width: 40%; /* Set max image width */
-        max-width: 400px;
-        animation: fadeIn ease-in-out; /* Apply the falling animation */
-        border-radius: 10px; /* Slightly curved edges */
-        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for a shine effect */
-    }
-    @keyframes gradientBackground {
-        0% {
-        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-        }
-        100% {
-        background: linear-gradient(45deg, #fad0c4, #ff9a9e);
-        }
-    }
-    @keyframes fall {
-      from {
-        top: -100px; /* Start above the screen */
-      }
-      to {
-        top: 100%; /* Fall to the bottom of the screen */
-      }
-    }
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        5% { opacity: 1; }
-        95% { opacity: 1; }
-        100% { opacity: 0; }
-    }
 
-    /* Media queries for responsive image sizing */
-    @media (max-width: 768px) { /* For tablets and smaller */
+        body {
+            background: linear-gradient(-45deg, #b66fc9, #c96f8d, #bf6969);
+            background-size: 400% 400%;
+            animation: gradient 7s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Style enhancements for the buttons */
+        .button1 {
+            font-family: 'Montserrat', sans-serif;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            /* Prevent scrolling */
+            padding: 10px 20px;
+            margin: 5px;
+            /* Spacing between buttons */
+            cursor: pointer;
+            border: 3px solid #1f5413;
+            border-radius: 5px;
+            background-color: #3e8030;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: 500;
+            /* Medium font weight */
+            transition: background-color 0.3s;
+            /* Smooth background color transition */
+        }
+
+        .button2 {
+            font-family: 'Montserrat', sans-serif;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            /* Prevent scrolling */
+            padding: 10px 20px;
+            margin: 5px;
+            /* Spacing between buttons */
+            cursor: pointer;
+            border: 3px solid #821c19;
+            border-radius: 5px;
+            background-color: #b03e3a;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: 500;
+            /* Medium font weight */
+            transition: background-color 0.3s;
+            /* Smooth background color transition */
+        }
+
+        /* Change button background color on hover */
+        .button1:hover {
+            background-color: #1f5413;
+        }
+
+        .button2:hover {
+            background-color: #821c19;
+        }
+    </style>
+    <style>
         .background-image {
-        width: 30%; /* Larger percentage of the screen width */
+            z-index: 1;
+            position: absolute;
+            width: 40%;
+            /* Set max image width */
+            max-width: 400px;
+            animation: fadeIn ease-in-out;
+            /* Apply the falling animation */
+            border-radius: 10px;
+            /* Slightly curved edges */
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+            /* Subtle shadow for a shine effect */
         }
-    }
 
-    @media (max-width: 480px) { /* For mobile phones */
-        .background-image {
-        width: 40%; /* Even larger percentage of the screen width */
+        @keyframes gradientBackground {
+            0% {
+                background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            }
+
+            100% {
+                background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+            }
         }
-    }
 
-    .header-container {
-        z-index: 10;
-        position: relative; /* Required for proper positioning */
-        width: 100%; /* Full width */
-        text-align: center; /* Center the text */
-        backdrop-filter: blur(8px); /* Apply blur effect to the background */
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent white background */
-        margin: 20px 20px; /* Add some margin around the container */
-        padding: 20px 0; /* Add padding inside the container for spacing */
-        box-sizing: border-box; /* Include padding in the element's total dimensions */
-    }
-    .shape {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        transform: scale(0.8);
-    }
-    .cir {
-        position: absolute;
-        border-radius: 50%;
-        z-index: 5;
-    }
-    .btn-particles {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        border-radius: 50%;
-        color: #eee;
-        font-family: monospace;
-        z-index: 50;
-    /* 	filter: url(#gooeyness); */
-    }
-  </style>
+        @keyframes fall {
+            from {
+                top: -100px;
+                /* Start above the screen */
+            }
+
+            to {
+                top: 100%;
+                /* Fall to the bottom of the screen */
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            95% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Media queries for responsive image sizing */
+        @media (max-width: 768px) {
+
+            /* For tablets and smaller */
+            .background-image {
+                width: 30%;
+                /* Larger percentage of the screen width */
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* For mobile phones */
+            .background-image {
+                width: 40%;
+                /* Even larger percentage of the screen width */
+            }
+        }
+
+        .header-container {
+            z-index: 10;
+            position: relative;
+            /* Required for proper positioning */
+            width: 100%;
+            /* Full width */
+            text-align: center;
+            /* Center the text */
+            backdrop-filter: blur(8px);
+            /* Apply blur effect to the background */
+            border: solid rgb(199, 199, 199) 5px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent white background */
+            margin: 20px 20px;
+            /* Add some margin around the container */
+            padding: 20px 0;
+            /* Add padding inside the container for spacing */
+            box-sizing: border-box;
+            /* Include padding in the element's total dimensions */
+        }
+
+        .shape {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            transform: scale(0.8);
+        }
+
+        .cir {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 5;
+        }
+
+        .btn-particles {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50%;
+            color: #eee;
+            font-family: monospace;
+            z-index: 50;
+            /* 	filter: url(#gooeyness); */
+        }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            overflow: hidden;
+            background-color: #000000a8;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: 2s;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="header-container">
-    <h1 style="z-index: 5;font-size: 5vh; color: #da77db; text-shadow: 0 0 10px rgb(0, 0, 0);touch-action: manipulation;">Will you be my Valentine?</h1>
-    <div style="z-index: 5;touch-action: manipulation;">
-      <button id="explodeButton" class="button1" style="font-size:16px;touch-action: manipulation;">Yes</button>
-      <button class="button2" style="font-size:16px;touch-action: manipulation;" onclick="nope();">No</button>
+    <div id="video-container">
+        <video autoplay muted id="vid">
+            <source src="assets/video/valentine.mp4" type="video/mp4">
+        </video>
     </div>
-</div>
 
-<div id="particles" class="btn-particles"></div>
-<!-- Buttons next to each other -->
+    <script>
+        var video = document.getElementById('vid')
+        var video_cont = document.getElementById('video-container')
+        video.addEventListener('ended', function () {
+            video.style.filter = "brightness(50%)";
+            $("#main-container").fadeIn(1500, function () { });
+        })
+    </script>
 
-<script>
-    const texts = ['Try again', 'Wrong answer', 'Think about it', 'Unacceptable'];
-    var count = 0;
-    function nope()
-    {
-        if (count < 10)
-        {
-            var but1 = document.getElementsByClassName("button1")[0];
-            var but2 = document.getElementsByClassName("button2")[0];
-            var currentSize = parseInt(but1.style.fontSize);
-            but1.style.fontSize = (currentSize + 5) + "px";
-            const randomIndex = Math.floor(Math.random() * texts.length);
-            but2.innerHTML = texts[randomIndex];
-            count++;
+    <div id="main-container" class="header-container" style="display:none;">
+        <h1
+            style="z-index: 5;font-size: 5vh; color: #da77db; text-shadow: 0 0 10px rgb(0, 0, 0);touch-action: manipulation;">
+            Will you be my Valentine?</h1>
+        <div style="z-index: 5;touch-action: manipulation;">
+            <button id="explodeButton" class="button1" style="font-size:16px;touch-action: manipulation;">Yes</button>
+            <button class="button2" style="font-size:16px;touch-action: manipulation;" onclick="nope();">No</button>
+        </div>
+    </div>
+
+    <div id="particles" class="btn-particles"></div>
+    <!-- Buttons next to each other -->
+
+    <script>
+        const texts = ['Try again', 'Wrong answer', 'Think about it', 'Unacceptable'];
+        var count = 0;
+        function nope() {
+            if (count < 10) {
+                var but1 = document.getElementsByClassName("button1")[0];
+                var but2 = document.getElementsByClassName("button2")[0];
+                var currentSize = parseInt(but1.style.fontSize);
+                but1.style.fontSize = (currentSize + 5) + "px";
+                const randomIndex = Math.floor(Math.random() * texts.length);
+                but2.innerHTML = texts[randomIndex];
+                count++;
+            }
+            if (count >= 10) but1.innerHTML = "YES!!!";
+            else if (count >= 5) but1.innerHTML = "YES";
         }
-        if (count >= 10) but1.innerHTML = "YES!!!";
-        else if (count >= 5) but1.innerHTML = "YES";
-    }
 
-</script>
+    </script>
 
-<script>
-    function createImage() {
-      const img = document.createElement('img');
-      const num = Math.floor(Math.random() * 8) + 1; // Random number between 1 and 5
-      img.src = `assets/img/valentine/${num}.jpg`; // Set the source to one of the 5 images
-      img.classList.add('background-image');
-  
-      // Randomly position images and apply a random rotation
-      img.style.top = `${Math.random() * 90}%`;
-      img.style.left = `${Math.random() * 90}%`;
-      const angle = Math.random() * 30 - 10; // Angle between -10 and 10 degrees
-      img.style.transform = `rotate(${angle}deg)`;
-  
-      // Set animation duration and delay to keep the image visible
-      const duration = Math.random() * 2 + 40; // Duration between 3 and 5 seconds
-      img.style.animationDuration = `${duration}s`;
-  
-      document.body.appendChild(img);
-  
-      // Remove the image after the animation ends
-      img.addEventListener('animationend', () => {
-        img.remove();
-      });
-    }
-  
-    // Create an initial set of images and continuously generate new ones
-    // setInterval(createImage, 1000); // Adjust timing as needed
-  
-</script>
+    <script>
+        function createImage() {
+            const img = document.createElement('img');
+            const num = Math.floor(Math.random() * 8) + 1; // Random number between 1 and 5
+            img.src = `assets/img/valentine/${num}.jpg`; // Set the source to one of the 5 images
+            img.classList.add('background-image');
 
-<script>
-    window.mobileCheck = function() {
-        let check = false;
-        (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-        return check;
-    };
-</script>
+            // Randomly position images and apply a random rotation
+            img.style.top = `${Math.random() * 90}%`;
+            img.style.left = `${Math.random() * 90}%`;
+            const angle = Math.random() * 30 - 10; // Angle between -10 and 10 degrees
+            img.style.transform = `rotate(${angle}deg)`;
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    var pushed = false;
-        $.fn.boom = function(e) {
-        var colors = [
-            '#eb1ae4',
-            '#ed4ee8',
-            '#b354b0',
-            '#cc5a6d',
-            '#ff5c77',
-            '#ff47ac',
-            '#ff47f3',
-            //You can add more color code for more effect..
-        ];
-        var shapes = [
-            '<path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/>',
-        ];
+            // Set animation duration and delay to keep the image visible
+            const duration = Math.random() * 2 + 40; // Duration between 3 and 5 seconds
+            img.style.animationDuration = `${duration}s`;
 
-        var btn = $(this);
-        var group = [];
-        var num = 500;
-        if (window.mobileCheck() == true) num = 100;
+            document.body.appendChild(img);
 
-        for(i = 0; i < num; i++) {
-            var randBG = Math.floor(Math.random() * colors.length);
-            var getShape = Math.floor(Math.random() * shapes.length);
-            var c = Math.floor(Math.random() * 10) + 5;
-            var scale = Math.floor(Math.random() * (10 - 4 + 1)) + 4;
-            var x = Math.floor(Math.random() * (2500 + 100)) - 1300;
-            var y = Math.floor(Math.random() * (1500 + 100)) - 800;
-            var sec = Math.floor(Math.random() * 5000) + 5000;
-            var cir = $('<div class="cir"></div>');
-            var shape = $('<svg class="shape">'+shapes[getShape]+'</svg>');
-            
-            shape.css({
-                top: e.pageY - btn.offset().top+50,
-                left: e.pageX - btn.offset().left+50,
-                'transform': 'scale('+scale+')',
-                'transition': sec + 'ms',
-                'fill': colors[randBG]
-            });
-
-            $( "#particles" ).append(shape);
-            // btn.siblings('.btn-particles').append(shape);
-
-            group.push({shape: shape, x: x, y: y});
-        }
-        
-        for (var a = 0; a < group.length; a++) {
-            var shape = group[a].shape;
-            var x = group[a].x, y = group[a].y;
-            shape.css({
-                left: x + 50,
-                top: y + 15,
-                'transform': 'scale(0)'
+            // Remove the image after the animation ends
+            img.addEventListener('animationend', () => {
+                img.remove();
             });
         }
-        
-        setTimeout(function() {
-            for (var b = 0; b < group.length; b++) {
-                var shape = group[b].shape;
-                shape.remove();
-            }
-            group = [];
-        }, 10000);
 
-    }	
+        // Create an initial set of images and continuously generate new ones
+        // setInterval(createImage, 1000); // Adjust timing as needed
 
-    $(function() {
-        $(document).on('click', '.button1', function(e) {
-            $(this).boom(e);
-            var snd = new Audio("assets/sounds/valentine.mp3");
-            snd.play();
-            if (pushed == false)
-            {
-                letsgo();
+    </script>
+
+    <script>
+        window.mobileCheck = function () {
+            let check = false;
+            (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var pushed = false;
+        $.fn.boom = function (e) {
+            var colors = [
+                '#eb1ae4',
+                '#ed4ee8',
+                '#b354b0',
+                '#cc5a6d',
+                '#ff5c77',
+                '#ff47ac',
+                '#ff47f3',
+                //You can add more color code for more effect..
+            ];
+            var shapes = [
+                '<path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/>',
+            ];
+
+            var btn = $(this);
+            var group = [];
+            var num = 500;
+            if (window.mobileCheck() == true) num = 100;
+
+            for (i = 0; i < num; i++) {
+                var randBG = Math.floor(Math.random() * colors.length);
+                var getShape = Math.floor(Math.random() * shapes.length);
+                var c = Math.floor(Math.random() * 10) + 5;
+                var scale = Math.floor(Math.random() * (10 - 4 + 1)) + 4;
+                var x = Math.floor(Math.random() * (2500 + 100)) - 1300;
+                var y = Math.floor(Math.random() * (1500 + 100)) - 800;
+                var sec = Math.floor(Math.random() * 5000) + 5000;
+                var cir = $('<div class="cir"></div>');
+                var shape = $('<svg class="shape">' + shapes[getShape] + '</svg>');
+
+                shape.css({
+                    top: e.pageY - btn.offset().top + 50,
+                    left: e.pageX - btn.offset().left + 50,
+                    'transform': 'scale(' + scale + ')',
+                    'transition': sec + 'ms',
+                    'fill': colors[randBG]
+                });
+
+                $("#particles").append(shape);
+                // btn.siblings('.btn-particles').append(shape);
+
+                group.push({ shape: shape, x: x, y: y });
             }
+
+            for (var a = 0; a < group.length; a++) {
+                var shape = group[a].shape;
+                var x = group[a].x, y = group[a].y;
+                shape.css({
+                    left: x + 50,
+                    top: y + 15,
+                    'transform': 'scale(0)'
+                });
+            }
+
+            setTimeout(function () {
+                for (var b = 0; b < group.length; b++) {
+                    var shape = group[b].shape;
+                    shape.remove();
+                }
+                group = [];
+            }, 10000);
+
+        }
+
+        $(function () {
+            $(document).on('click', '.button1', function (e) {
+                $(this).boom(e);
+                var snd = new Audio("assets/sounds/valentine.mp3");
+                snd.play();
+                if (pushed == false) {
+                    letsgo();
+                    $("#video-container").fadeOut(1000, function () { });
+                }
+            });
+
         });
 
-    });
-
-    function letsgo()
-    {
-        setInterval(createImage, 1500);
-        pushed = true;
-        document.getElementsByClassName("button2")[0].style.display = "none";
-        document.getElementsByClassName("button1")[0].innerHTML = "Of course!";
-    }
-</script>
+        function letsgo() {
+            setInterval(createImage, 1500);
+            pushed = true;
+            document.getElementsByClassName("button2")[0].style.display = "none";
+            document.getElementsByClassName("button1")[0].innerHTML = "Of course!";
+        }
+    </script>
 
 </body>
+
 </html>
