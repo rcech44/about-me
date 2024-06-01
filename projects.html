@@ -1,133 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Projekty | Radomír Čech</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon_projects.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <link href="css/projects.css" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <body id="page-top" onscroll="scrollHandle()">
-        <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
-        <!-- Navigation-->
-        <nav id="nav" style="background-color:rgba(0, 0, 0, 0)" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href="https://www.rcech.cz/index" onclick="return pageTransition(this);">Radomír Čech</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/features" onclick="return pageTransition(this);">Dovednosti</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-active active" href="#!" onclick="return pageTransition(this);">Projekty</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/doucovani" onclick="return pageTransition(this);">Doučování</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/about" onclick="return pageTransition(this);">O mně</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/contact" onclick="return pageTransition(this);">Kontakt</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Header-->
-        <header class="masthead text-center text-white" style="-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));">
-            <div class="masthead-content">
-                <div class="container px-5">
-                    <h1 class="masthead-heading mb-2">Projekty</h1>
-                    <h2 class="masthead-subheading mb-2">Mé největší projekty a jiné aplikace</h2>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#chapter_1">Posunout dolů</a>
-                </div>
-            </div>
-            <div class="bg-circle-1 bg-circle"></div>
-            <div class="bg-circle-2 bg-circle"></div>
-            <div class="bg-circle-3 bg-circle"></div>
-            <div class="bg-circle-4 bg-circle"></div>
-            <div class="bg-circle-5 bg-circle"></div>
-            <div class="bg-circle-6 bg-circle"></div>
-            <div class="bg-circle-7 bg-circle"></div>
-            <div class="bg-circle-8 bg-circle"></div>
-        </header>
 
-        <div class="container px-5" id="chapter_1" style="display:none;" >
-            <h2 class="display-4">Osobní projekty</h2>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Projekty | Radomír Čech</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_projects.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/projects.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body id="page-top" onscroll="scrollHandle()">
+    <div id="page_transition_div" class="page-transition-div" style="display:block;"></div>
+    <!-- Navigation-->
+    <nav id="nav" style="background-color:rgba(0, 0, 0, 0)"
+        class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand" href="https://www.rcech.cz/index" onclick="return pageTransition(this);">Radomír
+                Čech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/features"
+                            onclick="return pageTransition(this);">Dovednosti</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-active active" href="#!"
+                            onclick="return pageTransition(this);">Projekty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/doucovani"
+                            onclick="return pageTransition(this);">Doučování</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/about"
+                            onclick="return pageTransition(this);">O mně</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="about_web.html">O tomto webu</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="https://www.rcech.cz/contact"
+                            onclick="return pageTransition(this);">Kontakt</a></li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <!-- Header-->
+    <header class="masthead text-center text-white"
+        style="-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));">
+        <div class="masthead-content">
+            <div class="container px-5">
+                <h1 class="masthead-heading mb-2">Projekty</h1>
+                <h2 class="masthead-subheading mb-2">Mé největší projekty a jiné aplikace</h2>
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#chapter_1">Posunout dolů</a>
+            </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+        <div class="bg-circle-5 bg-circle"></div>
+        <div class="bg-circle-6 bg-circle"></div>
+        <div class="bg-circle-7 bg-circle"></div>
+        <div class="bg-circle-8 bg-circle"></div>
+    </header>
 
-        <!-- Content section 1-->
-        <section id="chapter_2" style="display:none;" >
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_1.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="p-5">
-                            <h2 class="display-4">Analýza COVIDu-19 v ČR</h2>
-                            <p>Webová aplikace, která pracuje s mohutným datasetem COVIDu-19 od MZČR. Aplikace umožňuje podrobně zkoumat šíření infekce, rozšíření vakcín a PCR testování. K dispozici je bohatá vizualizace ve formě interaktivní mapy ČR rozdělné na okresy. V aplikaci je možné si data plynule animovat, zvolit vlastní časové období a nebo také data porovnávat v reálném čase pomocí Picture-in-Picture. Pro funkčnost webové aplikace byl využit framework Django a databázový systém SQlite.</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setModal('covid')">
-                                Galerie
-                            </button>
-                        </div>
+    <div class="container px-5" id="chapter_1" style="display:none;">
+        <h2 class="display-4">Osobní projekty</h2>
+    </div>
+
+    <!-- Content section 1-->
+    <section id="chapter_2" style="display:none;">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_1.png"
+                            alt="..." /></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-5">
+                        <h2 class="display-4">Analýza COVIDu-19 v ČR</h2>
+                        <p>Webová aplikace, která pracuje s mohutným datasetem COVIDu-19 od MZČR. Aplikace umožňuje
+                            podrobně zkoumat šíření infekce, rozšíření vakcín a PCR testování. K dispozici je bohatá
+                            vizualizace ve formě interaktivní mapy ČR rozdělné na okresy. V aplikaci je možné si data
+                            plynule animovat, zvolit vlastní časové období a nebo také data porovnávat v reálném čase
+                            pomocí Picture-in-Picture. Pro funkčnost webové aplikace byl využit framework Django a
+                            databázový systém SQlite.</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" onclick="setModal('covid')">
+                            Galerie
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Content section 2-->
-        <section id="chapter_3" style="display:none;" >
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_2.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="p-5">
-                            <h2 class="display-4">RTSP přehrávač</h2>
-                            <p>Desktopová Windows aplikace, která umožňuje spravovat osobní systém kamer schopné protokolu RTSP. Aplikace je stavěna na nejmodernější WinUI 3 platformě a umožňuje si přehrávač kamer různě přizpůsobovat. Aplikace je schopna detekovat výpadek proudu a tak upozornit uživatele na případné změny v konfiguraci kamer.</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setModal('rtsp')">
-                                Galerie
-                            </button>
-                        </div>
+        </div>
+    </section>
+    <!-- Content section 2-->
+    <section id="chapter_3" style="display:none;">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_2.png"
+                            alt="..." /></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-5">
+                        <h2 class="display-4">RTSP přehrávač</h2>
+                        <p>Desktopová Windows aplikace, která umožňuje spravovat osobní systém kamer schopné protokolu
+                            RTSP. Aplikace je stavěna na nejmodernější WinUI 3 platformě a umožňuje si přehrávač kamer
+                            různě přizpůsobovat. Aplikace je schopna detekovat výpadek proudu a tak upozornit uživatele
+                            na případné změny v konfiguraci kamer.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" onclick="setModal('rtsp')">
+                            Galerie
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Content section 3-->
-        <section id="chapter_4" style="display:none;" >
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_6.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="p-5">
-                            <h2 class="display-4">Wallpaper Engine webové tapety</h2>
-                            <p>Zaujal vás design úvodní stránky tohoto webu? Můžete si tento styl přenést i do vašeho počítače. Pokud vlastníte aplikaci Wallpaper Engine, tak si můžete tapety stáhnout a přizpůsobit si je podle svého gusta. K dispozici je 15 různých vesmírných témat a široká škála přizpůsobení. Zatím dostupné pouze pro desktop.</p>
-                            <button style="margin-right: 10px; margin-bottom: 10px;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setModal('wallpaper')">
-                                Galerie
-                            </button>
-                            <a style="margin-right: 10px; margin-bottom: 10px;" class="btn btn-primary" href="https://www.rcech.cz/wallpaper">
-                                Odzkoušení
-                            </a>
-                            <a style=" margin-bottom: 10px;" class="btn btn-primary" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3028618030">
-                                Stažení (Steam Workshop)
-                            </a>
-                        </div>
+        </div>
+    </section>
+    <!-- Content section 3-->
+    <section id="chapter_4" style="display:none;">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_6.png"
+                            alt="..." /></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-5">
+                        <h2 class="display-4">Wallpaper Engine webové tapety</h2>
+                        <p>Zaujal vás design úvodní stránky tohoto webu? Můžete si tento styl přenést i do vašeho
+                            počítače. Pokud vlastníte aplikaci Wallpaper Engine, tak si můžete tapety stáhnout a
+                            přizpůsobit si je podle svého gusta. K dispozici je 15 různých vesmírných témat a široká
+                            škála přizpůsobení. Zatím dostupné pouze pro desktop.</p>
+                        <button style="margin-right: 10px; margin-bottom: 10px;" type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setModal('wallpaper')">
+                            Galerie
+                        </button>
+                        <a style="margin-right: 10px; margin-bottom: 10px;" class="btn btn-primary"
+                            href="https://www.rcech.cz/wallpaper">
+                            Odzkoušení
+                        </a>
+                        <a style=" margin-bottom: 10px;" class="btn btn-primary"
+                            href="https://steamcommunity.com/sharedfiles/filedetails/?id=3028618030">
+                            Stažení (Steam Workshop)
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Content section 3-->
-        <!-- <section id="chapter_5" style="display:none;" >
+        </div>
+    </section>
+    <!-- Content section 3-->
+    <!-- <section id="chapter_5" style="display:none;" >
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-4">
@@ -140,202 +173,237 @@
                             <!-- <a style="margin-right: 10px; margin-bottom: 10px;" class="btn btn-primary">
                                 Odkaz na přehrávač
                             </a> -->
-                        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section> -->
+    <!-- Content section 4-->
+
+    <div class="container px-5 py-5" id="chapter_5" style="display:none;">
+        <h2 class="display-4">Ostatní zajímavé práce</h2>
+    </div>
+
+    <section id="chapter_6" style="display:none;">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_3.png"
+                            alt="..." /></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-5">
+                        <h2 class="display-4">OpenGL Game Engine</h2>
+                        <p>Zajímavým projektem byl ručně tvořený herní engine stavěný pro OpenGL psaný v C++. Tento
+                            engine dokáže vypočítat stíny a světla objektů, zobrazit Skybox a vkládat vlastně tvořené
+                            objekty s texturami. V tomto projektu byl využit i jazyk GLSL.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2" onclick="setModal('game_engine')">
+                            Galerie
+                        </button>
                     </div>
                 </div>
             </div>
-        </section> -->
-        <!-- Content section 4-->
-
-        <div class="container px-5 py-5" id="chapter_5" style="display:none;" >
-            <h2 class="display-4">Ostatní zajímavé práce</h2>
         </div>
-
-        <section id="chapter_6" style="display:none;" >
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_3.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="p-5">
-                            <h2 class="display-4">OpenGL Game Engine</h2>
-                            <p>Zajímavým projektem byl ručně tvořený herní engine stavěný pro OpenGL psaný v C++. Tento engine dokáže vypočítat stíny a světla objektů, zobrazit Skybox a vkládat vlastně tvořené objekty s texturami. V tomto projektu byl využit i jazyk GLSL.</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="setModal('game_engine')">
-                                Galerie
-                            </button>
-                        </div>
+    </section>
+    <!-- Content section 4-->
+    <section id="chapter_7" style="display:none;">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_4.png"
+                            alt="..." /></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-5">
+                        <h2 class="display-4">Hry</h2>
+                        <p>Jako každý jiný programátor jsem si zkusil vyvinout pár klasických her. Většina těchto her
+                            využívá knihovnu SDL.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" onclick="setModal('games')">
+                            Galerie
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Content section 4-->
-        <section id="chapter_7" style="display:none;" >
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_4.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="p-5">
-                            <h2 class="display-4">Hry</h2>
-                            <p>Jako každý jiný programátor jsem si zkusil vyvinout pár klasických her. Většina těchto her využívá knihovnu SDL.</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setModal('games')">
-                                Galerie
-                            </button>
-                        </div>
+        </div>
+    </section>
+
+    <!-- Content section 4-->
+    <section id="chapter_8" style="display:none;">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_5.png"
+                            alt="..." /></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-5">
+                        <h2 class="display-4">Ostatní</h2>
+                        <ul>
+                            <li>GPU bug check pro Legion 5 - kontrola vady grafické karty pro tento notebook, kontrola
+                                špatně nastaveného taktu paměti hned po startu notebooku</li>
+                            <li>Spotify Discord bot - Discord bot, který monitoruje Spotify aktivitu uživatelů na
+                                serveru a poté vydává statistiky poslechu jednotlivých uživatelů nebo žebříček
+                                nejlepších posluchačů a jejich oblíbených písniček</li>
+                            <li>Spotify Web Player - vlastní webový přehrávač, který využívá Spotify API, umožňuje se
+                                přihlásit k vlastnímu Spotify účtu a přehrává skladby, přenáší playback na jiná zařízení
+                                a umožňuje
+                                vybírat playlisty, také nabízí fullscreen vizualizaci</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Content section 4-->
-        <section id="chapter_8" style="display:none;" >
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="p-5"><img class="img-fluid rounded-semicircle" src="assets/img/projects_5.png" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="p-5">
-                            <h2 class="display-4">Ostatní</h2>
-                            <ul>
-                                <li>GPU bug check pro Legion 5 - kontrola vady grafické karty pro tento notebook, kontrola špatně nastaveného taktu paměti hned po startu notebooku</li>
-                                <li>Spotify Discord bot - Discord bot, který monitoruje Spotify aktivitu uživatelů na serveru a poté vydává statistiky poslechu jednotlivých uživatelů nebo žebříček nejlepších posluchačů a jejich oblíbených písniček</li>
-                                <li>Generátor rozvrhu UPOL - webová aplikace, která generuje skript, který automaticky zvolí rozvrh podle zadaných předmětů a termínů</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Galerie aplikace</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Galerie aplikace</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div id="carouselExampleCaptions" class="carousel slide">
                         <div id="carousel_indicators_1" class="carousel-indicators">
-                          <button id="carousel_indicator_1" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button id="carousel_indicator_2" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button id="carousel_indicator_3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button id="carousel_indicator_4" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button id="carousel_indicator_1" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button id="carousel_indicator_2" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button id="carousel_indicator_3" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button id="carousel_indicator_4" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="3" aria-label="Slide 4"></button>
                         </div>
                         <div id="carousel_inner_1" class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img id="modal_pic_1" src="assets/img/covid_showcase/1.jpg" class="d-block w-100 carousel-pic" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img id="modal_pic_2" src="assets/img/covid_showcase/2.jpg" class="d-block w-100 carousel-pic" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img id="modal_pic_3" src="assets/img/covid_showcase/3.jpg" class="d-block w-100 carousel-pic" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img id="modal_pic_4" src="assets/img/covid_showcase/4.jpg" class="d-block w-100 carousel-pic" alt="...">
-                          </div>
+                            <div class="carousel-item active">
+                                <img id="modal_pic_1" src="assets/img/covid_showcase/1.jpg"
+                                    class="d-block w-100 carousel-pic" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="modal_pic_2" src="assets/img/covid_showcase/2.jpg"
+                                    class="d-block w-100 carousel-pic" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="modal_pic_3" src="assets/img/covid_showcase/3.jpg"
+                                    class="d-block w-100 carousel-pic" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="modal_pic_4" src="assets/img/covid_showcase/4.jpg"
+                                    class="d-block w-100 carousel-pic" alt="...">
+                            </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zavřít</button>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
 
-        <div class="modal fade" id="staticBackdrop2" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+    <div class="modal fade" id="staticBackdrop2" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdrop2Label">Galerie aplikace</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="staticBackdrop2Label">Galerie aplikace</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div id="carouselExampleCaptions2" class="carousel slide">
                         <div class="carousel-indicators">
-                          <button id="carousel_indicator_1" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button id="carousel_indicator_2" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button id="carousel_indicator_1" type="button" data-bs-target="#carouselExampleCaptions2"
+                                data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button id="carousel_indicator_2" type="button" data-bs-target="#carouselExampleCaptions2"
+                                data-bs-slide-to="1" aria-label="Slide 2"></button>
                         </div>
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img id="short_modal_pic_1" class="d-block w-100 carousel-pic" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img id="short_modal_pic_2" class="d-block w-100 carousel-pic" alt="...">
-                          </div>
+                            <div class="carousel-item active">
+                                <img id="short_modal_pic_1" class="d-block w-100 carousel-pic" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="short_modal_pic_2" class="d-block w-100 carousel-pic" alt="...">
+                            </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zavřít</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zavřít</button>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
 
-        <!-- Footer-->
-        <footer id="chapter_9" style="display:none;" class="py-3 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and icons from <a style="color:white;" href="https://www.flaticon.com/authors/freepik">Freepik - Flaticon</a></p></div>
-        </footer>
+    <!-- Footer-->
+    <footer id="chapter_9" style="display:none;" class="py-3 bg-black">
+        <div class="container px-5">
+            <p class="m-0 text-center text-white small">Copyright &copy; Bc. Radomír Čech | Created using Bootstrap and
+                icons from <a style="color:white;" href="https://www.flaticon.com/authors/freepik">Freepik -
+                    Flaticon</a></p>
+        </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script>
-            $("#page_transition_div").fadeOut("slow");
-            setTimeout(function () {
-                $("#chapter_1").fadeIn("slow");
-            }, 100);
-            setTimeout(function () {
-                $("#chapter_2").fadeIn("slow");
-            }, 200);
-            setTimeout(function () {
-                $("#chapter_3").fadeIn("slow");
-            }, 300);
-            setTimeout(function () {
-                $("#chapter_4").fadeIn("slow");
-            }, 400);
-            setTimeout(function () {
-                $("#chapter_5").fadeIn("slow");
-            }, 500);
-            setTimeout(function () {
-                $("#chapter_6").fadeIn("slow");
-            }, 600);
-            setTimeout(function () {
-                $("#chapter_7").fadeIn("slow");
-            }, 700);
-            setTimeout(function () {
-                $("#chapter_8").fadeIn("slow");
-            }, 800);
-            setTimeout(function () {
-                $("#chapter_9").fadeIn("slow");
-            }, 900);
-            // setTimeout(function () {
-            //     $("#chapter_10").fadeIn("slow");
-            // }, 1000);
-        </script>
+    <!-- Scripts -->
+    <script>
+        $("#page_transition_div").fadeOut("slow");
+        setTimeout(function () {
+            $("#chapter_1").fadeIn("slow");
+        }, 100);
+        setTimeout(function () {
+            $("#chapter_2").fadeIn("slow");
+        }, 200);
+        setTimeout(function () {
+            $("#chapter_3").fadeIn("slow");
+        }, 300);
+        setTimeout(function () {
+            $("#chapter_4").fadeIn("slow");
+        }, 400);
+        setTimeout(function () {
+            $("#chapter_5").fadeIn("slow");
+        }, 500);
+        setTimeout(function () {
+            $("#chapter_6").fadeIn("slow");
+        }, 600);
+        setTimeout(function () {
+            $("#chapter_7").fadeIn("slow");
+        }, 700);
+        setTimeout(function () {
+            $("#chapter_8").fadeIn("slow");
+        }, 800);
+        setTimeout(function () {
+            $("#chapter_9").fadeIn("slow");
+        }, 900);
+        // setTimeout(function () {
+        //     $("#chapter_10").fadeIn("slow");
+        // }, 1000);
+    </script>
 
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
